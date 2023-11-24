@@ -52,7 +52,7 @@ A imagem abaixo mostra a Colméia do UX, que apresenta palavras relacionadas a c
 
 O IBGE (Instituto Brasileiro de Geografia e Estatística) é uma das principais instituições brasileiras e que recebe todos os anos milhões e mais milhões de reais para investir nas suas pesquisas. Ele é responsável por realizar o senso, onde os funcionários vão de casa em casa e realizam o levantamento de informações que descrevem as características do povo brasileiro e disponibilizam todas elas em seu site. Toda empresa utiliza esses dados coletados pelo IBGE para definir seus projetos estratégicos. Mas de nada vale todo dinheiro investido, ter essa relevância e realizar todos esses estudos para no fim disponibilizá-los de forma tão inacessível e até mesmo mal estruturada.
 
-*"Transparência vai além de disponibilizar as informações, tem haver também como eles são disponibilizados. Eles são acessíveis?"*
+"*Transparência vai além de disponibilizar as informações, tem haver também como eles são disponibilizados. Eles são acessíveis?*"
 
 Pense em você dono de uma loja: se o seu cliente é mal atendido, tem uma experiência ruim, dificilmente ele irá retornar, e ainda acabará contando da experiência dele para outras pessoas, que podem acabar deixando de frequentá-la por conta desses relatos, deixando a empresa com uma fama ruim. Com aplicativos é igual.
 
@@ -67,7 +67,7 @@ UX também diminui o número de ligações a call center para tirar dúvidas ref
 3. A arte e a ciência de moldar produtos e experiências de informação para suportar a usabilidade, a encontrabilidade (*findability*) e o entendimento;
 4. Uma disciplina emergente e uma comunidade de prática focada em trazer princípios do design e da arquitetura para o espaço digital.
 
-*"Nós não projetamos a experiência, pois isso é individual de cada usuário e do momento em que ele se encontra. Porém, projetamos as variáveis que podem influenciar nessa experiência de alguma forma."*
+"*Nós não projetamos a experiência, pois isso é individual de cada usuário e do momento em que ele se encontra. Porém, projetamos as variáveis que podem influenciar nessa experiência de alguma forma.*"
 
 ## :six: Exercício
 
@@ -319,7 +319,218 @@ A combinação criativa de vários esquemas de organização atende usuários co
 
 Um ótimo exemplo de classificação facetada é o exemplo da interface do Uol para visualizar os filmes em cartaz. É possível utilizar um esquema de organização exato que é o de localização, filtrando os filmes e sessões por Sala ou Bairro, assim como é possível organizar utilizando um esquema ambíguo, que é o gênero do filme. Devemos pensar que nosso sistema pode precisar atender diferentes tipos de pessoas, com diferentes necessidades, talvez sendo necessário utilizar mais de um esquema para atender todas elas.
 
-## Perguntas
+## :nine: Sistema de Rotulação
+
+Determina as formas de representação da informação em palavras, ícones ou outros signos. Seu desafio é criar uma linguagem simples, compreensível e sem ambiguidades.
+
+### :arrow_right: Rótulo (ou *Label*)
+
+É um símbolo linguístico utilizado para representar um conceito.
+
+![Rótulo](Imagens/Rótulo.PNG)
+
+Os signos são arbitrários, isto é, a relação entre o rótulo e o conceito são culturamente estabelecidos e não há a necessidade de explicár-los a todo o instante. Por exemplo, uma árvore é chamada de árvore porque sim e todos aceitam isso. Claro que se for feito um estudo sobre a origem da palavra vamos descobrir os motivos que levaram a criação dela para representar o conceito, porém, isso pouco importa para nós.
+
+Signos também são mutáveis e imutáveis, isto porque eles estão culturamente estabelecidos, porém, podemos criar apelidos/gírias utilizados em pequenos grupos para nos referirmos a esses mesmos conceitos. Por exemplo, nos referimos ao objeto que calçamos para andarmos de tênis, porém, poderiamos chamar ele também de pisante,  também utilizado por algumas pessoas.
+
+### :arrow_right: Problemas
+
+Porém, temos uma dificuldade para projetar o sistema de rotulação que é falar a linguagem do nosso usuário e o feedback pobre.
+
+O primeiro exemplo que o professor deu de como não conversar na linguagem do usuário pode gerar problemas foi a dinâmica com o papel. Ele deu três comandos em sequência, sem responder perguntas, pedindo para dobrar o papel no meio e para cortar determinado quadrante. A questão é que podemos dobrar o papel na vertical, horizontal ou diagonal e como saber qual o primeiro, segundo, terceiro ou quarto quadrantes do papel. O resultado final foi que para cada uma das pessoas, ao abrir o papel, o resultado foi diferente, pois a comunicação foi imprecisa e não permitiu feedbacks.
+
+O segundo exemplo foi do site da Brastemp, que colocava suas geladeiras dentro da sessão de "Refrigeradores", um nome mais técnico do produto. Porém, nem todos os clientes sabem e nem são obrigados a saber essa outra forma de se nomear uma geladeira, o que fazia os mesmos buscarem por geladeiras diretamente na barra de pesquisa. Caso o sistema não possuísse uma forma de traduzir sinônimos, ele não encontraria o que desejava no site também, apesar daquele produto existir. Hoje o site da Brastemp corrigiu esse problema e utiliza a nomenclatura "Geladeira" para se referir a tal produto.
+
+![Sistema de Rotulação](Imagens/Sistema%20de%20Rotulação.PNG)
+
+O Terceiro exemplo é sobre o Banco do Brasil, que antigamente chamava os caixas eletrônicos de "Terminal de Autoatendimento", deixando os clientes confusos. Em uma decisão institucional eles decidiram mudar e começar a utilizar o nome mais popular.
+
+O quarto exemplo é um bem sucedido que é o caso do aplicativo da Discovery Channel, que fornece programas voltados para crianças ainda em fase de alfabetização. Nesse caso eles optaram por não inserir palavras e sim imagens relacionadas aos desenhos favoritos das crianças, uma vez que muitas delas ainda nem saber ler ou se sabem, ainda em fase inicial. Com a imagem dos personagens é muito mais simples elas realizarem a associação e conseguirem encontrar o conteúdo que desejam. Isso é entender o público alvo da plataforma e moldá-la de acordo com as necessidades e limitações dos mesmos.
+
+![Sistema de Rotulação - Sucesso](Imagens/Sistema%20de%20Rotulação%20-%20Sucesso.PNG)
+
+### :arrow_right: Recomendações
+
+A fim de utilizar o sistema de rotulação da melhor forma possível, podemos seguir algumas recomendações:
+
+#### :arrow_right::arrow_right: Ter Consistência
+
+Essa é uma das recomendações mais importantes para a definição dos rótulos.
+
+Ter consistência é sempre utilizar os mesmos conceitos ao longo de toda a construção da interface.
+
+Podemos fazer analogia com as boas práticas para codificação, citada no livro "Código Limpo", que diz para sempre empregarmos os mesmos padrões ao longo da construção do código: nome de variáveis expressivos, utilizar uma única língua (português, inglês, etc.), definir strings apenas com aspas simples ou duplas, etc. Construindo um código mais conciso, agradável de se ler e de mais fácil entendimento e manutenção.
+
+![Sistema de Rotulação - Consistência](Imagens/Sistema%20de%20Rotulação%20-%20Consistência.PNG)
+
+Na imagem acima, vemos um exemplo do aplicativo do Banco do Brasil de falta de consistência. Os caixas eletrônicos hora são chamados como tal e em outros momentos chamados de Terminais de Autoatendimento. Dependendo do nível de escolaridade da pessoa que está lendo a mensagem, talvez a compreensão seja mais simples, mas ainda pode tomar algum tempo, em outros casos pode demorar mais pois a pessoa pode ter maior dificuldade de compreensão de texto.
+
+Apesar de sempre aprendermos nas aulas de redação que devemos utilizar sinônimos ao longo da construção de um texto, quando estamos tratando de instruções, não é um problema sermos repetitivos para dar uma maior consistência ao texto.
+
+Tipos de consistência nos rótulos:
+
+- **Estilo:** Consistência no uso de caixa-alta e caixa-baixa, e da pontuação;
+- **Apresentação:** Consistência na aplicação de tipos e tamanhos de fontes, cores, espaçamentos e agrupamentos que reforçam visualmente grupos de rótulos;
+- **Sintaxe:** Uniformidade na sintaxe dos rótulos (grau, número, gênero, tempo verbal). Por exemplo, sempre quando for utilizar nomes nos botões colocar verbos no infinitivo (Consultar, Editar, Aplicar, Formatar, etc.);
+- **Granularidade:** Equalizar a abrangência dos rótulos evitando misturar no mesmo nível rótulos com significado amplo (como "Restaurantes") e estreito (como "Cantinas Italianas");
+- **Audiência:** Não misturar rótulos para público-alvo diferentes, especialmente quando esses públicos não utilizam a mesma linguagem. Por exemplo, em um sistema de um hospital, a linguagem utilizada com os médicos é diferente daquela utilizada com o paciente, logo, faz sentido separar essas duas plataformas;
+- **Completude:** Quando os rótulos formam um conjunto, coloque todos os elementos desse conjunto na interface, senão o usuário sentirá falta do item que não está presente.
+
+#### :arrow_right::arrow_right: Estreitar Escopo
+
+No exemplo abaixo vemos a versão antiga do site do UOL. Vemos que o menu da plataforma é extenso e existem diversas seções que possuem significados semelhantes, podendo causar uma certa confusão no usuário de em qual dessas ele irá encontrar o que deseja.
+
+![Sistema de Rotulação - Escopo](Imagens/Sistema%20de%20Rotulação%20-%20Estreitar%20Escopo.PNG)
+
+Uma alternativa para contornar essa situação é definir escopos maiores para as seções do menu e dentro de cada dessas seções, um novo menu com opções que se encaixam dentro de um mesmo escopo, como por exemplo: Notícias -> Educação, Política, Saúde, etc., exatamente como o UOL fez anos mais tarde.
+
+![Sistema de Rotulação - Escopo 2](Imagens/Sistema%20de%20Rotulação%20-%20Estreitar%20Escopo%202.PNG)
+
+#### :arrow_right::arrow_right: Eliminar Dúvidas
+
+Uma dúvida muito comum é: Tomate é Fruta ou Legume? Existem aqueles que a reconhecem como uma ou outra e a verdade é que as duas não estão tecnicamente erradas, uma vez que essa nomenclatura não possui embasamento científico e é adotada pelo setor de gastronomia. A ciência classifica o Tomate como um frutO. Se criassemos um site para um supermercado, como iriamos decidir em qual categoria colocá-lo? Para isso podemos realizar três operações: eliminar categorias, unificar categorias ou duplicar itens.
+
+No início da aula foi dado o exemplo do liquidificador e se ele deveria estar na categoria "Eletrodomésticos" ou "Eletroportáteis". O Mercado Livre, para evitar essa dúvida, eliminou a categoria dos "Eletroportáteis" e inseriu tudo em "Eletrodomésticos".
+
+![Sistema de Rotulação - Eliminar Dúvidas](Imagens/Sistema%20de%20Rotulação%20-%20Eliminar%20Dúvidas.PNG)
+
+Empréstimo e financiamento são coisas semelhantes, já que a grosso modo significam pegar dinheiro emprestado com o banco, mas existe uma diferença técnica entre eles: o financiamento está atrelado ao bem, isto é, você solicita um financiamento para comprar um apartamento ou carro, o mesmo fica em posse do banco até que você termine de pagar ele. No caso do empréstimo, o cliente solicita o dinheiro mas não atrela ele a nenhum bem, podendo ser utilizado para qualquer finalidade. Acontece que muitos dos clientes não conhecem essa diferença, podendo solicitar um empréstimo para comprar a casa própria (o que é possível). Para evitar esses problemas, a Caixa Econômica Federal decidiu unificar essas duas categorias em uma única sessão e dentro dela desenvolver melhor cada um deles, para que o cliente faça a melhor escolha de acordo com a necessidade dele.
+
+![Sistema de Rotulação - Eliminar Dúvidas 2](Imagens/Sistema%20de%20Rotulação%20-%20Eliminar%20Dúvidas%202.PNG)
+
+Outro exemplo dado no início da aula foi do Home Theater, se ele deveria estar na categoria "Áudio e Vídeo" ou "Televisão". Uma alternativa seria replicar esse item em ambas categorias, igual ocorre com o iPad no exemplo abaixo do site da FastShop, que o coloca tanto na categoria "Informática" quanto "Smartphones".
+
+![Sistema de Rotulação - Eliminar Dúvidas 3](Imagens/Sistema%20de%20Rotulação%20-%20Eliminar%20Dúvidas%203.PNG)
+
+#### :arrow_right::arrow_right: Evitar Siglas
+
+Há não ser que essas sejam universalmente conhecidas, como por exemplo, AIDs, COVID, TV, RADAR, etc.
+
+#### :arrow_right::arrow_right: Exibir alguns itens "filhos"
+
+#### :arrow_right::arrow_right: Consultar rótulos de outras interfaces
+
+Uma alternativa para a construção dos rótulos do seu site é analisar o que está sendo feito por outras empresas do mesmo ramo para tentar identificar alguns padrões que todas elas utilizam e que funcionam.
+
+Se analisarmos a imagem abaixo que mostra o cabeçalho do site de quatro empresas de departamento diferente, vamos ver que todas elas utilizam rótulos e até mesmo ícones muito semelhantes.
+
+![Sistema de Rotulação - Consultar rótulos de outras interfaces](Imagens/Sistema%20de%20Rotulação%20-%20Consultar%20rótulos%20de%20outras%20interfaces.PNG)
+
+Isso é bom para todas as empresas, pois cria um padrão para essa área da industria e facilita para o cliente quando o mesmo navega de um site para o outro.
+
+#### :arrow_right::arrow_right: Usar rótulos padrão
+
+De tanto uma empresa copiar a outra, alguns rótulos se tornam padrão no mercado, como:
+
+- Home, Home page, Página inicial, Início;
+- Buscar, Pesquisar;
+- Contate-nos, Fale Conosco, Entre em contato;
+- Ajuda, Dúvidas;
+- Notícias, Últimas Notícias;
+- Quem Somos, Sobre a empresa;
+- Mapa do site;
+- Carrinho de Compras.
+
+## :one::zero: Ícones
+
+Ícones são pequenas imagens utilizadas para representar conceitos substituindo os rótulos textuais.
+
+São reconhecidos mais rapidamente porque a nossa memória é predominantemente visual, porém, são uma linguagem limitada. Portanto, faz-se importante utilizar-se dos rótulos junto dos ícones, como nos dois exemplos apresentados abaixo.
+
+Os usuários mais experientes do Excel costumam reconhecer e utilizar as funcionalidades do Excel através dos ícones dispostos na barra de tarefas. Porém, para usuário iniciantes, quando se passa o mouse em cima do ícone, é possível visualizar uma *tooltip* com uma descrição do que o mesmo representa.
+
+![Ícones](Imagens/Ícones.PNG)
+
+Ícones são importantes principalmente em cenários onde estamos tratando de assuntos complexos, como no exemplo abaixo, aplicativos de bancos. Para aqueles que estão acessando o aplicativo pelas primeiras vezes a navegação será através dos rótulos. Com o tempo e prática eles passarão a fazer essa navegação utilizando apenas os ícones, tornando-se um processo muito mais automático e rápido.
+
+![Ícones 2](Imagens/Ícones%202.PNG)
+
+### :arrow_right: Tipos de Ícones
+
+1. **Ícones por semelhança:** representam o conceito com uma imagme análoga, por isto são os mais fáceis de compreender.
+
+    ![Tipos de Ícones - Por Semelhança](Imagens/Tipos%20de%20Ícones%20-%20Por%20Semelhança.PNG)
+
+    - A placa de trânsito "Área com desmoronamento" é um ícone por semelhança porque representa o conceito com a ilustração de um desmoronamento.
+
+2. **Ícones exemplares:** Utilizam uma parte, um exemplo típico ou um instrumento para representar o conceito.
+
+    ![Tipos de Ícones - Exemplares](Imagens/Tipos%20de%20Ícones%20-%20Exemplares.PNG)
+
+    - A placa de trânsito "Restaurante" é um ícone exemplar porque usa uma "parte" do restaurante (dois talheres) para representá-lo;
+    - Outro exemplo são as placas de banheiros que utilizam-se de objetos que remetem a homens e mulheres para indicar a qual sexo "pertence" tal banheiro.
+
+3. **Ícones simbólicos:** Representam um conceito com nível de abtsração maior que a imagem em si.
+
+    ![Tipos de Ícones - Simbólicos](Imagens/Tipos%20de%20Ícones%20-%20Simbólicos.PNG)
+
+    - O símbolo de "Frágil" é um ícone simbólico porque a fragilidade é um conceito maior que uma taça quebrada.
+
+4. **Ícones arbitrários:** A imagem do ícone foi escolhida arbitrariamente (isto é, definiram essa imagem sem necessariamente ele ter alguma ligação com o conceito que ela representa). Por isso, sua associação com o conceito precisa ser ensinada, tornando-o mais difícil de compreender.
+
+    ![Tipos de Ícones - Arbitrários](Imagens/Tipos%20de%20Ícones%20-%20Arbitrários.PNG)
+
+    - O símbolo de "material radioativo" é um ícone arbitrário definido em normas internacionais;
+    - Problema desse tipo de ícone é que se ele não foi ensinado, a pessoa não entenderá o que ele significa.
+
+5. Ícones também podem ser **Abstratos**, **Concretos** ou **Mistos**:
+
+    ![Tipos de Ícones - Abstratos, Concretos e Mistos](Imagens/Tipos%20de%20Ícones%20-%20Abstratos,%20Concretos%20e%20Mistos.PNG)
+
+### :arrow_right: Processo de Memorização e Reconhecimento de Ícones
+
+Quanndo utilizamos uma funcionalide pela primeira vez, nosso cérebro reconhece o ícone que a representa e guarda características marcantes dele, como a silhueta e a cor mais representativa. Quando estamos procurando por um ícone que já conhecemos, geralmente procuramos pela cor que ele se destaca.
+
+Por exemplo, na imagem abaixo, se estivermos procurando pelo ícone do aplicativo *Find my phone* do iPhone, você procurará por uma silhueta verde em formato de círculo:
+
+  ![Processo de Memorização e Reconhecimento de Ícones](Imagens/Processo%20de%20Memorização%20e%20Reconhecimento%20de%20Ícones.png)
+
+Temos algumas recomendações para melhorar a memorização e o reconhecimento dos ícones:
+
+- **Clareza:** Utilizar ícones fáceis de se memorizar;
+- **Legibilidade:** Verificar se o ícone em diferentes tamanhos mantêm a legibilidade. O professor deu exemplo do aplicativo da Claro que o ícone de "ao vivo" em uma tela menor parecia uma gravata borboleta;
+- **Alinhamento:** Utilizar um grid para fazer a centralização dos elementos do ícone;
+- **Brevidade:** Utilizar desenhos simples, como por exemplo, o ícone padrão utilizado para simbolizar os banheiros masculino e feminino. Não a necessidade de se colocar nariz, boca, olhos, etc. no boneco, pois gera informação desnecessária;
+- **Consistência:** Caso os ícones possuam elementos semelhantes, manter uma consistência entre eles. Por exemplo, os símbolos para representar banheiro masculino e feminino, ambos estão em preto, os bonecos tem mesmo tamanho, seja no corpo ou na cabeça, etc.;
+- **Personalidade:** Qual o tom de comunicação do seu produto? Podemos desenhar um coração de várias formas, qual delas melhor representa o seu produto? Algo mais formal? Algo mais despojado?
+
+## :one::one: Rótulos e Ícones Padrão
+
+Muitas das palavras que utilizamos no nosso dia-a-dia são fruto de acordos culturais que ocorreram anteriormente e por conta da sua longevidade e constante uso foram incorporadas a linguagem.
+
+Um exemplo disso é a palavra "Baderna", utilizada para se referir a bagunça, desordem, desorganização entre outros sinônimos. Mas ninguém sabe que a origem da palavra "Baderna" é o sobrenome de uma dançarina brasileira famosa antigamente, que ao se familiarizar com as danças populares brasileiras, decidiu as introduzir em suas apresentações. Quando as pessoas mais pobres percebiam que ela estava performando suas danças, começavam a fazer festa, gritar, pular e dançar. Isso incomodava as pessoas de elite, que começaram a referir a essas pessoas como "Baderneiros" e começou-se a utilizar a palavra para se referir a situações de desorganização.
+
+Esses acordos linguísticos também existem para ícones. Apesar de não existir mais, até os dias de hoje o ícone padrão para "Salvar" é o "Disquete" ou para "Telefonar" é o "Gancho" de um telefone. Porém, existem outros exemplos de ícones padrão:
+
+![Ícones Padrão](Imagens/Ícones%20Padrão.PNG)
+
+## :one::two: Linguagem Baseada em Ícones
+
+Essa técnica é utilizada para projetar uma grande quantidade de ícones.
+
+Benefícios:
+
+- Reduz o esforço necessário para projetar, desenhar, testar e revisar os ícones;
+- Assegura e reforça a consistência entre os ícones;
+- Torna os ícones autoexplicativos e dedutíveis;
+- Ajuda os usuários a iniciar mais rapidamente e a dominar a interface mais cedo;
+- Dá ao produto um estilo distinto.
+
+Exemplo: Criamos um aplicativo para fazer desenhos, semelhante ao "Paint". Porém, nosso aplicativo é muito simples e possui apenas duas funções que são "Desenhar" e "Apagar" e só é possível desenhar três tipos de coisas que são "Retângulos", "Círculos" e "Triângulos". Como poderiamos criar os botões para representar as ações da nossa ferramenta?
+
+![Linguagem Baseada em Ícones](Imagens/Linguagem%20Baseada%20em%20Ícones.PNG)
+
+A ideia foi definir símbolos que representam as ações que podem ser realizadas e os objetos que podem ser desenhados e fazer a união deles, criando ícones bastante intuitívos e que demonstram com clareza o que o ícone representa.
+
+A barra de ferramentas de editores de texto como o da Google são exemplos de linguagens baseadas em ícones:
+
+![Linguagem Baseada em Ícones 2](Imagens/Linguagem%20Baseada%20em%20Ícones%202.PNG)
+
+Nesse exemplo, apesar de uma linguagem alienígena ser utilizada nos rótulos, sabemos o funcionalidade que cada botão representa por conta de seus ícones e de sabermos que se trata da interface de um caixa eletrônico:
+
+![Linguagem Baseada em Ícones 3](Imagens/Linguagem%20Baseada%20em%20Ícones%203.PNG)
+
+## :one::three: Perguntas
 
 1. **Qual a diferença entre UI (User Interface) e UX (User Interface)?**
 
