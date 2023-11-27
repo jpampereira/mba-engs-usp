@@ -223,6 +223,13 @@ Mapas espaciais cognitivos
     - Limitar a no máximo três níveis hierárquicos o menu;
     - Serve como atalho para as funcionalidades.
 
+7. **Índice Remissivo ou Autosuggest:**
+
+    ![Elementos do Sistema de Navegação - Índice Remissivo e Autosuggest](Imagens/Elementos%20do%20Sistema%20de%20Navegação%20-%20Índice%20Remissivo%20e%20Autosuggest.png)
+
+    - O Índice Remissivo em interfaces funciona exatamente como os de livros;
+    - Eles vem sendo substituídos pelo Autosuggest, onde o usuário vai inserindo a pergunta da busca e já vai recebendo sugestões de conteúdos de acordo com o que foi inserido.
+
 ### :arrow_right: Posicionamento dos Elementos de Navegação
 
 ![Estudo Sobre Posicionamento dos Elementos de Navegação](Imagens/Estudo%20sobre%20posicionamento%20dos%20elementos%20de%20navegação.png)
@@ -245,3 +252,329 @@ Algumas bibliotecas que podemos utilizar para ver exemplos de componentes de int
 - Mobbin (mobbin.design)
 - Games Inspiration (gamesinspiration.com)
 - Design System Repo (designsystemrepo.com)
+
+## :two: Sistema de Busca
+
+Componente do produto que determina as perguntas que o usuário pode fazer (queries) e o conjunto de respostas que irá obter.
+
+Quando implementar
+
+- Produtos com grande volume de conteúdo;
+- Produtps com muitas informações para consulta;
+- Produtos com conteúdo muito dinâmico e um histórico grande (sites de notícias e serviços de streaming);
+- Sistemas corporativos formados por vários subsistemas descentralizados.
+
+Quando não implementar
+
+- Quando há pouco volume de conteúdo (hotsites ou aplicativos com poucas páginas);
+- Para compensar um sistema de navegação ruim;
+- Caso os usuários não gostem ou não saibam usar a busca (por exemplo, sites infantis).
+
+### :arrow_right: Comportamentos Comuns dos Usuários ao Utilizar a Busca
+
+1. **Múltiplas Interações:**
+
+    ![Comportamentos de Usuários com a Busca - Múltiplas Interações](imagens/Comportamento%20do%20Usuário%20ao%20Utilizar%20Sistema%20de%20Busca%20-%20Múltiplas%20Interações.png)
+
+    - Quando estamos realizando uma consulta simples, é normal que ao realizar a primeira busca já encontremos o resultado que desejamos. Porém, em situações onde o conteúdo buscado é mais complexo, é normal que sejam necessárias várias buscas até se encontrar o que deseja;
+
+    - Nesse segundo caso o usuário faz uma pergunta, analisa as respostas obtidas, verifica que o conteúdo retornado não é exatamente o que deseja e realizar uma nova consulta, refinando a resposta. Esse processo é repetido até que o usuário obtenha o que deseja.
+
+2. **Uso Integrado dos Sistemas de Busca e Navegação:**
+
+    ![Comportamentos de Usuários com a Busca - Integração Sistema de Busca e Navegação](imagens/Comportamento%20do%20Usuário%20ao%20Utilizar%20Sistema%20de%20Busca%20-%20Uso%20integrado%20dos%20sistemas%20de%20busca%20e%20navegação.png)
+
+    - A integração entre o sistema de busca e navegação é comumente chamado de "Menusca";
+
+    - A plataforma oferece uma barra de pesquisa e os resultados retornados são seções do aplicativo, onde o usuário acesso o que for do seu interesse, realizar a navegação, verifica as informações contidas nele, retorna para o buscador se achar necessário e realiza o processo novamente.
+
+### :arrow_right: Interação Básica com o Sistema de Busca
+
+![Interação Básica com o Sistema de Busca](imagens/Interação%20básica%20com%20o%20sistema%20de%20busca.png)
+
+- Devemos entender que a interação do usuário com o sistema de busca não é linear, pois ele poder realizar várias perguntas e analisar vários resultados, antes de acessar um dos resultados retornados e avaliar seu detalhamento.
+
+### :arrow_right: Componentes do Sistema de Busca
+
+![Componentes do Sistema de Busca](imagens/Componentes%20do%20Sistema%20de%20Busca.png)
+
+- A Ajuda é necessária quando o sistema possui uma interface complicada.
+
+### :arrow_right: Recomendações para a Interface de Busca
+
+1. **Ofereça suporte às perguntas e aos modos de busca que o usuário costuma fazer:**
+
+    ![Recomendações para a Interface de Busca - Oferecer Suporte](Imagens/Recomendações%20do%20Sistema%20de%20Busca%20-%20Suporte%20às%20Perguntas.png)
+
+    - Nos exemplos acima verificamos que as plataformas oferecem um sistema de busca personalizado de acordo com as necessidade do usuário de cada tipo de serviço;
+    - No sistema de compra de passagens aéreas, é normal que o usuário busque por passagens (produto vendido pela companhia) que atendam as seguintes especificações: origem, destino, número de passageiros, data de ida e volta;
+    - No sistema de reserva de hospedagem, o usuário busca por lugares que estejam no local e data de interesse dele;
+    - No sistame de compra ou aluguel de imóveis, o usuário geralmente realizar essa busca por localidade (cidade e bairro), no caso de aluguel pode definir o período que deseja alugar, além do número de quartos da habitação, etc.
+
+2. **Facilite a digitação das palavras chave:**
+
+    - Como já comentado, o processo de busca realizado pelo usuário nem sempre é linear, portanto, o quanto mais pudermos facilitar a busca, a experiência do usuário será mais prazerosa.
+
+    ![Recomendações para a Interface de Busca - Facilite a Digitação de Palavras Chave 1](Imagens/Recomendações%20do%20Sistema%20de%20Busca%20-%20Facilite%20a%20Digitação%20de%20Palavras%20Chave%201.png)
+
+    - Na busca do YouTube, a plataforma fornece o sistema de autopreenchimento de palavras de acordo com buscas anteriores e as mais realizadas pelos usuários;
+    - O Apple Watch e o iPhone, por sua vez, fornecem a Siri, o Assistente que permite realizar a busca por Voz;
+
+    ![Recomendações para a Interface de Busca - Facilite a Digitação de Palavras Chave 2](Imagens/Recomendações%20do%20Sistema%20de%20Busca%20-%20Facilite%20a%20Digitação%20de%20Palavras%20Chave%202.png)
+
+    - A plataforma da Azul permite que o usuário realize a busca de passagens aéres sem a necessidade de se utilizar o mouse.
+
+    ![Recomendações para a Interface de Busca - Facilite a Digitação de Palavras Chave 3](Imagens/Recomendações%20do%20Sistema%20de%20Busca%20-%20Facilite%20a%20Digitação%20de%20Palavras%20Chave%203.png)
+
+    - O iFood não exige que o usuário insira o seu endereço para fornecer os restaurantes próximos. Ele consegue essa informação através do GPS;
+    - O Desrotulando é uma plataforma que permite ao usuário ver informações nutricionais sobre produtos do se interesse. Como os produtos são identificados pelo seu código de barra, ao invés do usuário ter que inserir manualmente o valor, oferece a possibilidade de transmitir essa informação utilizando um scanner com a câmera do celular;
+    - O Shazam permite a identificação de músicas utilizando o microfone do celular ou computador.
+
+3. **Faça a caixa de busca grande:**
+
+    ![Recomendações para a Interface de Busca - Caixa de Busca Grande](Imagens/Recomendações%20do%20Sistema%20de%20Busca%20-%20Caixas%20de%20Pesquisa%20Grandes.png)
+
+    - Colocar caixas de busca grandes diz para o usuário que ele pode inserir várias palavras chaves para realizar a busca;
+    - Quanto mais informação ele inserir, mais precisa será a busca realizada.
+
+4. **Evite a busca avançada:**
+
+    ![Recomendações para a Interface de Busca - Evite busca avançada](Imagens/Recomendações%20do%20Sistema%20de%20Busca%20-%20Evite%20a%20busca%20avançada.png)
+
+    - Pesquisas avançadas podem acabar assustando os usuários, pela quantidade de campos e até mesmo a complexidade das informações inseridas;
+    - Caso ela seja necessária mesmo assim, uma alternativa é utilizar a divulgação progressiva, isto é, exibir apenas os campos mínimos que o usuário precisa para realizar a pesquisa e colocar um botão que abre uma outra parte da interface para inserir mais informações caso o usuário deseje.
+
+### :arrow_right: Recomendações para a Página de Resultados
+
+1. **Facilite o acesso aos itens encontrados:** Procure trazer as informações que o usuário procura diretamente na página de resultados, sem a necessidade de clicar em um link que o redireciona para outra página para então visualizar o conteúdo.
+
+2. **Ofereça filtros e sugestões para refinar os resultados:**
+
+    ![Recomendações para Página de Resultados - Ofereça filtros e sugestões para refinar os resultados](Imagens/Recomendações%20da%20Página%20de%20Resultados%20-%20Oferecer%20filtros%20e%20sugestões%20para%20refinar%20resultados.png)
+
+    - Quando realizamos a busca de um determinado em uma plataforma de e-commerce, como a Amazon no exemplo acima, geralmente elas oferecem após trazer o resultado uma série de filtros, personalizados para cada tipo de produto. Então, quando o usuário pesquisa por celular, filtros de celular são trazidos também para permitir que o mesmo refine sua pesquisa para ser mais específico. Quando pesquisa por televisão, os tipos de filtros são relacionados a esse produto, que se diferem de celular. Por exemplo, quando pesquisamos por uma televisão, um dos atributos no qual levamos em consideração é o seu tamanho em polegadas. Já quando estamos falando de celular, esse não é um dos principais atributos pesquisados, sendo muito mais importante a capacidade de armazenamento do dispositivo.
+
+3. **Ordene os Resultados:**
+
+    ![Recomendações para Página de Resultados - Ordene os resultados](Imagens/Recomendações%20da%20Página%20de%20Resultados%20-%20Ordene%20os%20resultados.png)
+
+    - Sempre ordene os resultados da pesquisa utilizando algum critério;
+    - O mais comum é a ordenação baseada na relevância do produto, isto é, quantos deles já foram adquiridos pelos usuários da plataforma, quantas vezes a página já foi acessada, quais possuem as melhores notas, etc.;
+    - Porém, podemos também oferecer outros tipos de filtro, como data, preço, etc. para permitir que o usuário personalize a resposta de acordo com o que deseja.
+
+4. **Mostre a quantidade de itens encontrados:**
+
+    ![Recomendações para Página de Resultados - Mostre a quantidade de itens encontrados](Imagens/Recomendações%20da%20Página%20de%20Resultados%20-%20Mostre%20a%20quantidade%20de%20itens%20encontrados.png)
+
+    - Não é necessário ter um grande destaque na página;
+    - Mas essa informação ajuda principalmente usuários mais experientes, que vão se basear na quantidade de itens encontrados para definir se devem restringir ainda mais as buscas, se precisam aumentar ou se a quantidade de resultados é adequada, sem a necessidade de ler os conteúdos retornados.
+
+5. **Pagine os Resultados:**
+
+    - A paginação dos resultados é recomendada, caso contrário, tornará a página lenta;
+    - Temos três abordagens de paginação:
+
+        ![Recomendações para Página de Resultados - Pagine os Resultados](Imagens/Recomendações%20da%20Página%20de%20Resultados%20-%20Pagine%20os%20resultados.png)
+
+        - A paginação tradicional, onde utilizamos setinhas para ir de uma página à outra.
+
+        ![Recomendações para Página de Resultados - Pagine os Resultados 2](Imagens/Recomendações%20da%20Página%20de%20Resultados%20-%20Pagine%20os%20resultados.png)
+
+        - O scroll infinito, onde clicamos em um botão para exibir mais produtos, porém, àqueles apresentados anteriormente permanecem na página;
+        - Esse modelo facilita a comparação de itens que encontram-se em páginas diferentes.
+
+        - A terceira abordagem é o scroll infinito automático, estratégia comumente utilizada em redes sociais. Porém, existem diversas críticas a esse modelo pois ele tem o intuito de manter o usuário permaneça o maior tempo possível na plataforma, dando uma sensação parecida às máquinas caça-níqueis.
+
+6. **Faça a mesma busca em várias bases simultâneamente (*Federated Search*):** Caso a sua aplicação utilize diferentes bases de dados para construir as respostas, faça todas essas buscas de uma única vez.
+
+7. **Facilite a realização de uma nova busca:**
+
+    ![Recomendações para Página de Resultados - Facilite a realização de uma nova busca](Imagens/Recomendações%20da%20Página%20de%20Resultados%20-%20Facilite%20a%20realização%20de%20uma%20nova%20busca.png)
+
+    - Como já comentado, é comum que um usuário não se sinta satisfeito com o resultado de uma busca e deseja alterá-la para obter outras respostas. Porém, pode ser que ele deseje apenas inserir mais alguma palavra chave e não quer apagar o que já escreveu anteriormente. No exemplo acima o usuário pesquisou por "poster do Batman" e na página de resultado a barra de pesquisa veio preenchida com o mesmo conteúdo, facilitando esse ajuste na busca se assim ele desejar.
+
+8. **Indexe apenas o conteúdo útil:**
+
+    ![Recomendações para Página de Resultados - Indexe Apenas o Conteúdo Útil](Imagens/Recomendações%20da%20Página%20de%20Resultados%20-%20Indexe%20apenas%20conteúdo%20útil.png)
+
+    - Na página do meio, o usuário realizou uma busca no Google por notícias relacionadas a empresa "Vale";
+    - O primeiro resultado é uma notícia do próprio site da vale sobre um determinado assunto;
+    - O segundo resultado também encaminha o usuário para uma página da Vale, porém, que funciona como um sumário, sendo necessário que ele clique novamente em algum link para ser encaminhado para as notícias de fato;
+    - Essa página de sumário não deveria ser indexada na página de resultados pois os conteúdos ao qual ela se referencia já são apresentados nos resultados do Google;
+    - É possível fazer esse controle do que deve ser indexado ou não através de meta tags.
+
+9. **Apresente os resultados rapidamente:**
+
+    ![Recomendações para Página de Resultados - Apresente os resultados rapidamente](Imagens/Recomendações%20da%20Página%20de%20Resultados%20-%20Resultados%20rapidamente.png)
+
+    - Devemos entender a interação entre o usuário e o sistema como um diálogo e ninguém gosta de uma conversa travada, onde uma pessoa demora muito tempo para responder a outra. Portanto, devemos tomar cuidado com essa questão;
+    - O ideal é que os resultados sejam retornados em até meio segundo;
+    - Até 1 segundo o usuário aceita os resultados, mas já começa a ficar irritado;
+    - Acima de 10 segundos você já perdeu seu usuário para outra plataforma.
+
+### :arrow_right: Recomendações para a Página Sem Resultados
+
+1. **Informe que não foram encontrados resultados:**
+
+    ![Recomendações para a Página Sem Resultados - Informe que não foram encontrados resultados](Imagens/Recomendações%20para%20Página%20Sem%20Resultados%20-%20Informe%20que%20não%20foram%20encontrados%20resultados.png)
+
+    - Deixe claro para o usuário que não foi possível encontrar resultados para a pesquisa informada;
+    - Evite colocar sugestões de outras pesquisas para não deixar o usuário confuso. Ele pode não entender que aquilo são recomendações e achar que ela que fez uma pesquisa errada.
+
+2. **Apresente dicas de como utilizar a busca:**
+
+    ![Recomendações para a Página Sem Resultados - Apresente dicar de como utilizar a busca](Imagens/Recomendações%20para%20Página%20Sem%20Resultados%20-%20Apresente%20dicas%20de%20como%20usar%20a%20busca.png)
+
+3. **Facilite a realização de uma nova busca:**
+
+    ![Recomendações para a Página Sem Resultados - Facilite a realização de uma nova busca](Imagens/Recomendações%20para%20Página%20Sem%20Resultados%20-%20Facilite%20a%20realização%20de%20uma%20nova%20busca.png)
+
+    - Foi informado para o usuário que não foi encontrado nenhum resultado para a pesquisa realizada, porém, a barra de busca encontra-se na mesma página para realizar uma nova busca.
+
+4. **Ofereça links para outros serviços e para área de atendimento:**
+
+    ![Recomendações para a Página Sem Resultados - Ofereça links para outros serviços e para a área de atendimento](Imagens/Recomendações%20para%20Página%20Sem%20Resultados%20-%20Ofereça%20links%20para%20outros%20serviços%20e%20para%20a%20área%20de%20atendimento.png)
+
+    - Na imagem acima o usuário pesquisou por determinado conteúdo pela barra de pesquisa do iPhone e nenhum resultado foi encontrado. Porém, a própria plataforma ofereceu outros sistemas de busca para que o usuário procure por resultados dentro deles;
+    - Uma outra possibilidade é oferecer para o usuário que caso ele não encontre o que deseja através da pesquisa, se ele deseja entrar em contato com um atendimento humanizado.
+
+### :arrow_right: Recomendações para a Ajuda
+
+Explique na ajuda:
+
+- O que está sendo procurado;
+- Como as perguntas podem ser formuladas;
+- Quais são as opções para refinar a busca;
+- O que fazer se a lista de resultados é muito grande;
+- O que fazer se não foram obtidos resultados;
+- O que fazer se os resultados não interessam.
+
+![Recomendações para a Ajuda](Imagens/Recomendações%20para%20a%20Ajuda.png)
+
+### :arrow_right: Análise do log da busca
+
+É muito comum que ao realizar uma busca, o usuário digite as palavras com algum erro de digitação, como no exemplo abaixo, onde foi realizada uma busca por chapéus, porém, o usuário escreveu a palavra de forma errada. Apesar disso, a plataforma foi capaz de compreender o que o usuário queria e trazer os resultados esperados.
+
+![Análise do Log da Busca 1](Imagens/Análise%20do%20Log%20da%20Busca.png)
+
+Na imagem abaixo temos uma tabela real das 50 principais buscas no site do Buscapé, uma plataforma de comparação de preços, que não deu match com nenhum resultado. É importante que todas as empresas mantenham um log desse tipo de suas buscas e trabalhe em cima delas para melhorar a experiência do usuário.
+
+![Análise do Log da Busca 2](Imagens/Análise%20do%20Log%20da%20Busca%202.png)
+
+Uma forma de melhorar a experiência do usuário seria realizar um processo de curadoria em cima dessas pesquisas e entender o que faz sentido que seja ajustado na plataforma para que dê match em um determinado conteúdo.
+
+## :three: Heurísticas
+
+### :arrow_right: O que são Heurísticas?
+
+São princípios, regras, diretrizes e boas práticas de design.
+
+Elas traduzem o senso comum de um bom projeto e servem para avaliar a qualidade da experiência oferecida, facilitar a crítica durante o desenvolvimento, e prever a eficácia das soluções propostas.
+
+### :arrow_right: Tipos de Heurísticas
+
+Heurísticas Genéricas:
+
+- Tentam cercar todos os tipos de problemas que uma interface pode ter;
+- São aplicáveis a grande maioria dos produtos e dispositivos.
+- Exemplos:
+  - Dez Heurísticas de Nielsen;
+  - Oito regras de ouro de Shneiderman;
+  - Heurísticas de Arquitetura de Informação de Abby Covert.
+
+Heurísticas Específicas:
+
+- Apresentam recomendações para um tipo restrito de interface (internet bankings, videogames, e-commerces, etc.) ou para devices (smartphones, desktops, terminais de autoatendimento, etc.);
+- Exemplos:
+  - Heurísticas de Arquitetura de Informação Pervasiva de Resmini e Rosati;
+  - Heurísticas para avaliação de sistemas interativos cross-channel;
+  - Heurísticas de Jogabilidade para jogos de computador;
+  - Content Analysis Heuristics;
+  - E-commerce User Experience;
+  - Baymard Institute Guidelines;
+  - Diretrizes de Stanford para credibilidade na web;
+  - Design Social Interfaces.
+
+### :arrow_right: Dez Heurísticas de Nielsen
+
+1. A interface deve sempre manter os usuários informados sobre o que está acontecendo, com feedback adequado em tempo razoável:
+
+    - No exemplo abaixo da área de seguros do Banco do Brasil, o usuário preencheu seus dados pessoais e ao clicar em "Iniciar Cálculo", a barrinha de progresso aumentou, porém, retornou para a mesma página, fazendo com que o usuário fique sem entender nada. Se ele olhar para a parte de baixo da tela, ele verá a informação de que é obrigatório informar mais um número de telefone além do celular. Caso essa mensagem de erro estivesse melhor posicionada (na área de atenção do usuário) e a barra de progresso refletisse a realidade, a experiência do usuário seria melhor.
+
+        ![Heurísticas de Nielsen - Feedback Adequado 1](Imagens/Heurísticas%20de%20Nielsen%20-%20Feedback%20adequado%201.png)
+
+        ![Heurísticas de Nielsen - Feedback Adequado 2](Imagens/Heurísticas%20de%20Nielsen%20-%20Feedback%20adequado%202.png)
+
+2. Equivalência entre o sistema e o mundo real (falar a linguagem do usuário):
+
+    - A voz do povo é a voz de Deus!
+    - O sistema deve falar a linguagem dos usuários, com palavras, frases, ícones e conceitos familiares, em vez de usar termos técnicos;
+    - Siga as convenções do mundo real, trazendo informações de maneira natural e lógica conforme o modelo mental do usuário;
+    - No exemplo abaixo, vemos as versões de 2016 e 2021 do site da polícia rodoviária federal. Na versão mais antiga, para se consultar o status de um boletim de ocorrência tinha um campo chamado "Comunicação C", que nada mais é do que o nome técnico utilizado internamente na PRF para se referir ao número do protocolo do BO. Acontece que quem não é desse universo não conhece esse termo, causando problemas durante a consulta a plataforma. Na versão mais recente isso já foi readequado utilizando a linguagem acessível ao povo:
+
+        ![Heurísticas de Nielsen - Falar a linguagem do usuário](Imagens/Heurísticas%20de%20Nielsen%20-%20Falar%20a%20linguagem%20do%20usuário.png)
+
+3. Controle do Usuário e Liberdade (Saídas Claramente Marcadas):
+
+    - É comum os usuários escolherem caminhos ou executarem funções por engano dentro do sistema e necessitarem de "saídas de emergência" para abandonar essas situações indesejadas sem ter que passar por um caminho longo ou refazer a tarefa desde o início;
+    - É o usuário que controla o sistema, por isto ele precisa, a qualquer momento, poder abortar ou desfazer uma operação e retornar ao estado anterior.
+
+4. Consistência e Padrões:
+
+    - Consistência significa que as mesmas coisas funcionam do mesmo jeito e são apresentadas da mesma forma;
+    - A consistência facilita o uso do produto porque o usuário aproveita seu aprendizado anterior, minimiza sua necessidade de memorização e oferece previsibilidade das ações;
+    - No exemplo abaixo, na primeira imagem temos a página das Casas Bahia em 2017 e ela chamava o carrinho de compras dela de "caminhão de compras", já havendo uma inconsistência com o padrão utilizado pelo mercado que chama de "carrinho" ou "sacola" de compras. Porém, além dessa inconsitência com o mercado, as Casas Bahia cometia uma inconsistência interna, porque quando você acessava o caminhão, a página se chamava carrinho. Nas versões mais recentes, representada pela segunda imagem, as Casas Bahia já usa o desenho de um carrinho de compras e usa o modelo utilizado também por outros e-commerces:
+
+        ![Heurísticas de Nielsen - Consistência 1](Imagens/Heurísticas%20de%20Nielsen%20-%20Consistência%201.png)
+
+        ![Heurísticas de Nielsen - Consistência 2](Imagens/Heurísticas%20de%20Nielsen%20-%20Consistência%202.png)
+
+5. Prevenção de Erros:
+
+    - Melhor do que boas mensagens de erro é um design cuidadoso que evita a ocorrência de erros;
+    - Elimine as condições de erro ou apresente aos usuários uma opção de confirmação antes de executar a ação;
+    - Também vale apresentar opções de conserto direto e rápido.
+
+6. Reconhecer ao invés de relembrar (Minimizar a carga de memória do usuário):
+
+    - Utilize objetos, ações e opções de fácil entendimento cognitivo e deixe-os visíveis para minimizar a carga de memória do usuário. Por exemplo, o Windows é muito mais fácil do que o DOS pois o primeiro utiliza ícones para acessar as funcionalidades enquanto o segundo necessita que o usuário decore comandos;
+    - Ele não deve ter que lembrar informações de uma parte do diálogo para outra;
+    - As instruções para utilizar o sistema devem ser visíveis ou facilmente recuperáveis sempre que apropriado;
+    - A interface deve mostrar os elementos de diálogo e permitir que o usuário faça suas escolhas sem a necessidade de lembrar um comando específico.
+    - No exemplo abaixo temos a página do banco HSBC para simulação um financiamento de um imóvel e tem um campo que solicita a idade do imóvel em dias. Porém, o formulário pede para que o usuário insira o valor na mão, necessitando que ele faça essa conta, enquanto seria bem mais fácil colocar um campo no formato de calendário para o usuário inserir a data de nascimento (?) do imóvel e deixar que o sistema realize o cálculo:
+
+        ![Heurísticas de Nielsen - Facilitar para o usuário](Imagens/Heurísticas%20de%20Nielsen%20-%20Facilitar%20para%20o%20usuário.png)
+
+7. Flexibilidade e Eficiência de Uso (Atalhos):
+
+    - Normalmente despercebidos pelos novatos, os atalhos ajudam a acelerar a interação dos usuários experientes de modo que a interface consegue proporcionar uma boa experiência para ambos;
+    - Atalhos, como as teclas de função, o menu contextualizado (botão direito) e o botão "Voltar" entre outros servem para recuperar informações que estão em níveis mais profundos;
+    - Eles permitem que os usuários executem com maior velocidade as ações mais frequentes.
+
+8. Auxiliar o usuário a reconhecer, diagnosticar e recuperar ações erradas (boas mensagens de erro):
+
+    - As mensagens de erro devem ter uma linguagem simples (sem códigos) indicando com precisão o problema e sugerindo uma solução;
+    - Elas devem ajudar o usuário a entender e resolver o seu problema sem assustá-lo, culpá-lo ou intimidá-lo.
+
+9. Ajuda e Documentação:
+
+    - O ideal é que o produto seja tão fácil de usar, seja tão intuitivo, que não necessite de ajuda ou documentação;
+    - Mas se for necessária, a ajuda deve estar facilmente acessível, com informações fáceis de pesquisar e focada nas tarefas do usuário, com instruções passo a passo de como chegar ao objetivo, sem ser muito extensa.
+
+10. Estética e Design Minimalista:
+
+    - As interfaces não devem conter informações irrelevantes ou raramente necessárias competindo em visibilidade e atenção com informações relevantes;
+    - Por isto a interface deve apresentar exatamente a informação que o usuário precisa no momento, nem mais nem menos.
+
+## :four: Metodologia de Projeto de UX
+
+## :five: Perguntas
+
+1. **O que o professor acha sobre todos os sites e aplicativos apresentarem a mesma cara?**
+
+    Essa convergência entre aplicativo acaba funcionando como um processo de seleção natural, onde as melhores práticas de mercado acabam prevalecendo e sendo replicadas entre as diferentes plataformas que não querem ficar para traz. Por um lado isso é bom para os usuários, pois cria consistência entre as páginas, facilitando seus usos, porém, acaba criando páginas com pouca personalidade, o que pode acabar sendo um diferencial de sucesso. O jeito é buscar um equilíbrio entre utilizar as melhores práticas de mercado mas tentar manter uma personalidade que diferencie o seu produto dos demais existentes.
+
+2. **Como novas tecnologias emergentes como Realidade Aumentada e Inteligência Artificial podem ajudar na experiência do usuário?**
+
+    Primeiro passo é entender se de fato aquela tecnologia trará algum benefício para o usuário. O professor deu o exemplo de um banco que criou uma página web em 3D anos atrás, em um estilo gameficado onde o usuário para realizar as tarefas do banco como conversar com o gerente, realizar transferências, etc. precisaria controlar um boneco e andar com ele até o local da agência onde aquela tarefa se encontra. Isso realmente traz algum ganho? Não é muito mais prático apenas colocar um formulário em 2D para o usuário preencher?
+    Por outro lado o professor deu o exemplo do JusBrasil, já mencionado em uma resposta da aula 1, onde eles estão utilizando o chatGPT para realizar a "tradução" de termos jurídicos para pessoas que não são do meio.
