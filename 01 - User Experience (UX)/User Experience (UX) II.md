@@ -568,7 +568,109 @@ Heurísticas Específicas:
 
 ## :four: Metodologia de Projeto de UX
 
-## :five: Perguntas
+### :arrow_right: O que compõe um projeto de UX?
+
+Algumas coisas que são presentes em qualquer outro projeto:
+
+- Escopo;
+- Prazo;
+- Recursos;
+- Pessoas;
+
+Coisas específicas de UX:
+
+- Quem são os usuários;
+- Ambiente de uso;
+- Contexto dos usuários.
+
+O professor passou um vídeo de uma empresa que foi desafiada por um programa de notícias estadunidense a criar um modelo de carrinho de supermercado inovador em apenas cinco dias. A reportagem mostra o processo realizado pelo time de design até chegar o produto final. Durante o projeto foram reunidas pessoas de diferentes áreas do conhecimento e com diferentes pontos de vista trazendo informações relacionadas a carrinhos de supermercado, como número de acidentes com crianças, quantidade de roubos, etc. Também foram realizadas entrevistas com os usuários para entender as dores que eles e quais as opiniões deles sobre o objeto. Juntando todas essas informações, foram levantadas e debatidas ideias que poderiam ser implementadas e até mesmo criado protótipos para demostrar essas ideias. Por fim foi realizada uma votação e as melhores ideias de cada protótipo compuseram a versão final da cadeira.
+É importante a mensagem de que apesar da versão final trazer melhorias para o dia a dia dos usuários, ela ainda precisa de melhorias, o que mostra que o processo de avaliação da experiência do usuário deve ser continuo e não apenas durante fase de desenvolvimento ou quando aparecem problemas.
+
+### :arrow_right: Pensamento Criativo
+
+O processo de pensamento criativo pode ser exemplificado pela imagem abaixo que é conhecido como diamante:
+
+![Pensamento Criativo - Diamong](Imagens/Pensamento%20Criativo%20-%20Diamond.png)
+
+Esse processo é muito comum nas reuniões de brainstorm.
+
+Como a imagem mostra, o pensamento criativo é divido em duas etapas:
+
+- Pensamento Divergente:
+  - Incentive as ideias selvagens pois essas ideias acabam trazendo outras ideias mais realistas
+  - Uma ideia puxa a outra
+  - Criar opções
+
+- Pensamento Convergente:
+  - Avaliar
+  - Fazer escolhas
+
+### :arrow_right: O Modelo de Processo Criativo "Double Diamond"
+
+A partir do diamante criado para exemplificar a ideia do pensamento criativo, foi criado pela Design Council, em 2005, um modelo de processo criativo chamado "Double Diamond", pois ele possui dois diamantes daquele apresentado no tópico anterior.
+
+A ideia é que esse modelo pudesse ser replicado para qualquer tipo de processo de design de produto, e não apenas para a área de UX e também foi a base para o Design Thinking.
+
+![Double Diamond](Imagens/Double%20Diamond.png)
+
+Muitas vezes o projeto chega para a área de design com uma especificação de uma linha, pobre, com poucos detalhes, portanto, é necessário expandir o problema proposto para entendê-lo com mais propriedade. Essa é a etapa de "Descobrir" e no vídeo do professor ela é representada pela parte onde o time de design realiza pesquisas de informações sobre os carrinhos de supermercados e também fazem pesquisas de campos com os usuários desse objeto para entender mais.
+
+Após fazer essa expansão do problema, agora é a etapa de "Definir" o que feito. No vídeo essa é a parte onde após a coleta de todas as informações, as mesmas são apresentadas ao restante dos colegas, mostrando o que cada um coletou. O mais rico dessa parte é que o grupo é formado por pessoas de diferentes áreas do conhecimento, portanto, os pontos tratados em suas pesquisas variam de acordo com a sua perspectiva de mundo, gerando diferentes ideias que não necessariamente surgiriam caso a equipe fosse composta de pessoas com o mesmo perfil. Ao final dessa fase o escopo do problema é definido, gerando o "Design Brief".
+
+Após essas duas primeiras etapas, então vem o segundo diamante, onde é necessário expandir novamente em "Desenvolver" para propor e definir o que será feito para resolver o problema proposto e na última fase de convergência "Entregar", é onde é colocado de fato a mão na massa até gerar o produto final. No vídeo a primeira etapa é representada pela parte onde são criados os protótipos por cada um dos subgrupos formados e a definição do que será reaproveitado de cada um deles e por fim a construção do carrinho com as melhores ideias propostas pelos membros do grupo.
+
+### :arrow_right: Processo do Design Thinking
+
+Na imagem a baixo podemos ver o modelo de processo do Design Thinking. Podemos encontrar alguns modelos um pouco diferentes que variam de acordo com quem idealizou o modelo. O mostrado abaixo é um dos mais conhecidos.
+
+![Design Thinking](Imagens/Design%20Thinking.png)
+
+Vemos a semelhança dele com o modelo Double Diamond. As etapas de "Empatizar" e "Definir" equivalem ao primeiro diamante, onde os membros do time realizam as pesquisas e depois realizam o brainstorm, respectivamente. Enquanto "Idealizar", "Propotipar" e "Testar" dizem respeito ao segundo diamante, onde se define as soluções para o problema, cria protótipos e os testa.
+
+Valores do Design Thinking:
+
+- **Empatia:** Empatia é a capacidade de se colocar no lugar do outro. Porém, não conseguimos nos colocar literalmente no lugar do outro pois a experiência de cada um é muito particular. Por conta disso, é importante trazer o usuário para perto do projeto, das conversas, definições, etc;
+- **Colaboração:** Nenhum grande projeto saiu da cabeça de uma só pessoa;
+- **Prototipação:** Você não irá acertar de primeira, portanto, faça protótipos para testar o seu produto e coletar dados de onde pode melhorar e ir repetindo esse processo até entender que o produto atingiu um nível de maturidade consistente.
+
+### :arrow_right: Design Squiggle
+
+Abaixo temos uma representação visual do que é o processo de design, onde se inicialmente existe muitos ruídos e aplicando-se os processos de design, como os apresentados nos tópicos anteriores, chegasse a um cenário de clareza e para onde o projeto deve caminhar.
+
+![Design Squiggle](Imagens/Design%20Squiggle.png)
+
+### :arrow_right: Design Centrado no Usuário
+
+Duas disciplinas são importantes quando estamos tratando do design centrado no usuário:
+
+1. **Visão da Interação Humano-Computador:**
+
+    - Focar desde o início do projeto no usuário e nas suas tarefas (antes mesmo das tecnologias que serão utilizadas);
+    - Avaliar e medir o uso do produto (Teste de usabilidade);
+    - Design iterativo (a ideia é implementar, testar e repetir esse ciclo pra ir melhorando o projeto) e interativo (testes junto do usuário);
+    - No vídeo apresentado os membros da equipe antes de tudo querem entender as necessidades dos usuários do produto (carrinho de supermercado), então realizam entrevistas tanto com os clientes desses mercados quanto com quem trabalha nesses locais e assim que finalizam o protótipo levam para serem testados nos próprios mercados.
+
+2. **Visão da Ciência da Informação:**
+
+    - Como as pessoas adquirem conhecimento?
+    - Na visão da ciência da informação o foco é no usuário em entender suas situações particulares de uso de informação e no que ocorre antes, durante e depois das suas interação com o sistema (visão holística);
+    - No vídeo isso é apresentado quando pessoas de diferentes áreas são consultadas e cada uma dela trás uma visão do produto: a visão do vendedor e do cliente sobre o carrinho, o carrinho dentro do mercado, fora do mercado, no estacionamento, com crianças, adultos e idosos, etc., procurando entender o cenário do carrinho de supermercado por completo.
+
+### :arrow_right: Princípios para uma Metodologia de Projeto de UX
+
+![Metodologia de Projeto de UX](Imagens/Metologia%20de%20Projeto%20de%20UX.png)
+
+Focando agora em um projeto de UX, seus projetos são compostos geralmente por cinco fases, especificadas na imagem acima.
+
+Podemos dizer que as duas primeiras etapas são o duplo diamante apresentado em tópicos anteriores, onde são feitas as pesquisas e a equipe de design tenta inicialmente entender o problema que eles precisam resolver e buscar soluções. A etapa de especificação é aquela onde os designers criam as telas, utilizando o figma ou outras ferramentas de modelagem. Na etapa de implementação é quando a especificação é repassada aos desenvolvedores que começam a implementar tudo o que foi planejado. Nessa etapa é importante que o design esteja sempre disponível, pois dúvidas e problemas sempre vão surgir, muitas vezes necessitando de algumas revisões das especificações. Por fim, esse produto é colocado em produção e então feitas avaliações para entender a satisfação do cliente e o que o produto pode melhorar. Os vários ciclos mostram que esse processo ocorre indefinidamente, sempre havendo melhorias a serem realizadas no projeto.
+
+É muito importante saber também implementar os conceitos de design centrado no usuário.
+
+## :five: Reflexão
+
+"*O cliente é o visitante mais importante em nossa casa. Ele não depende de nós; nós que somos dependentes dele. Ele não é interrupção do nosso trabalho, ele é o propósito do mesmo. Ele não é estranho em nosso negócio, ele faz parte do mesmo. Nós não estamos fazendo um favor ao serví-lo, ele está fazendo um favor em nos dar uma oportunidade.*" - Mahatma Gandhi
+
+## :six: Perguntas
 
 1. **O que o professor acha sobre todos os sites e aplicativos apresentarem a mesma cara?**
 
