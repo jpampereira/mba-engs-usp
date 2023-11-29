@@ -68,7 +68,7 @@ Mapas espaciais cognitivos
 
     - Na imagem acima vemos um rádio do modelo Pioneer muito utilizado em automóveis antigamente. A principal ação que o usuário poderia realizar era a troca de estações. Para isso ele apertava o botão "List", em seguida girava o botão para selecionar a estação e por último o apertava para começar a tocar a estação selecionada;
     - O grande problema é que o feedback apresentado pelo rádio é visual, isto é, ele não emite nenhum som e o condutor, caso seja ela que esteja manipulando o rádio, precisa olhar para o visor para confirmar se selecionou a estação correta, o que pode acabar gerando acidentes;
-    - A gran de lição é: apresente feedbacks de acordo com o contexto do usuário. Por exemplo, o Waze diz para o usuário para onde ele deve seguir, se virar esquerda, direta, etc., uma vez que o usuário que muita das vezes é o condutor, não irá conseguir utilizar a visão para receber o feedback.
+    - A grande lição é: apresente feedbacks de acordo com o contexto do usuário. Por exemplo, o Waze diz para o usuário para onde ele deve seguir, se virar esquerda, direta, etc., uma vez que o usuário que muita das vezes é o condutor, não irá conseguir utilizar a visão para receber o feedback.
 
 4. **Ser Eficiente:**
 
@@ -140,11 +140,11 @@ Mapas espaciais cognitivos
 
     - O browser via notebook possui o botão de voltar, bastante utilizado pelos usuários, portanto, não exclua o seu uso da navegação do seu site;
     - Nos smartphones é muito comum, por padrão, a barra de opções do aplicativo ser disponibilizada no canto inferior da tela, portanto, aproveite esse padrão já que ele é bem estabelecido com a comunidade;
-    - utilizar esses padrões gera CONSISTÊNCIA.
+    - Utilizar esses padrões gera CONSISTÊNCIA.
 
 12. **Navegação Social:**
 
-    ![Recomendações do Sistema de Navegação - navegação Social](Imagens/Recomendações%20para%20o%20sistema%20de%20navegação%20-%20Navegação%20Social.png)
+    ![Recomendações do Sistema de Navegação - Navegação Social](Imagens/Recomendações%20para%20o%20sistema%20de%20navegação%20-%20Navegação%20Social.png)
 
     - Nesse caso a interface irá fornecer caminhos que não foram projetados pelo arquiteto de informações e sim por outros usuários que passaram por situações semelhantes àquelas que você está passando no momento;
     - Cerca de 10% das vendas da Amazon decorrem desse sistema "Clientes que compraram este item também compraram".
@@ -260,7 +260,7 @@ Componente do produto que determina as perguntas que o usuário pode fazer (quer
 Quando implementar
 
 - Produtos com grande volume de conteúdo;
-- Produtps com muitas informações para consulta;
+- Produtos com muitas informações para consulta;
 - Produtos com conteúdo muito dinâmico e um histórico grande (sites de notícias e serviços de streaming);
 - Sistemas corporativos formados por vários subsistemas descentralizados.
 

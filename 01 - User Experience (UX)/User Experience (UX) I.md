@@ -1,7 +1,5 @@
 # User Experience (UX) I
 
-[Clique aqui](https://mm.tt/app/map/3052644584?t=CJfZtnGoXl) para acesso o mapa mental!
-
 ## :one: Exemplo de utilização do UX 1
 
 Vamos analisar as latas de tomate da imagem abaixo, da esquerda para a direita, e ver como a usabilidade foi utilizada para modificar o design delas ao longo do tempo.
