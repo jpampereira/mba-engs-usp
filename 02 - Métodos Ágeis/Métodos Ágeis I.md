@@ -79,6 +79,8 @@ Esse trabalho em conjunto e a entrega do produto sendo realizado ciclo após cic
 
 Nessa época um dos mercados que mais sofria com essa questão dos modelos de trabalho adotado pelas empresas era o setor de desenvolvimento de software e quando esse artigo foi publicado, logo esse público voltou seu interesse para esse modelo e começaram a pesquisá-lo. Foi então que dois homens de um grupo de dezessete pessoas que se juntavam para discutir sobre essas questões, ao ler e conhecer sobre como essas empresas estavam trabalhando através do artigo, decidiram definir e publicar, em 1995, o que eles chamaram de "Metodologia SCRUM", se apropiando do nome e do hype que o artigo vinha tendo no mundo corporativo.
 
+o Scrum nasceu como metodologia e hoje é um framework.
+
 ## :five: Manifesto Ágil
 
 Na mesma época do nascimento do SCRUM, outros modelos com o Extreme programming (XP) também surgiram e as empresas começaram a ficar malucas com essas novas metodologias de trabalho e começaram a tentar aplicar em massa em seus negócios. Esses foram intitulados **Métodos Leves**. Acontece que como tudo era muito novo e a oferta ainda era muito baixa, também começaram a surgir outros métodos conhecidos como **Caóticos**, que se vendiam como leves, mas na verdade eles só eliminavam partes do ciclo de trabalho, como documentação e testes, tornando os projetos bombas relógios que em algum momento iam explodir por conta da queda de qualidade nas entregas. Vendo para onde estava indo a reputação dos chamados métodos leves, os dezessete idealizadores iniciais do SCRUM decidiram se reunir para publicar, em 2001, um manifesto com os princípios que devem ser respeitados para um método poder ser chamado de leve. Acontece que o nome leve já havia sido mal interpretado e não poderia ser adotado no manifesto e portanto, decidiram aplicar o nome **Ágil**.
@@ -94,3 +96,77 @@ Os quatro valores do Manifesto Ágil:
 3. **Colaboração com o Cliente ao invés de Negociação de Contratos:** Se amarrarmos os objetivos em contratos, pode ser que ao longo do tempo eles acabem mudando, fazendo com que o time fique amarrado em entregar o que está em contrato, podendo não fazer mais sentido em algum momento e impedindo que seja feito o que de fato é necessário;
 
 4. **Responder a mudanças mais do que seguir um plano:** Há plano, porém, se precisarmos mudar, mudamos e depois adaptamos o plano.
+
+## :six: Primeiro de Tudo: Entender o Problema
+
+"*Se não houver problema, não há solução e não há razão para existir uma empresa*" - Vinod Khosla
+
+"*Se eu tivesse uma hora para resolver um problema e minha vida dependesse da solução, eu passaria os primeiros 55 minutos determinando a pergunta adequada para perguntar, uma vez que eu soubesse a pergunta adequada, eu poderia resolver o problema em menos de 5 minutos.*" - Albert Einstein
+
+O professor deu o exemplo da ponte Choluteca, construída em Honduras e tinha como objetivo permitir que as pessoas atravessassem o rio por vias terrestres. Acontece que o requisito para a construção dessa ponte é que ela fosse resistentes a possíveis desastres naturais que aconteciam na região. Após a construção, houve um furacão que devastou a região e a ponte, como proposto, ficou intacta. Acontece que outro fenômeno que acontecia na região e não foi levado em consideração era de que esses desastres naturais poderiam mudar a posição do rio, que de fato ocorreu, ficando a ponte suspensa sob terra e fora do mar, tornando-se totalmente inútil. Isso mostra que os responsáveis pelo projeto não conheciam a totalidade do problema, gerando um resultado final ineficaz e que não resolvendo a questão. Foram necessários novos gastos para arrumar a ponte e permitir que ela cumprisse o seu papel.
+
+Problemas precisam ser **consistentes**, isto é, precisa ser compreendidos pelas pessoas que o analisam e **relevantes**, ou seja, eles merecem ser resolvidos.
+
+### :arrow_right: Mapa do Problema
+
+O professor mostrou uma ferramenta interessantes para utilizarmos quando estamos tentando entender um problema e verificar a sua relevância:
+
+![Mapa do Problema](Imagens/Mapa%20do%20Problema.png)
+
+1. **Contexto do Problema:** Nesse passo temos uma descrição do problema. Tomando o exemplo da ponte Choluteca, por exemplo, o contexto seria que seria necessária a construção de uma ponte para ligar as duas margens do rio;
+
+2. **Consequências/Efeitos Conhecidos:** Quais os efeitos da não resolução desse problema. A não construção da ponte pode ter efeitos econômicos, energéticos ou até mesmo de relacionamento entre as pessoas que se encontram em cada uma das margens;
+
+3. **Causas Identificadas:** Quais as caractéristicas do ambiente no qual o problema de aplica? Nessa etapa muito provavelmente apareceria a questão de que a região é muito propícia para furacões e que o terreno permite a mudança na disposição do rio;
+
+4. **Pessoas impactadas ou envolvidas (Direta ou indiretamente):** Ao final dessas quatro primeiras etapas, conseguimos ter um problema consistente. Nas duas próximas etapas vamos tentar entender se ele merece ser resolvido.
+
+5. **Importância:** Entender qual a importância (ou ganho) de se solucionar esse problema. Nesse momento podem ser utilizadas diferentes métricas, como financeira, tempo, algum KPI interno da empresa, etc. Conectar com o planejamento estratégico da empresa;
+
+6. **Realidade X Ideal:** Como é a situação atual do problema e qual seria o ideal? Estamos demorando quinze dias para atender nossos clientes e o ideal é que precisassemos de apenas três.
+
+Ter clareza e conseguir mediar o que separa você do estado atual para o futuro é fundamental.
+
+### :arrow_right: Estágios do Problema
+
+Após entender o problema e ele é relevante ou não, o próximo passo é entender o estágio em que o problema se encontra:
+
+1. **Problem Solution Fit:** Encontrar uma solução para o problema;
+
+2. **Product Market Fit:** A implantação da solução do problema vai necessitar alguma mudança de comportamento dos envolvidos? De nada adianta entregarmos algo e as pessoas não confiarem e continuarem utilizando os métodos antigos;
+
+3. **Scale:** Todas as pessoas impactadas conseguem utilizar a solução? Ou apenas uma parte delas?
+
+Nem todos os problemas encontram-se no mesmo estágio e passam por todos eles.
+
+"*Se o projeto não é um fim em sí mesmo e eu não sei a pergunta que ele quer responder, eu não saberei quando ela estará respondida e quando acabar o projeto.*"
+
+### :arrow_right: Como Obter Conhecimento?
+
+Onde obter conhecimento para resolver um problema?
+
+Temos duas linhas de pensamento sobre a obtenção do conhecimento defendidas por René Descartes e John Locke. Na visão de Descartes, o conhecimento era obtido a partir de experiências passadas, enquanto Locke defendia que o conhecimento era obtido de forma empírica, isto é, a partir da experimentação. Havia quem defendia uma das visões e essa discussão seguiu até que Immanuel Kant concluiu que não existia uma única visão correta e sim que elas deveriam ser utilizadas em momentos diferentes, ou seja, há momento em que eu preciso me basear em problemas do passado e há momentos em que o conhecimento do passado não é suficiente e precisamos de algo novo.
+
+Se o problema já é de conhecimento e as soluções existente para ele ainda são válidas, chamamos esse de um problema **conhecido**. Se o problema é novo ou já teve uma solução no passado mas que não serve mais, esses são problemas **conhecíveis**. Por fim, aqueles problema inimagináveis e que ainda não temos conhecimento, são os **incognoscíveis**.
+
+Um exemplo de problema conhecido é quando temos dois pontos em um plano bidimensional e precisamos conectá-los. Até os dias atuais, comprovado através da matemática, a melhor forma de solucionar esse problema é conectando os dois pontos através de uma reta. Nesse caso, utilizamos de um conhecimento do passado para resolver um problema que hoje já possui solução. Para esses tipos de problemas podemos utilizar de **processos preditivos** (PDCA - *Plan, Do, Check, Act*).
+
+Um exemplo de problema conhecível, por sua vez, é o jogo do "ta quente/ta frio", que consiste de uma pessoa esconder um objeto e outra ter que encontrá-lo, mas para receber dicas da pessoa que escondeu, deve perguntar se está quente (isto é, está perto do objeto) ou está frio (está longe do objeto). Nesse problema, é impossível você se planejar antes de encontrar o objeto, é necessário dar pequenos passos, interpretá-los e a partir dos resultados obtidos definir o próximo passo. Por exemplo, se dou um passo para a esquerda e a pessoa diz que ta frio e dou um pra trás e a pessoa disse que está mais frio ainda, eu já sei que não devo andar nessas duas direções de agora em diante. Da mesma forma que não adianta eu dar grandes passos, pois posso depois ficar tão longe de onde o objeto está, que vou precisar implicar mais esforço (nesse caso, dar mais passos), para atingir o meu objetivo. A esse modelo de resolução de problemas chamamos de **processos adaptativos** (DCAP - *Do, Check, Act, Plan*) e é nesse tipo de processo que os modelos ágeis se baseiam.
+
+- Esses pequenos passos que damos a cada rodada da partida damos o nome de sprint e ao final de cada uma delas, conseguimos alterar o nosso plano (no exemplo do jogo, alterar a direção), para atingir nosso objetivo;
+
+- O professor passou a parte do filme "Fome de Poder" onde os dois idealizadores do modelo de negócio do McDonald's contam como chegaram na solução para o seu problema, que era diminuir o tempo de preparo de um hamburguer de 30 minutos para 30 segundos. Para fazer isso eles utilizaram de uma quadra de tênis, desenharam a posição dos equipamentos utilizando giz de cera na quadra e chamaram os funcionários para realizar testes em cima dos esquemas que eles criaram (*Do*). Porém, o modelo de primeira não obteve o resultado esperado (*Check*), portanto, foram necessários ajustes (*Act*) e feitos testes novamente até se obter o resultado esperado (*Plan*). Se eles primeiros tivessem planejado a cozinha, reformado ela toda e depois testado se a disposição era adequada, eles iriam ter gastado dinheiro e tempo de forma ineficiente, e iriam precisar gastar mais e perder mais tempo para reformar de novo sem ter certeza que o novo resultado seria o esperado. Isso mostra o quanto dar pequenos passos é bem mais eficiente do que planejar tudo antes da execução, pois ajustes de rota muito provavelmente serão necessários ao longo do projeto.
+
+Qualquer opinião que diga que um modelo é melhor do que outro parte de um conhecimento raso, pois cada um dos modelos vai depender do contexto de cada problema.
+
+![Abordagens de Desenvolvimento](Imagens/Abordagens%20de%20Desenvolvimento.png)
+
+- A abordagem preditiva exige conhecimento do problema de forma antecipada e possuem poucas iterações;
+- A abordagem adaptativa, por sua vez, é um processo incremental e que possui diversas iterações, sendo mais adequada em cenários onde não temos como definir uma solução para o problema previamente a seu desenvolvimento e o caminho é construído pouco a pouco;
+- A abordagem híbrida é quando temos uma quantidade de incerteza proporcional a quantidade de certeza, portanto, utilizamos as duas abordagens.
+
+## :seven: O que é Ágil?
+
+- Processo adaptativo;
+- Construção de ambiente para receber tanto notícias boas quanto ruins (ta quente/ta frio);
+- Feedbacks são importantes (quanto mais em tempo real melhor) ajudam a definir o caminho que devemos seguir.
