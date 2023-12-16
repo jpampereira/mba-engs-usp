@@ -79,7 +79,7 @@ Esse trabalho em conjunto e a entrega do produto sendo realizado ciclo após cic
 
 Nessa época um dos mercados que mais sofria com essa questão dos modelos de trabalho adotado pelas empresas era o setor de desenvolvimento de software e quando esse artigo foi publicado, logo esse público voltou seu interesse para esse modelo e começaram a pesquisá-lo. Foi então que dois homens de um grupo de dezessete pessoas que se juntavam para discutir sobre essas questões, ao ler e conhecer sobre como essas empresas estavam trabalhando através do artigo, decidiram definir e publicar, em 1995, o que eles chamaram de "Metodologia SCRUM", se apropiando do nome e do hype que o artigo vinha tendo no mundo corporativo.
 
-o Scrum nasceu como metodologia e hoje é um framework.
+O Scrum nasceu como metodologia e hoje é um framework.
 
 ## :five: Manifesto Ágil
 
@@ -97,13 +97,23 @@ Os quatro valores do Manifesto Ágil:
 
 4. **Responder a mudanças mais do que seguir um plano:** Há plano, porém, se precisarmos mudar, mudamos e depois adaptamos o plano.
 
+Os três pilares do Scrum:
+
+1. **Transparência:** Todas as informações devem estar disponíveis e acessíveis a todos os membros da equipe, promovendo a confiança e colaboração, e permitindo que todos no projeto tenham compreensão clara do que está acontecendo, podendo tomar posições embasadas e alinhadas com os objetivos do projeto.
+
+2. **Inspeção:** Realizar avaliação contínua do trabalho através de uma abordagem iterativa e incremental para encontrar pontos de melhoria no produto. É importante que a equipe esteja aberta a feedbacks e pronta para realizar ajustes e correções necessárias para melhorar o produto. Isso permite uma análise criteriosa do progresso do projeto, garantindo a qualidade e entrega de valor.
+
+3. **Adaptação:** O ambiente onde os projetos são desenvolvidos são dinâmicos e incertos, sendo a adaptação fundamental para responder as mudanças que ocorrem ao longo do tempo. Os feedbacks e aprendizados obtidos durante a etapa de inspeção permite a equipe realizar ajustes e mudanças tanto no produto quanto no processo de trabalho.
+
+Os três pilares estão interligados e se fortalecem mutuamente. A transparência é necessária para que a inspeção possa ser realizada de forma efetiva e a inspeção alimenta a adaptação com informações relevantes para a tomada de decisão.
+
 ## :six: Primeiro de Tudo: Entender o Problema
 
 "*Se não houver problema, não há solução e não há razão para existir uma empresa*" - Vinod Khosla
 
 "*Se eu tivesse uma hora para resolver um problema e minha vida dependesse da solução, eu passaria os primeiros 55 minutos determinando a pergunta adequada para perguntar, uma vez que eu soubesse a pergunta adequada, eu poderia resolver o problema em menos de 5 minutos.*" - Albert Einstein
 
-O professor deu o exemplo da ponte Choluteca, construída em Honduras e tinha como objetivo permitir que as pessoas atravessassem o rio por vias terrestres. Acontece que o requisito para a construção dessa ponte é que ela fosse resistentes a possíveis desastres naturais que aconteciam na região. Após a construção, houve um furacão que devastou a região e a ponte, como proposto, ficou intacta. Acontece que outro fenômeno que acontecia na região e não foi levado em consideração era de que esses desastres naturais poderiam mudar a posição do rio, que de fato ocorreu, ficando a ponte suspensa sob terra e fora do mar, tornando-se totalmente inútil. Isso mostra que os responsáveis pelo projeto não conheciam a totalidade do problema, gerando um resultado final ineficaz e que não resolvendo a questão. Foram necessários novos gastos para arrumar a ponte e permitir que ela cumprisse o seu papel.
+O professor deu o exemplo da ponte Choluteca, construída em Honduras e tinha como objetivo permitir que as pessoas atravessassem o rio de mesmo nome por vias terrestres. Acontece que o requisito para a construção dessa ponte é que ela fosse resistentes a possíveis desastres naturais que aconteciam na região. Após a construção, houve um furacão que devastou a região e a ponte, como proposto, ficou intacta. Acontece que outro fenômeno que acontecia na região e não foi levado em consideração era de que esses desastres naturais poderiam mudar a posição do rio, que de fato ocorreu, ficando a ponte suspensa sob terra e fora do mar, tornando-se totalmente inútil. Isso mostra que os responsáveis pelo projeto não conheciam a totalidade do problema, gerando um resultado final ineficaz e que não resolvendo a questão. Foram necessários novos gastos para arrumar a ponte e permitir que ela cumprisse o seu papel.
 
 Problemas precisam ser **consistentes**, isto é, precisa ser compreendidos pelas pessoas que o analisam e **relevantes**, ou seja, eles merecem ser resolvidos.
 
@@ -170,3 +180,97 @@ Qualquer opinião que diga que um modelo é melhor do que outro parte de um conh
 - Processo adaptativo;
 - Construção de ambiente para receber tanto notícias boas quanto ruins (ta quente/ta frio);
 - Feedbacks são importantes (quanto mais em tempo real melhor) ajudam a definir o caminho que devemos seguir.
+
+## :eight: Abordagem Preditiva x Adaptativa
+
+A Abordagem Preditiva é utilizada quando é possível prever com grau de certeza o que será entregue (escopo), quando (tempo), quanto vai custar (orçamento), pessoas e riscos envolvidos, sendo possível coletar os requisitos no início do projeto.
+
+Esse método também é chamado de Waterfall ou Cascata.
+
+![Abordagem Preditiva](Imagens/Abordagem%20Preditiva.png)
+
+Na abordagem adaptativa, temos inicialmente uma ideia. Criamos suposições sobre essa ideia, como o que o produto deve fazer e armazenamos em um backlog. É selecionado então um item desse backlog e implementado. No final da implementação, os resultados são apresentados para os interessados e esses darão seu feedback se o projeto está indo para o caminho certo ou não e baseado nesse feedback, o plano é ajustado e esse ciclo repetido indefinidamente.
+
+![Abordagem Adaptativa](Imagens/Abordagem%20Adaptativa.png)
+
+## :nine: Cynefin
+
+É um Framework para categorização de problemas que ajuda na tomada de decisões.
+
+![Cynefin](Imagens/Cynefin.png)
+
+### :arrow_right: Claro (Melhores Práticas)
+
+Problemas categorizados como **Claros** são aqueles que já existem uma receita (ou melhores práticas) para resolvê-lo, isto é, entre um universo de diferentes formas de se solucionar uma determinada questão, uma delas se destaca diante das demais.
+
+Um exemplo prático desse modelo é uma fábrica de pães. O dono da padaria sabe a receita para se criar o melhor pão possível. Em uma fábrica de automóveis, a companhia tem o passo a passo para se construir um determinado carro. Em ambos os casos, esse modelo deve ser seguido.
+
+Essa abordagem consiste em **entender** o problema, **categorizá-lo**, isto é, elencar entre as possíveis soluções da melhor a pior, selecionar a mais bem colocada e utilizá-la para resolver o problema.
+
+Para medir o sucesso da resolução do problema podemos utilizar como métricas um padrão e a eficiência, ou seja, se temos uma receita de como atingir determinado objetivo, sabemos o que queremos, logo, conseguimos comparar o resultado final real com o esperado e definir se o objetivo foi batido ou não. Esse tipo de método também prega a eficiência, uma vez que já se sabe o caminho para o resultado e não é necessário perder tempo com elaboração de soluções.
+
+Esse tipo de projeto pode ser aplicado para times grandes (mais de cento e cinquenta pessoas) que possuam forte dependência de uma liderança e pouca entre seus membros, uma vez que já se sabe como solucionar a questão, não sendo necessário brainstorms em equipe para encontrar uma resposta, bastando o líder a orientá-los a cumprir o processo.
+
+### :arrow_right: Complicado (Boas Práticas)
+
+Diferentemente dos problemas categorizados como claros, os **Complicados** são aqueles que não possuem uma única solução eficiente e sim várias, sendo necessário avaliar qual dessas soluções é a mais adequada de acordo com o contexto do problema.
+
+Nesse caso ainda vamos precisar de um líder com forte vínculo de dependência com seus subordinados, porém, esses subordinados deveram ter um forte vínculo também entre sí para conversarem e determinarem qual o melhor caminho a se seguir.
+
+Esses subordinados são conhecidos como **Especialistas** e é tarefa do líder conhecer e selecionar as pessoais para os projetos de acordo com os seus atributos, por isso dizem que esses grupos devem ser formados por no máximo 150 pessoas, que segundo pesquisas, é o número máximo de indivíduos que conseguimos estabelecer uma conexão significativa e ter conhecimento pleno de cada uma delas.
+
+Para medir a qualidade do trabalho não devemos utilizar uma métrica como padrão, pois se os especialistas estiverem apontando sempre a mesma solução para os problemas, é bem possível que ele não esteja fazendo uma análise precisa de como solucionar o problema. Nesse caso devemos medir a qualidade através da assertividade e da eficácia das soluções propostas.
+
+- Por exemplo, não medimos a qualidade de um médico se ele da sempre o mesmo remédio para todos os seus pacientes e que atende muitas pessoas em um curto espaço de tempo. É bem possível que esse médico esteja cometendo equívocos, pois cada caso é um caso e velocidade não é sinônimo de qualidade. O bom médico nesse caso é aquele que possui maior taxa de assertividade no método adotado para tratar o seu paciente e eficácia no tratamento, isto é, conseguiu curar mais pacientes.
+
+### :arrow_right: Complexo (Práticas Emergem)
+
+Tanto os claros quanto os complicados são problemas do passado, conforme pensado por Descartes, onde já se conhece o problema e as soluções viáveis para resolvê-lo, podendo ser feito um planejamento prévio anterior a aplicação prática.
+
+"*Penso logo existo*"
+
+Ao contrário das duas categorias anteriores que olham para o passado, os problemas complexos olham para o presente e é onde os métodos ágeis e o DCAP se encaixa.
+
+Nesse caso, não sabemos com exatidão como resolver um determinado problema, portanto, damos pequenos passos (lembre do ta quente/ta frio) e **sondamos**, isto é, seguimos por um caminho que acreditamos que seja o correto. Após a aplicação, procuramos **entender** o que foi feito e seus resultados para sabermos se estamos no caminho certo e **respondemos** a essa análise, ou seja, ajustamos a rota para o próximo passo.
+
+Nesse tipo de projeto, medimos a qualidade do trabalho de acordo com o aprendizado da equipe, portanto, devemos criar ambientes que permitam erros para encorajar os membros da equipe a se arriscarem, que forneçam feedbacks constantes e valorizem o aprendizado ao longo do tempo. Se tentarmos medir a qualidade do trabalho através da assertividade e eficácia, podemos acabar desencorajando os membros da equipe de errar.
+
+Nesse modelo não devemos ter membros da equipe com forte dependência de um líder, porém, esses devem ter forte envolvimento entre sí para fazerem o trabalho sem ter um chefe que diga o que deva ser feito. O líder deve ser alguém que encoraja seus comandados.
+
+"*Transformar algo que está errado em algo que está certo.*"
+
+"*Transformar veneno em remédio.*"
+
+"*Parar de namorar com a inovação e casar com ela.*"
+
+O professor deu exemplo do homem que descobriu um método para extração do Grafeno a partir de experimentações despretensiosas encorajadas pelo laboratório onde ele trabalhava, como fazer uma rã voar utilizando semicondutores.
+
+A quantidade máxima de pessoas que podem trabalhar em uma equipe dessa são 15, que segundo pesquisas é o número máximo de pessoas que conseguimos ter confiança a ponto de aceitar "pequenas traições". No caso de um projeto, essas pequenas traições seriam erros cometidos ao longo dos ciclos e nossas equipes devem ser capazes de entenderem que o erro de seus parceiros assim como os seus fazem parte do projeto e que não devemos perder a confiança.
+
+"*Estabelecer a cultura da confiança.*"
+
+### :arrow_right: Caos (Práticas Inéditas)
+
+"*Todos os cogumelos são comestíveis, porém alguns apenas uma vez.*"
+
+Tudo acontece como se fosse a primeira vez e é preciso **agir** rapidamente e só depois tentar **entender** o que está acontecendo. Ao final desse estágio, você se encontrará em um dos demais mas nem sempre bem.
+
+Nesses casos a métrica para analisar a qualidade do trabalho são a quantidade de danos sanados pela equipe e nesse caso devemos trabalhar em equipes pequenas de no máximo cinco pessoas.
+
+Uma forma muito comum de cair no caos é quando temos um problema claro que é resolvido através de um processo e por algum motivo as pessoas deixam de seguir essa melhor prática ocasionando em um grande problema onde depois as pessoas não sabem o que fazer e como agir, gerando estresse.
+
+"*Pode subir em produção sem testar, confia.*"
+
+"*Pode apagar essa coluna da tabela, ninguém utiliza, relaxa.*"
+
+"*'Confia' é a palavra que precede a morte.*"
+
+"*Resolva do jeito que der.*"
+
+### :arrow_right: Confuso
+
+Não sabemos em qual das categorias o problema se encaixa ou achamos que ele se encaixa em mais de um. Nesse caso, vale a pena quebrar o problema em partes menores.
+
+Quando mais para a esquerda no gráfico do Cynefin, o empirismo vai sendo deixado de lado (já sabemos como resolver o problema) assim como quando mais para cima, menos determinístico ele se torna (sabemos como resolver, mas temos mais de uma possibilidade de solução). No caso da categoria dos problemas confusos, nesse caso não existe projeto e as pessoas estão apenas preocupadas em resolver o problema, seja lá como.
+
+![Cynefin - Empírico x Determinístico x Sobrevivência](Imagens/Cynefin%20-%20Empírico%20x%20Determinístico%20x%20Sobrevivência.png)
