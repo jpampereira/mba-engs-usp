@@ -97,16 +97,6 @@ Os quatro valores do Manifesto Ágil:
 
 4. **Responder a mudanças mais do que seguir um plano:** Há plano, porém, se precisarmos mudar, mudamos e depois adaptamos o plano.
 
-Os três pilares do Scrum:
-
-1. **Transparência:** Todas as informações devem estar disponíveis e acessíveis a todos os membros da equipe, promovendo a confiança e colaboração, e permitindo que todos no projeto tenham compreensão clara do que está acontecendo, podendo tomar posições embasadas e alinhadas com os objetivos do projeto.
-
-2. **Inspeção:** Realizar avaliação contínua do trabalho através de uma abordagem iterativa e incremental para encontrar pontos de melhoria no produto. É importante que a equipe esteja aberta a feedbacks e pronta para realizar ajustes e correções necessárias para melhorar o produto. Isso permite uma análise criteriosa do progresso do projeto, garantindo a qualidade e entrega de valor.
-
-3. **Adaptação:** O ambiente onde os projetos são desenvolvidos são dinâmicos e incertos, sendo a adaptação fundamental para responder as mudanças que ocorrem ao longo do tempo. Os feedbacks e aprendizados obtidos durante a etapa de inspeção permite a equipe realizar ajustes e mudanças tanto no produto quanto no processo de trabalho.
-
-Os três pilares estão interligados e se fortalecem mutuamente. A transparência é necessária para que a inspeção possa ser realizada de forma efetiva e a inspeção alimenta a adaptação com informações relevantes para a tomada de decisão.
-
 ## :six: Primeiro de Tudo: Entender o Problema
 
 "*Se não houver problema, não há solução e não há razão para existir uma empresa*" - Vinod Khosla
@@ -159,9 +149,13 @@ Temos duas linhas de pensamento sobre a obtenção do conhecimento defendidas po
 
 Se o problema já é de conhecimento e as soluções existente para ele ainda são válidas, chamamos esse de um problema **conhecido**. Se o problema é novo ou já teve uma solução no passado mas que não serve mais, esses são problemas **conhecíveis**. Por fim, aqueles problema inimagináveis e que ainda não temos conhecimento, são os **incognoscíveis**.
 
-Um exemplo de problema conhecido é quando temos dois pontos em um plano bidimensional e precisamos conectá-los. Até os dias atuais, comprovado através da matemática, a melhor forma de solucionar esse problema é conectando os dois pontos através de uma reta. Nesse caso, utilizamos de um conhecimento do passado para resolver um problema que hoje já possui solução. Para esses tipos de problemas podemos utilizar de **processos preditivos** (PDCA - *Plan, Do, Check, Act*).
+Um exemplo de problema conhecido é quando temos dois pontos em um plano bidimensional e precisamos conectá-los. Até os dias atuais, comprovado através da matemática, a melhor forma de solucionar esse problema é conectando os dois pontos através de uma reta. Nesse caso, utilizamos de um conhecimento do passado para resolver um problema que hoje já possui solução. Para esses tipos de problemas podemos utilizar de **processos preditivos**.
 
-Um exemplo de problema conhecível, por sua vez, é o jogo do "ta quente/ta frio", que consiste de uma pessoa esconder um objeto e outra ter que encontrá-lo, mas para receber dicas da pessoa que escondeu, deve perguntar se está quente (isto é, está perto do objeto) ou está frio (está longe do objeto). Nesse problema, é impossível você se planejar antes de encontrar o objeto, é necessário dar pequenos passos, interpretá-los e a partir dos resultados obtidos definir o próximo passo. Por exemplo, se dou um passo para a esquerda e a pessoa diz que ta frio e dou um pra trás e a pessoa disse que está mais frio ainda, eu já sei que não devo andar nessas duas direções de agora em diante. Da mesma forma que não adianta eu dar grandes passos, pois posso depois ficar tão longe de onde o objeto está, que vou precisar implicar mais esforço (nesse caso, dar mais passos), para atingir o meu objetivo. A esse modelo de resolução de problemas chamamos de **processos adaptativos** (DCAP - *Do, Check, Act, Plan*) e é nesse tipo de processo que os modelos ágeis se baseiam.
+- Essas abordagens de resolução de problemas onde já se sabe como solucioná-los se baseia no Paradigma PDCA (*Plan, Do, Check, Act*), onde é possível fazer todo o planejamento anterior a execução.
+
+Um exemplo de problema conhecível, por sua vez, é o jogo do "ta quente/ta frio", que consiste de uma pessoa esconder um objeto e outra ter que encontrá-lo, mas para receber dicas da pessoa que escondeu, deve perguntar se está quente (isto é, está perto do objeto) ou está frio (está longe do objeto). Nesse problema, é impossível você se planejar antes de encontrar o objeto, é necessário dar pequenos passos, interpretá-los e a partir dos resultados obtidos definir o próximo passo. Por exemplo, se dou um passo para a esquerda e a pessoa diz que ta frio e dou um pra trás e a pessoa disse que está mais frio ainda, eu já sei que não devo andar nessas duas direções de agora em diante. Da mesma forma que não adianta eu dar grandes passos, pois posso depois ficar tão longe de onde o objeto está, que vou precisar implicar mais esforço (nesse caso, dar mais passos), para atingir o meu objetivo. A esse modelo de resolução de problemas chamamos de **processos adaptativos** e é nesse tipo de processo que os modelos ágeis se baseiam.
+
+- Essas abordagens de resolução de problemas onde ainda não se sabe como o problema será solucionado se baseia no Paradigma DCAP (*Do, Check, Act, Plan*), onde o plano é resultado de experimentos impíricos anteriores.
 
 - Esses pequenos passos que damos a cada rodada da partida damos o nome de sprint e ao final de cada uma delas, conseguimos alterar o nosso plano (no exemplo do jogo, alterar a direção), para atingir nosso objetivo;
 
@@ -255,7 +249,7 @@ A quantidade máxima de pessoas que podem trabalhar em uma equipe dessa são 15,
 
 Tudo acontece como se fosse a primeira vez e é preciso **agir** rapidamente e só depois tentar **entender** o que está acontecendo. Ao final desse estágio, você se encontrará em um dos demais mas nem sempre bem.
 
-Nesses casos a métrica para analisar a qualidade do trabalho são a quantidade de danos sanados pela equipe e nesse caso devemos trabalhar em equipes pequenas de no máximo cinco pessoas.
+Nesses casos a métrica para analisar a qualidade do trabalho são a quantidade de danos evitados pela equipe e nesse caso devemos trabalhar em equipes pequenas de no máximo cinco pessoas.
 
 Uma forma muito comum de cair no caos é quando temos um problema claro que é resolvido através de um processo e por algum motivo as pessoas deixam de seguir essa melhor prática ocasionando em um grande problema onde depois as pessoas não sabem o que fazer e como agir, gerando estresse.
 

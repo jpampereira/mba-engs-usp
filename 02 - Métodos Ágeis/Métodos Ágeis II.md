@@ -1,0 +1,142 @@
+# Métodos Ágeis II
+
+## :one: Planning Onion
+
+O Planning Onion, ou PO é utilizado para representar os diferentes níveis de planejamento que deve-se realizar em projetos de software.
+
+Esse nome se deve a analogia feita com uma cebola (*Onion*, em inglês), onde cada camada da mesma representa uma etapa do projeto e quanto mais interna a camada mais detalhado deve estar o projeto.
+
+![Planning Onion](Imagens/Planning%20Onion.png)
+
+Vamos entender cada um desses passos:
+
+- **Visão:** Preferencialmente deve ser elaborada antes do início do projeto e deve abordar os problemas principais que o produto deseja resolver. É uma boa prática que essa visão seja apresentada pelo dono do produto ao time Scrum e que a partir dela serão gerados os insumos necessários para criar e manter o backlog do mesmo.
+
+  - Uma forma de construir a visão de um produto é utilizando a técnica de **Elevator Pitch**:
+
+    ![Elevator Pitch](Imagens/Elevator%20Pitch.png)
+
+  - Um Pitch é uma apresentação curta e direta sobre um produto ou uma empresa que tem como objetivo despertar a atenção de um investidor, parceiro ou cliente pelo negócio.
+
+- **Roadmap:** A ideia dessa etapa é criar uma representação visual da estratégia relacionada ao projeto. Entre as informações fornecidas por essa etapa podem estar o orçamento do projeto, a data de entrega ou os períodos de lançamentos, os nomes das versões, a meta para cada uma dessas versões, quais os requisitos que devem ser satisfeitos e como medir se as metas foram atingidas ou não.
+
+  ![Roadmap](Imagens/Roadmap.png)
+
+- **Release:** Representa o resultado final de um backlog de estórias priorizadas que geraram algum valor, isto é, uma parte utilizável do produto, sendo possível avaliar se ele está indo para o caminho certo (ta quente/ta frio).
+
+- **Sprint:** Conjunto de estórias que pretende-se entregar ao cliente no final de cada iteração. Essas estórias são priorizadas pelo Gerente de Projeto de acordo com o valor que elas possuem em relação a visão do projeto. Esses itens são compartilhados com a equipe que se responsabiliza por implementá-las.
+
+- **Backlog:** Criado a partir da visão do produto. É uma lista ordenada de tudo aquilo que é necessário para criar o produto (caso esteja fora desta lista, não será feito), como requisitos de negócio, não funcionais, melhorias, correções, testes de arquitetura, etc. Esses itens devem ser constituídos e priorizados pelo Product Owner.
+
+  ![Backlog](Imagens/Backlog.png)
+
+  - Devemos ter a noção de que um backlog nunca está totalmente completo, estando em constante evolução e itens sendo adicionados e removidos da lista ao longo do projeto quando as necessidades surgem;
+  - Antes de cada sprint o Product Owner faz a repriorização do backlog, uma vez que os objetivos podem se alterar ao longo do tempo;
+  - O backlog deve ser constantemente refinado, afim de prover mais detalhes sobre determinado requisito, à medida que esses detalhes estiverem disponíveis;
+  - O backlog deve ser **D.E.E.P**: **D**etalhado no nível certo, **E**stimado adequadamente, **E**mergente (ou seja, evolui com o tempo) e **P**riorizado.
+
+  ![Exemplo de Backlog](Imagens/Exemplo%20de%20Backlog%20do%20Produto.png)
+
+  - Uma técnica para fazer a priorização de demandas é o **MoSCoW**, isto é, classifica as demandas como *Must have* (devem ser feitas), *Should have* (deveriam ser feitas), *Could have* (poderiam ser feitas) e *Won't have* (não devem ser feitas - pelo menos por enquanto) e os itens entregáveis devem ser implementados nessa ordem, que pode ser revista no planejamento de cada sprint;
+  - "*Se tudo é importante, nada é importante*".
+
+## :two: Scrum
+
+"*Não é sobre finanças. Não é estratégia. Não é tecnologia. É o trabalho em equipe que continua sendo a maior vantagem competitiva, tanto porque é tão poderoso quanto raro.*" - Patrick Lencioni
+
+Scrum é um framework e não um método, pois ele não diz o que fazer, quando ou como e sim apresenta princípios que ajudam pessoas, times e organizações a gerar valor por meio de soluções adaptativas para problemas complexos.
+
+O Scrum é propositalmente incompleto, pois ele define apenas as partes necessárias para que funcione, podendo ser incrementado de acordo com as necessidade de cada ambiente (desde que não acabe ferindo um dos seus princípios).
+
+O Scrum é baseado no empirismo e no Lean Thinking. O empirismo afirma que o conhecimento vem da experimentação e da tomada de decisão baseado nos resultado obtidos, enquanto o Lean Thinking procura reduzir o desperdício e concentrar no essencial.
+
+Além disso, ele emprega uma abordagem iterativa e incremental para otimizar a imprevisibilidade e controlar riscos.
+
+Seus grupos devem ser formados por pessoas que possuem as habilidades e conhecimentos necessários para se realizar o trabalho e ou compartilhá-las quando necessário.
+
+### :arrow_right: Pilares do Scrum
+
+O Scrum combina quatro eventos formais dentro de uma sprint que satisfazem os seus pilares:
+
+1. **Transparência:** Todas as informações devem estar disponíveis e acessíveis a todos os membros da equipe, promovendo a confiança e colaboração, e permitindo que todos no projeto tenham compreensão clara do que está acontecendo, podendo tomar posições embasadas e alinhadas com os objetivos do projeto.
+
+2. **Inspeção:** Realizar avaliação contínua do trabalho através de uma abordagem iterativa e incremental para encontrar pontos de melhoria no produto. É importante que a equipe esteja aberta a feedbacks e pronta para realizar ajustes e correções necessárias para melhorar o produto. Isso permite uma análise criteriosa do progresso do projeto, garantindo a qualidade e entrega de valor.
+
+3. **Adaptação:** O ambiente onde os projetos são desenvolvidos são dinâmicos e incertos, sendo a adaptação fundamental para responder as mudanças que ocorrem ao longo do tempo. Os feedbacks e aprendizados obtidos durante a etapa de inspeção permite a equipe realizar ajustes e mudanças tanto no produto quanto no processo de trabalho.
+
+Os três pilares estão interligados e se fortalecem mutuamente. A transparência é necessária para que a inspeção possa ser realizada de forma efetiva e a inspeção alimenta a adaptação com informações relevantes para a tomada de decisão.
+
+### :arrow_right: Os Valores do Scrum
+
+1. **Coragem:** O Time Scrum precisa ter coragem para fazer a coisa certa e trabalhar em problemas difíceis. Como já falado anteriormente, é necessário que seja criado um ambiente que permita o erro e premie o aprendizado.
+
+2. **Foco:** Todos focam no trabalho da Sprint e nos objetivos do Time Scrum, evitando disperdícios e ruídos externos.
+
+3. **Comprometimento:** As pessoas se comprometem pessoalmente em alcançar os objetivos do Time Scrum e suportar uns aos outros.
+
+4. **Respeito:** Os membros do Time Scrum respeitam uns aos outros para serem pessoas capazes e independentes.
+
+5. **Abertura:** O Time Scrum e seus Stakeholders concordam em estarem abertos a todo o trabalho e aos desafios com a execução dos trabalhos.
+
+### :arrow_right: Papéis
+
+Unidade fundamental do Scrum, composto por um Scrum Master, um Product Owner e os Developers, não havendo sub-times ou hierarquias.
+
+Os Scrum Teams são multifuncionais, isto é, todos os membros possuem todas as habilidades necessárias para criar valor a cada Sprint, além de autogerenciáveis, que significa que eles decidem internamente quem faz o quê, quando e como.
+
+Os Scrum Teams devem ser pequenos o suficiente para permanecer ágil e facilitar a comunicação e grande o suficiente para conseguirem concluir um trabalho significativo dentro de uma Sprint. Normalmente são compostos por dez pessoas ou menos.
+
+1. **Product Owner (Foco nas prioridades para o negócio, adição de valor):** Representa os interesses dos clientes, assegura que as entregas adicionem valor e que o backlog esteja sempre priorizado, atualizado e que reflita aquilo que é mais importante para os usuários, clientes e para a empresa.
+
+2. **Scrum Master (Foco nos processos e no desenvolvimento das pessoas):** É o líder de uma equipe autogerenciável e tem o papel de um mentor, que remove impedimentos e desenvolve constantemente as pessoas. Caminha com a equipe num constante processo que busca identificar o que não está funcionando e o que deve ser mudado. Ele é responsável por fazer com que o Scrum seja seguido conforme o Guia Scrum.
+
+3. **Developers (Foco nas entregas, valor adicionado e em uso):** Time auto-organizado, autogerenciável, empoderado e independente. Possuem autoridade para tomar decisões, assumir riscos e responsabilidades. É uma equipe multidisciplinar e com profundos conhecimentos sobre a sua área de atuação
+
+### :arrow_right: Eventos e Artefatos
+
+Uma Sprint é um contêiner que armazena todos os outros eventos do Scrum e deve durar 30 dias ou menos.
+
+Cada evento no Scrum é uma oportunidade formal para inspecionar e adaptar os artefatos do Scrum, fortalecendo os três pilares já apresentados e permitindo previsibilidade.
+
+Esses eventos são usados para criar regularidade e minimizar a necessidade de reuniões além das já programas no Scrum.
+
+O ideal é que todos esses eventos sejam realizados no mesmo horário e local para reduzir complexidade e evitar que algum membro do time não compareça.
+
+Quando o tempo da Sprint é muito longo, a meta dela pode se tornar inválida, e a complexidade e o risco podem aumentar. Sprints mais curtas permitem mais ciclos de aprendizagem e limitam os riscos de custo e esforço. Cada Sprint pode ser considerada um projeto curto.
+
+Na imagem abaixo temos uma representação visual dos eventos e artefatos que compõe uma Sprint no Scrum:
+
+![Eventos e Artefatos do Scrum](Imagens/Eventos%20e%20Artefatos%20do%20Scrum.png)
+
+- Uma Sprint se inicia após o fim da anterior;
+
+- Antes do início da Sprint já possuímos o primeiro artefato do Scrum que é o **Product Backlog** que nada mais é do que as estórias que compõe a visão/meta do produto, organizados do mais importante para o menos.
+
+- No dia 1 da Sprint, deve ser realizada a **Sprint Planning**, onde todos os componentes do Scrum Team devem participar e devem em conjunto definir quais estórias serão tratadas no ciclo atual.
+  - Tem duração máxima de oito horas para Sprint de trinta dias sendo mais curtos para Sprints menores;
+  - É papel do Product Owner garantir que os participantes estejam preparados para discutir os itens mais importantes do Product Backlog;
+  - O Scrum Master pode convidar outras pessoas para participarem afim de adicionarem mais informações referentes aos itens abordados;
+  - A Sprint Planning aborda os seguintes tópicos:
+
+    1. **Por que esta Sprint é valiosa?** O PO propõe como o produto pode aumentar seu valor na sprint atual. Todo o Scrum Team então colabora para definir uma meta na Sprint que comunica o porque ela é valiosa para os Stakeholders;
+    2. **O que pode ser feito nesta Sprint?** Por meio de discussão com o PO, os Developers selecionam itens do Product Backlog para incluir na Sprint que se inicia. O Scrum Team pode refinar esses itens durante essa etapa, isto é, solicitar mais informações, o que aumenta a compreensão e confiança;
+    3. **Como o trabalho escolhido será realizado?** Para cada item selecionado do Product Backlog, os Developers são responsáveis por decompô-los em itens menores e definem o esforço necessário para cada um deles e quem será responsável pelos mesmos.
+
+  - No final da Sprint Planning, teremos gerado o segundo artefato do Scrum que é o **Sprint Backlog**, que é composto pela Meta da Sprint, os itens selecionados do Sprint Backlog e o plano de ação para entregá-los. Ela é feita por e para os Developers.
+
+    ![Sprint Backlog](Imagens/Sprint%20Backlog.png)
+
+- A própria **Sprint** é um evento dentro de sí mesma, onde os Developers incrementam o valor do produto conforme acordado no planejamento. Afim de especionar o progresso da Sprint e adaptar o Sprint Backlog conforme a necessidade, são realizadas as **Daily Scrums**.
+  - Esse evento é diário;
+  - Possui no máximo 15 minutos;
+  - Deve ser realizado sempre no mesmo local e horário para diminuir complexidade;
+  - Deve ser realizado apenas pelos Developers, porém, caso o PO ou SM esteja participando ativamente nos itens da Sprint Backlog, eles também participam como Developers (uma mesma pessoa pode ocupar dois chapéus dentro de um Scrum Team, porém, é importante que ele saiba quando deve adotar cada um deles. No caso da Daily, ele deve incorporar o espírito do Developer);
+  - Os Developers podem utilizar qualquer estrutura ou técnica, desde que o Dayli Scrum se concentre no progresso em direção a Meta da Sprint e produza um plano de ação para o próximo dia de trabalho. Isso cria foco e melhora o autogerenciamento;
+  - Melhora as comunicações, identificam os impedimentos, promovem a rápida tomada de decisões e consequentemente, eliminam a necessidade de outras reuniões;
+  - Porém, a Daily Scrum não é o único horário do dia que os Developers se reúnem para ajustar seu plano, havendo ao longo do dia discussões mais detalhadas.
+
+- A **Sprint Review** é o penúltimo evento da Sprint e tem um prazo máximo de 4 horas para uma Sprint de um mês, sendo menor para Sprints mais curtas. O seu objetivo principal é inspecionar o resultado da Sprint e determinar as adaptações futuras. O Scrum Team apresenta os resultados de seu trabalho para os principais stakeholders e o progresso em direção a Meta do Produto é discutida. Como resultado dessa seção, o Product Backlog pode ser ajustado para atender as necessidades mapeadas durante essa etapa.
+
+- Como última etapa da Sprint, temos a **Sprint Retrospective**, realizada apenas pelos Developers onde eles buscam discutir sobre o trabalho deles durante a Sprint, o que deu certo, o que deu errado e como eles fizeram para solucionar (ou não), o que eles podem melhorar, etc. Ela tem uma duração máxima de três horas para Sprints de 30 dias sendo menor para casos mais curtos. Assim como a Sprint Review, alguns pontos discutidos nessa etapa podem ajudar a refiniar o Product Backlog.
+
+- No final da Sprint temos o último artefato do Scrum que é o **Incremento**, que nada mais é do que o produto final da Sprint. Esse resultado final também pode influenciar no Product Backlog de alguma forma.
