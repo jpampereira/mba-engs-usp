@@ -1,6 +1,38 @@
 # Métodos Ágeis II
 
-## :one: Planning Onion
+## :one: Product Market Fit
+
+Como falado na aula anterior, os problemas possuem três estágios: **Problem Solution Fit**, que é a etapa onde se procurar encontrara a solução para o problema, o **Product Market Fit** que é quando procura-se entender se a solução irá necessitar de alguma mudança de comportamento das pessoas e se o mercado tem interesse no produto e por último **Scale** que é a etapa de entrega do produto, seja para todos ou por uma parcela exclusiva das pessoas.
+
+E apesar de também ter sido dito que não necessariamente todos os problemas vão passar pelos três estágios (por exemplo, existem problemas cujas solução já são conhecidas, não havendo necessidade de investigação ou que não vão necessitar de uma mudança de comportamento do mercado), é importante saber qual a impressão dele para o mercado, caso contrário, se você lança-lo sem realizar esse estudo, pode acabar lançando um produto já morto (ou utilizando um termo mais atual, um *flop*).
+
+- O professor mostra como exemplo a continuação do trecho do filme "Fome de Poder", onde os irmãos McDonald's, após encontrarem a solução para o problema de preparar hamburguers em apenas 30 segundos utilizando giz em uma quadra (Problem Solution Fit), pularam a segunda etapa, isto é, a pesquisa de mercado (Product Market Fit) e indo direto pra etapa de confecção (Scale), entregando o projeto da cozinha na mão de uma empresa. O resultado disso foi que no dia do lançamento foi um desastre, pois a proposta idealizada por eles mudava totalmente a forma como as pessoas naquela época estavam acostumadas a comer sanduíche: dentro de um carro, com uma bandeija e com uma garçonete indo atender eles. As pessoas não entenderam e não compraram a ideia deles de primeira, o que poderia ter sido evitado caso eles tivessem feito um estado do mercado anteriormente.
+
+Frameworks como Scrum e XP são voltado para confecção de novos produtos (até por isso o conjunto de todas as estórias de um produto formam o **Product** Backlog e não o **Solution** Backlog) e não para resolução de problemas. Para a resolução de problemas existem outros métodos também baseados no Ágil como o **Design Sprint**.
+
+"*O ágil vem para transformar simples produtos em produtos que as pessoas queiram.*"
+
+## :two: Difusão da Inovação
+
+Segundo Everett Rogers, a inovação não é uma coisa e sim uma ideia, uma prática ou objeto que é percebido por um indivíduo ou um grupo e que pouco importa se a ideia de fato é nova e sim que ela gere essa percepção nas pessoas.
+
+Você passar pela problem solution fit e fazer algo bom tecnicamente não vai te garantir bons resultados necessariamente. O processo de difusão da inovação passa por uma série de unidades de adoção (ou grupos) até que finalmente seja adotado pela maioria.
+
+![Difusão da Inovação](Imagens/Difusão%20da%20Inovação.png)
+
+- **Inovadores:** São aquelas pessoas que possuem boas ideias mas não tem força pra as difundirem sozinhos;
+- **Primeiros adeptos:** Esses são os chamados visionários, pois olham para o produto pensando no futuro. Para atingir esses grupos é interessante realizar um estudo de redes sociais, para encontrar pessoas que influenciam os nichos/perfis que desejamos atingir;
+- **Maioria Inicial:** Nesse momento é quando há a mudança de chave e quando se atinge essa parcela da população, seu produto começa de fato a se difundir no mercado de forma considerável. Eles querem mudar seu comportamento e precisam da prova social gerada pelos primeiros adeptos;
+- **Maioria Final:** É aquele ditado "Se mais de 50% dos meus amigos forem verdes, eu serei verde". Nós seres humanos somos seres sociáveis e temos a necessidade de imitação e não queremos ficar para trás, por isso vamos adotar esse produto;
+- **Obsoletos:** Parcela que não irá aderir ao produto.
+
+![Difusão da Inovação por Nichos](Imagens/Difusão%20da%20Inovação%20por%20Nichos.png)
+
+Melhor do que atender mais ou menos um monte de gente, selecione um nicho e arrebente com ele e depois vá para o próximo e vá tomando o mercado aos poucos.
+
+**Diferença entre Protótipo x MVP:** Você quer testar se uma solução funciona (Problem Solution Fit) x Você já tem a solução e quer verificar se ela vai ser aceita pelo mercado (Product Market Fit).
+
+## :three: Planning Onion
 
 O Planning Onion, ou PO é utilizado para representar os diferentes níveis de planejamento que deve-se realizar em projetos de software.
 
@@ -22,7 +54,7 @@ Vamos entender cada um desses passos:
 
   ![Roadmap](Imagens/Roadmap.png)
 
-- **Release:** Representa o resultado final de um backlog de estórias priorizadas que geraram algum valor, isto é, uma parte utilizável do produto, sendo possível avaliar se ele está indo para o caminho certo (ta quente/ta frio).
+- **Release:** Representa o resultado final de um backlog de estórias priorizadas que geraram algum valor, isto é, uma parte utilizável do produto, sendo possível avaliar se ele está indo para o caminho certo (ta quente/ta frio). As vezes são necessárias várias sprints antes de gerar uma release.
 
 - **Sprint:** Conjunto de estórias que pretende-se entregar ao cliente no final de cada iteração. Essas estórias são priorizadas pelo Gerente de Projeto de acordo com o valor que elas possuem em relação a visão do projeto. Esses itens são compartilhados com a equipe que se responsabiliza por implementá-las.
 
@@ -40,7 +72,7 @@ Vamos entender cada um desses passos:
   - Uma técnica para fazer a priorização de demandas é o **MoSCoW**, isto é, classifica as demandas como *Must have* (devem ser feitas), *Should have* (deveriam ser feitas), *Could have* (poderiam ser feitas) e *Won't have* (não devem ser feitas - pelo menos por enquanto) e os itens entregáveis devem ser implementados nessa ordem, que pode ser revista no planejamento de cada sprint;
   - "*Se tudo é importante, nada é importante*".
 
-## :two: Scrum
+## :four: Scrum
 
 "*Não é sobre finanças. Não é estratégia. Não é tecnologia. É o trabalho em equipe que continua sendo a maior vantagem competitiva, tanto porque é tão poderoso quanto raro.*" - Patrick Lencioni
 
