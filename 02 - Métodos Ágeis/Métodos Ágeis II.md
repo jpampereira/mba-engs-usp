@@ -172,3 +172,73 @@ Na imagem abaixo temos uma representação visual dos eventos e artefatos que co
 - Como última etapa da Sprint, temos a **Sprint Retrospective**, realizada apenas pelos Developers onde eles buscam discutir sobre o trabalho deles durante a Sprint, o que deu certo, o que deu errado e como eles fizeram para solucionar (ou não), o que eles podem melhorar, etc. Ela tem uma duração máxima de três horas para Sprints de 30 dias sendo menor para casos mais curtos. Assim como a Sprint Review, alguns pontos discutidos nessa etapa podem ajudar a refiniar o Product Backlog.
 
 - No final da Sprint temos o último artefato do Scrum que é o **Incremento**, que nada mais é do que o produto final da Sprint. Esse resultado final também pode influenciar no Product Backlog de alguma forma.
+
+## :five: XP (eXtreme Programming)
+
+O XP é uma metodologia ágil utilizada para o desenvolvimento de softwares.
+
+![O ciclo do XP](Imagens/O%20Ciclo%20do%20XP.png)
+
+As 12 práticas do XP:
+
+- **Práticas de Gestão:**
+  - **Cliente no Local:** Um contato central do cliente deve estar sempre acessível para esclarecer requisitos e perguntas diretamente.
+  - **Jogo de Planejamento:** Projetos são iterativos (repetidos) e incrementais (construídos gradualmente). Os conteúdos da próxima etapa são planejados antes de cada iteração. Todos os membros do projeto (incluindo o cliente) participam.
+  - **Lançamentos Curtos:** Novas entregas devem ser feitas em intervalos curtos. Consequentemente, os clientes recebem as funções necessárias mais rapidamente e podem fornecer feedback sobre o desenvolvimento mais rapidamente.
+
+- **Práticas de Equipe:**
+  - **Metáfora:** Apenas algumas metáforas claras devem descrever o sistema em desenvolvimento, de modo que os detalhes do sistema sejam claros para todos os membros do projeto.
+  - **Propriedade Coletiva:** Toda a equipe é responsável pelo sistema, não indivíduos. Cada desenvolvedor deve ter acesso a todas as linhas de código para que cada um possa assumir a tarefa de outro desenvolvedor.
+  - **Integração Contínua:** Todas as mudanças no sistema são integradas protamente para que não ocorram muitas dependências entre as mudanças.
+  - **Padrões de Codificação:** Considerando a responsabilidade comum pelo código, deve haver um padrão comum estabelecido para a escrita do código.
+  - **Ritmo Sustentável:** O Xp se baseia na criatividade dos membros individuais do projeto. Essa criatividade não pode ser alcançada se a equipe do projeto trabalhar constantemente em horas extras. Horas extras devem ser evitadas.
+
+- **Práticas de Programação:**
+  - **Teste:** Todos os desenvolvimentos devem ser testados.
+  - **Design Simples:** O sistema deve ser projetado da forma mais simples possível para que seja mais fácil de entender, modificar e testar.
+  - **Refatoração:** Assim que se tornar necessário alterar a estrutura do sistema, isso deve ser implementado.
+  - **Programação em Pares:** Sempre há dois desenvolvedores sentados em frente a um computador para aumentar a qualidade e transferir melhor o conhecimento.
+
+Vantagens e desvantagens do uso do XP:
+
+| Vantagens | Desvantagens |
+| :-------: | :----------: |
+| Grandes projetos são divididos em quantidades gerenciáveis. | XP foca mais no código do que no design. |
+| Redução de custos e tempo necessários para a realização do projeto. | XP requer planejamento detalhado desde o início devido a mudanças de custos e escopo. |
+| Economia significativa de dinheiro por usar pouca documentação. | XP não mede/planeja a garantia de qualidade do código. |
+| Simplicidade, buscando sempre o que pode ser evitado. | Convencer os desenvolvedores a aceitar essa práticas difícil nem sempre é fácil. Requer mais disciplina na equipe e dedicação dos clientes. |
+| XP reduz os riscos relacionados à programação, espalhando riscos e diminuindo a dependência de indivíduos-chave. | A gestão de projetos pode ter dificuldades relacionadas às práticas que mudam durante o ciclo de vida. |
+| A simplicidade em software traz qualidade e robustez, resultando em software mais rápido com menos defeitos. | A programação em pares praticada pelo XP pode levar a muita duplicação de código e dados. |
+| Desenvolvimento orientado a testes e validação do cliente levam a um desenvolvimento bem sucedido. ||
+
+## :six: Kanban
+
+Antes de tudo devemos entender que existe o kanban com k minúsculo, o Kanban com k maiúsculo e o Quadro Kanban. Vamos aprender o que cada um deles significa.
+
+A palavra kanban (com k minúsculo) é de origem japonesa e traduzindo para o português significa algo como "placa de sinalização". Esse nome foi utilizado para nomear o sistema de visualização introduzido por Taiichi Ohno, em 1940, no Sistema Toyota de Produção conhecido como *Just in Time* (ou JIT), onde a produção acontecia de acordo com a demanda, evitando desperdícios e grandes lotes de produtos prontos armazenados sem serem vendidos. O sistema kanban consistia em um quadro onde era possível visualizar o estado atual do processo de fabricação. Ele foi baseado num sistema visual de abastecimento de um supermercado: conforme os produtos vão sendo vendidos (consumidos), os espaços vazios vão sendo reabastecidos.
+
+O Kanban (com k maiúsculo) por sua vez, é um método criado por David Anderson, em 2002, que adapta o kanban que surgiu na Toyota. Ele é um conjunto de princípios e práticas que tem o objetivo de proporcionar uma evolução na forma que sua equipe (ou empresa) entrega valor nos serviços prestados.
+
+![Princípios e Práticas do Kanban](Imagens/Princípios%20e%20Práticas%20do%20Kanban.png)
+
+"*Tarefas são puxadas por quem irá executá-las e não empurradas para eles.*"
+
+"*Pare de começar e comece a terminar.*"
+
+"*Muita iniciativa e pouca finalização.*"
+
+Como utilizar o Kanban:
+
+1. Iniciamos o Kanban com uma lista ou backlog de itens a serem implementados;
+2. Adicionamos as etapas do processo, como por exemplo, "A fazer", "Análise", "Execução", "Conclusão" e "Feito" em cada uma das colunas. Claro que esse exemplo é bem simplório e as etapas devem refletir a realidade de cada projeto e empresa e podem ser refinado com o tempo;
+3. Adicionamos filas as etapas intermediárias. Como saberemos se podemos puxar um cartão para a próxima etapa? Ele está em "Análise", mas como vamos saber se ela está no início ou já foi finalizada?
+4. Delimitamos a quantidade de itens que cada etapa pode conter, conhecido como WIP Limits (*Work In Progress Limits*). Isso evita a frase "Muito iniciativa e pouca finalização", pois as pessoas vão ser obrigados a finalizar um item para conseguir puxar outro;
+5. É possível ainda determinar uma raia apenas com itens urgentes e eles terão prioridade sobre os demais. Caso seja possível puxar um item para a próxima etapa e tenha um classificado como urgente, esse deve ser puxado independentemente do que houver no restante da lista de tarefas pendentes.
+
+Na imagem abaixo temos um exemplo de como é um quadro Kanban, que torna visual os princípios do método Kanban. Existem diversas ferramentas:
+
+![Quadro Kanban](Imagens/Quadro%20Kanban.png)
+
+Essa representação gráfica permite identificarmos rapidamente em qual etapa o nosso processo está sofrendo um gargalo e propor melhorias.
+
+O Scrum casou muito bem com o Kanban pois ele atende aos seus três pilares: transparência, inspeção e adaptação, sendo o conjunto deles apelidade de **Scrumban**.
