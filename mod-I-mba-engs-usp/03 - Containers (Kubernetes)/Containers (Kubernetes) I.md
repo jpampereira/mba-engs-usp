@@ -20,7 +20,9 @@ O problema é que subir aplicações diretamente no sistema operacional da máqu
 
 É nesse momento que entra o **Docker**, uma plataforma Open Source de virtualização de containers que simplifica o desenvolvimento, implantação e execução de aplicativos, proporcionando ambientes isolados e consistentes para suas operações. Foi escrita em linguagem Go, por Solomon Hykes e lançada em março de 2013, sendo uma tecnología disruptiva no mercado.
 
-- Existem outras alternativas de containerização de aplicações no mercado, sendo o Docker a líder de mercado nesse seguimento.
+- Existem outras alternativas de containerização de aplicações no mercado, como o Podman, porém o Docker segue como líder de mercado nesse seguimento.
+
+O Docker é uma ótima opção quando falamos da etapa de desenvolvimento de software, isto é, na parte de codificação e testes. Porém, quando estamos falando de ambientes de produção, ele se torna um pouco limitado devido a sua limitação para orquestração de grandes quantidades de instâncias. Nesse caso vamos utilizar outra ferramenta também muito conceituada no mercado que é o Kubernetes, que será visto na segunda aula.
 
 ## :two: Virtual Machine (VM) x Container (Docker)
 
@@ -77,3 +79,25 @@ Existem três comandos iniciais que podem ser considerados os principais para o 
 3. Por fim, já com a imagem em mãos, seja ela criada através de um Dockerfile ou importada de um registro remoto, utilizamos o comando `docker run` para realizar a criação do container, fazendo com que nossa aplicação comece a funcionar.
 
     ![Docker Run](Imagens/Docker%20Run.png)
+
+## :five: Docker via VS Code
+
+Os comando para manipulação de containers e imagens via CLI encontram-se no arquivo [README.md](./scripts-docker/README.md) no diretório [scripts-docker](./scripts-docker/). O que vamos ver aqui é uma das opções gráficas para realizar as mesmas tarefas que é através de uma **extensão** do **Visual Studio Code**.
+
+- Outra opção é utilizar o **Docker Desktop**.
+
+Por padrão essa extensão não vem instalada na ferramenta, sendo necessário acessar a aba de **extensões** e no campo de busca digitar `docker`. Entre as respostas, provavelmente a primeira será a extensão oficial (possui um selo de verificada):
+
+![Extensão Docker no VS Code - Parte 1](Imagens/Extensão%20Docker%20no%20VS%20Code%20-%20Parte%201.png)
+
+Após a instalação, vamos verificar que na barra de ferramentas à esquerda da tela o ícone do Docker foi adicionado. No que clicamos nele, será aberto um menu que nos permite manipular diferentes tipos de objetos Docker, como **containers**, **imagens**, **redes** e **volumes**:
+
+![Extensão Docker no VS Code - Parte 2](Imagens/Extensão%20Docker%20no%20VS%20Code%20-%20Parte%202.png)
+
+No que iniciamos um container, é possível visualizá-lo através da interface gráfica. Se clicarmos com o botão direito do mouse em cima dele, vamos observar todas as ações que podemos executar em cima dos mesmos:
+
+![Extensão Docker no VS Code - Parte 3](Imagens/Extensão%20Docker%20no%20VS%20Code%20-%20Parte%203.png)
+
+Quando um container está ativo, ele aparece na interface gráfica com um ícone em verde à sua esquerda. Quando ele encontra-se parado, o ícone que aparece é em vermelho:
+
+![Extensão Docker no VS Code - Parte 4](Imagens/Extensão%20Docker%20no%20VS%20Code%20-%20Parte%204.png)
