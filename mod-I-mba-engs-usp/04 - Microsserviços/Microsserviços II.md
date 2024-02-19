@@ -134,7 +134,7 @@ Podemos separar esse processo em três etapas:
 | Permite adicionar novos serviços enquanto atualiza os antigos | Se a camada de proxy ou fachada (façade) não for projetada adequadamente, pode se tornar um ponto único de falha ou gargalo de desempenho |
 | Pode ser utilizado para controle de versão de APIs | Requer um plano de reversão do serviço refatorado para a versão antiga caso algo dê errado, de forma segura e rápida |
 
-No artigo [How to break a Monolith into Microservices](https://martinfowler.com/articles/break-monolith-into-microservices.html), Martin Fowler explica como realizar essa migração. 
+No artigo [How to break a Monolith into Microservices](https://martinfowler.com/articles/break-monolith-into-microservices.html), Martin Fowler explica como realizar essa migração.
 
 ### :arrow_right: Padrão de Integração: API Gateway
 
@@ -174,6 +174,84 @@ Nas imagens abaixo temos duas propostas de implementação desse caso de uso uti
 ![Padrões de Projeto para Microsserviços - API Gateway - Parte 1](Imagens/Padrões%20de%20Projeto%20para%20Microsserviços%20-%20API%20Gateway%20-%20Parte%201.png)
 
 ![Padrões de Projeto para Microsserviços - API Gateway - Parte 2](Imagens/Padrões%20de%20Projeto%20para%20Microsserviços%20-%20API%20Gateway%20-%20Parte%202.png)
+
+### :arrow_right: Padrão de Banco de Dados: CQRS
+
+O padrão de Segregação de Responsabilidade de Consulta de Comando (CQRS - *Command Query Responsability Segregation*) divide um aplicativo em duas partes: o lado que trata comandos DML (*Data Manipulation Language*), como `INSERT`, `UPDATE` e `DELETE` e outro que trata comandos DQL (*Data Query Language*), que são comandos de consulta, ou mais precisamente, o `SELECT`.
+
+Esse padrão é ideal quando há diferentes requisitos de taxa de throughput, latência ou consistência para cada um desses tipos de comandos. Por exemplo, se há uma demanda muito maior por comandos de se comparado a comandos de manipulação ou se é necessário que a latência da seleção seja bem menor, esse modelo se torna ideal.
+
+Na imagem abaixo temos um exemplo de funcionamento desse padrão: o usuário interaje com as **Write APIs** quando desejam realizar comandos de manipulação. É comum que nessa API hajam algumas verificações como autenticação e autorização antes da execução dos comandos. Após a persistência das alterações, os dados então gravados na **Write database** são sincronizados com o **Read database** através de um evento. A partir de então, esses dados podem ser acessados pelos usuários através das **Read APIs**.
+
+![Padrões de Projeto para Microsserviços - CQRS](Imagens/Padrões%20de%20Projeto%20para%20Microsserviços%20-%20CQRS.png)
+
+### :arrow_right: Padrão de Banco de Dados: SAGA
+
+O padrão saga é utilizado para gerenciamento de falhas que ajuda a estabelecer a consistência em aplicativos distribuídos e coordena as transações entre vários microsserviços para manter a consistência de dados.
+
+Um microsserviço publica um evento para cada transação e a próxima transação é iniciada com base no resultado do evento. Ele pode seguir dois caminhos diferentes, dependendo do êxito (*Happy path*) ou da falha das transações.
+
+Na imagem abaixo podemos ver a aplicação desse padrão, onde cada etapa, como por exemplo, **ProcessPayment** tem um caminho em caso de sucesso (**UpdateCustomerAccount**) e outro em caso de erro (**SetOrderFailed**).
+
+![Padrões de Projeto para Microsserviços - SAGA](Imagens/Padrões%20de%20Projeto%20para%20Microsserviços%20-%20SAGA.png)
+
+Analogia com uma saga, onde o protagonista passa por desafios ao longo da sua jornada. Aqui, os dados atravessam diversas etapas antes de chegar no seu objetivo final.
+
+### :arrow_right: Padrão de Preocupações Transversais: Circuit Breaker (Disjuntor)
+
+Esse padrão ajuda a evitar a ocorrência de falhas em cascata, quando microsserviços estiverem indisponíveis ou com alta latência. O padrão pode impedir que um microsserviço repita uma chamada para outro quando a mesma já causou interrupções ou falhas repetidas.
+
+Por isso a analogia com um disjuntor: no contexto de um circuito elétrico de uma casa, caso seja identificada alguma anomalia na rede, o disjuntor abre o circuito em um determinado ponto para evitar que ele ou até mesmo eletrodomésticos e eletrônicos sejam danificados e para evitar acidentes.
+
+O padrão também é usado para detectar quando o serviço de chamada está funcionando novamente.
+
+Seja o exemplo abaixo onde temos dois microsserviços: "Order" e "Payment".
+
+Quando não há falhas o serviço de pedidos encaminha todas as requisições para o serviço de pagamentos pelo Circuit Breaker:
+
+![Padrões de Projeto para Microsserviços - Circuit Breaker - Parte 1](Imagens/Padrões%20de%20Projeto%20para%20Microsserviços%20-%20Circuit%20Breaker%20-%20Parte%201.png)
+
+Se o serviço de pagamentos atingir o tempo limite, o disjuntor poderá detectar e rastrear a falha:
+
+![Padrões de Projeto para Microsserviços - Circuit Breaker - Parte 2](Imagens/Padrões%20de%20Projeto%20para%20Microsserviços%20-%20Circuit%20Breaker%20-%20Parte%202.png)
+
+Se o tempo limite for identificado, o disjuntor irá abrir o circuito e começará a não passar mais as requisições para o microsserviço de pagamentos automaticamente devolverá as requisições do serviço de pedidos com uma mensagem de erro:
+
+![Padrões de Projeto para Microsserviços - Circuit Breaker - Parte 3](Imagens/Padrões%20de%20Projeto%20para%20Microsserviços%20-%20Circuit%20Breaker%20-%20Parte%203.png)
+
+O disjuntor de tempos em tempos irá verificar periodicamente se o serviço de pagamentos está funcionando corretamente:
+
+![Padrões de Projeto para Microsserviços - Circuit Breaker - Parte 4](Imagens/Padrões%20de%20Projeto%20para%20Microsserviços%20-%20Circuit%20Breaker%20-%20Parte%204.png)
+
+Caso tenha sucesso, o circuito é novamente fechado e as chamadas passam a ser encaminhas novamente:
+
+![Padrões de Projeto para Microsserviços - Circuit Breaker - Parte 5](Imagens/Padrões%20de%20Projeto%20para%20Microsserviços%20-%20Circuit%20Breaker%20-%20Parte%205.png)
+
+### :arrow_right: Identificando limites de microsserviços
+
+Qual o tamanho de um microsserviço?
+
+Tomar cuidado para não criar um microsserviço monolítico.
+
+Como definir o microsserviço?
+
+- Cada serviço tem uma única responsabilidade;
+
+- Se há conversa excessiva entre dois microsserviços, talvez eles devessem ser um só;
+
+- Cada microsserviço deve ser pequeno o suficiente para ser criado e mantido por uma equipe pequena que trabalha de forma independente;
+
+- Microsserviços não devem ter interdependência que necessite de sincronismo;
+
+- Não devem ser acoplados de forma firme e podem evoluir de forma independente;
+
+- Os serviços não devem criar problemas de consistência ou integridade dos dados. As vezes é importante manter a consistência dos dados colocando a funcionalidade em um único microsserviço.
+
+### :arrow_right: Etapas para Construção de uma Aplicação Baseada em Microsserviços
+
+![Etapas para Construção de uma Aplicação Baseada em Microsserviços - Parte 1](Imagens/Etapas%20para%20Construção%20de%20uma%20Aplicação%20baseada%20em%20Microsserviços%20-%20Parte%201.png)
+
+![Etapas para Construção de uma Aplicação Baseada em Microsserviços - Parte 2](Imagens/Etapas%20para%20Construção%20de%20uma%20Aplicação%20baseada%20em%20Microsserviços%20-%20Parte%202.png)
 
 ## :four: Métodos Ágeis / DevOps
 
