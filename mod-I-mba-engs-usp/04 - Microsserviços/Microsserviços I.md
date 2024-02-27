@@ -23,6 +23,7 @@ Trabalha bastante com REST APIs.
 A arquitetura de microsserviços acaba combinando diversos outros conceitos, tecnologías e padrões que são intrínsecos ao modelo:
 
 - Desenvolvimento de Software Ágil;
+- DevOps;
 - Arquiteturas Orientadas à Serviço (SOA);
 - APIs;
 - CI/CD;

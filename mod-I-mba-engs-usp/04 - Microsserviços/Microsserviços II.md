@@ -253,8 +253,57 @@ Como definir o microsserviço?
 
 ![Etapas para Construção de uma Aplicação Baseada em Microsserviços - Parte 2](Imagens/Etapas%20para%20Construção%20de%20uma%20Aplicação%20baseada%20em%20Microsserviços%20-%20Parte%202.png)
 
-## :four: Métodos Ágeis / DevOps
+## :four: Ferramentas, Linguagens e Frameworks
 
-## :five: Ferramentas, Liguagens e Frameworks
+Na página [landscape.cncf.io](https://landscape.cncfio/) temos uma lista de todas as tecnologías nativas utilizadas para a construção de aplicações em nuvem. Essas tecnologias estão categorizadas conforme a sua utilização.
 
-## :six: Modelos de Maturidade
+Algumas ferramentas:
+
+![Tecnologias](Imagens/Tecnologias.png)
+
+Linguagens de programação mais adaptadas e mais fáceis para trabalhar com microsserviços:
+
+- Java;
+- Python;
+- Node.JS;
+- Go;
+- .NET;
+- TypeScript.
+
+Alguns frameworks:
+
+- Spring (Java);
+- Vert.x (Java);
+- Express.js (JavaScript e TypeScript);
+- Django (Python);
+- Flask (Python);
+- Go kit (Go);
+- FastAPI (Python).
+
+Na imagem abaixo temos um levantamento da The State of Developer Ecosystem de 2023, feita pela JetBrains, que traz a popularidade das principais linguagens de programação existentes:
+
+![Popularidade das Linguagens de Programação](Imagens/Popularidade%20das%20Linguagens%20de%20Programação%20-%202023.png)
+
+- Lembrando que HTML e CSS, apesar de aparecerem no ranking, não são consideradas linguagens de programação e sim de estruturação (HTML) e estilo (CSS).
+
+Outro [estudo](https://www.jetbrains.com/lp/devecosystem-2022/microservices/) da JetBrains, de 2022, traz algumas questões que foram feitas para grupos de indivíduos que trabalham no mundo da tecnologia e essas foram algumas das respostas:
+
+- Apenas 37% desenvolvem microsserviços;
+- A principal abordagem utilizada para design de sistema é microsserviços e monolítos vem caindo ano após ano;
+- Os principais métodos de comunicação entre partes de uma aplicação são APIs REST e RPC;
+- Maioria das pessoas documentam APIs através do OpenAPI;
+- Principal forma de armazenar especificação de APIs são ferramentas de versionamento de código;
+- As pessoas geralmente separam os serviços em diferentes repositórios, mas é comum utilizarem um único para armazenar todos;
+- A principal linguagem utilizada para desenvolvimento de microsserviços é Java.
+
+## :five: Modelos de Maturidade
+
+O Modelo de Maturidade de Richardson foi desenvolvido por Leonard Richardson para que fosse possível categorizar o nível de uma API REST e se ela encontra-se mais próxima ou não de uma RESTful API. Em cada um desses níveis alguns pontos são abordados, como utilização correta de recursos, verbos HTTP e controles de hipermídia.
+
+![Modelo de Maturidade de Richardson](Imagens/Modelo%20de%20Maturidade%20de%20Richardson.png)
+
+Temos também um modelo de maturidade voltado para microsserviços:
+
+![Modelo de Maturidade de Microsserviços - Parte 1](Imagens/Modelo%20de%20Maturidade%20para%20Microsserviços%20-%20Parte%201.png)
+
+![Modelo de Maturidade de Microsserviços - Parte 2](Imagens/Modelo%20de%20Maturidade%20para%20Microsserviços%20-%20Parte%202.png)
