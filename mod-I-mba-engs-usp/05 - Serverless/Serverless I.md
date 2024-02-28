@@ -100,3 +100,75 @@ Todo esse processo é muito rápido e demora de 3 à 5 milisegundos.
 O API Gateway faz todas essas etapas, então utilize e não faça através de hardcode: gasto de tempo de desenvolvimento e gasto de processamento no back-end.
 
 Utilizar os serviços nas Regiões de Norte da Vrigínia e Oregon pois tem os melhores preços e índices de disponibilidade.
+
+## :two: O que é FAAS?
+
+### :arrow_right: Introdução
+
+FAAS (Function As A Service) é diferente de Serverless. Acontece que FAAS foi uma das primeiras, senão a primeira implementação de Serverless que estourou, portanto, sempre que se fala nesse tema, logo se associa a essa abordagem, porém, vai muito além disso. Vimos, por exemplo, que serviços como S3 (armazenamento de objetos), DynamoDB (banco de dados) e API Gateway são exemplos de aplicações Serverless com outros objetivos além de permitir rodar um script sem se preocupar com o provisionamento de infraestrutura.
+
+Na imagem abaixo temos uma visão alto nível do FAAS: funções, que podem ser escritas em qualquer linguagem de programação, que resolvem um pequeno problema.
+
+![FAAS - Visão Alto Nível](Imagens/FAAS%20-%20Visão%20Alto%20Nível.png)
+
+Por exemplo, em uma aplicação bancária, na funcionalidade de pagamento, precisamos verificar se o cliente tem saldo, se a conta destino é válida, realizar a transação etc. Cada uma dessas etapas pode ser uma função lambda diferente.
+
+O AWS Lambda cobra por uso e não por instância, logo, não é mais custoso e facilita manutenção e uma falha em um dos pontos não afeta os demais.
+
+O custo está diretamente relacionado com a qualidade do código. Isso porque a precificação é feita de acordo com o número de solicitações e o tempo de duração das execuções (GB por segundo). Portanto, se o seu código não é otimizado, você corre sérios riscos de pagar mais do que deveria.
+
+### :arrow_right: Arquivos
+
+Os arquivos que compõe o serviço que irá rodar no AWS Lambda ficam compactados e armazenados em um bucket do S3.
+
+Esses arquivos tem limite de tamanho: máximo de 50 MB de arquivos compactados e 250 MB descompactados. Porém, devemos tentar manter no máximo 10MB máximo, sendo o ideal apenas 1MB.
+
+Conforme a imagem abaixo mostra, os arquivos da função ficam separados em camadas. Na camada mais de cima Código de Função, é onde vão ficar os arquivos do script que devem ser executados e nas demais camadas (Camada de Função) os arquivos de dependência.
+
+![Composição de um Lambda](Imagens/Composição%20de%20um%20Lamba.png)
+
+No YAML de declaração da função especificamos os arquivos que fazem parte de cada camada e eles são compactados separadamente.
+
+### :arrow_right: Como Funciona
+
+Na imagem abaixo temos o esquema do funcionamento do AWS Lambda:
+
+![Esquema de Funcionamento AWS Lambda](Imagens/Esquema%20de%20Funcionamento%20AWS%20Lambda.png)
+
+O AWS Lambda pode ser invocado de três formas:
+
+- **Síncrono:** Quando o chamador espera a resposta da função;
+
+  - Útil quando você precisa de uma resposta imediata;
+  - Erros retornados ao chamador;
+  - Retorna aceleradores quando você atinge o limite de simultaneidade;
+  - Exemplo de evento que utiliza chamada síncrona: API Gateway.
+
+- **Assíncrono:** Quando o chamador não espera uma resposta da função;
+
+  - Chamador obtem apenas uma confirmação da função Lambda de que a requisição dele está sendo processada;
+  - Utiliza uma fila interna e pode persistir requisições por até seis horas;
+  - Suporta duas à três retentativas, destinos e DLQ.
+
+- **Mapeamento de Origem de Eventos:** Integração com fontes de eventos específicas;
+
+  - Comportamento similar ao síncrono;
+  - Diferença é que requisições chegam em lotes.
+
+Exemplos de serviços que invocam o AWS Lambda de cada uma das formas apresentadas acima:
+
+![Serviços AWS x Forma de Invocação do Lambda](Imagens/Serviços%20AWS%20x%20Forma%20de%20Invocação%20do%20Lambda.png)
+
+Os ambientes de execução (EE - Execution Environment) processa uma solicitação por vez e é onde de fato o seu código irá ser executado.
+
+O AWS faz o aprovisionamento das máquinas de acordo com a necessidade
+
+Há uma trava para no máximo 1000 execuções em paralelo, porém, da pra abrir um ticket pra AWS pra aumentar esse limite em caso de necessidade
+
+- O professor já  viu 1 milhão em paralelo.
+
+![Ciclo de vida do ambiente de execução](Imagens/Ciclo%20de%20vida%20do%20ambiente%20de%20execução.png)
+
+O processo de criação da MicroVM, descompactação do código e ficar pronto pra executar é chamado de **Code Start**.
+
+Você não é cobrado pelas MicroVMs criadas, apenas pelo tempo de utilização das mesmas.
