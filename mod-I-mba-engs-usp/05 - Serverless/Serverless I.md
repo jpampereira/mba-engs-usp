@@ -99,7 +99,7 @@ Todo esse processo é muito rápido e demora de 3 à 5 milisegundos.
 
 O API Gateway faz todas essas etapas, então utilize e não faça através de hardcode: gasto de tempo de desenvolvimento e gasto de processamento no back-end.
 
-Utilizar os serviços nas Regiões de Norte da Vrigínia e Oregon pois tem os melhores preços e índices de disponibilidade.
+Utilizar os serviços nas Regiões de Norte da Virgínia e Oregon pois tem os melhores preços e índices de disponibilidade.
 
 ## :two: O que é FAAS?
 
@@ -172,3 +172,53 @@ Há uma trava para no máximo 1000 execuções em paralelo, porém, da pra abrir
 O processo de criação da MicroVM, descompactação do código e ficar pronto pra executar é chamado de **Code Start**.
 
 Você não é cobrado pelas MicroVMs criadas, apenas pelo tempo de utilização das mesmas.
+
+Uma MicroVM utiliza o conceito de containers, porém, são mais rápidos, pois containers processam requisições em paralelo, enquanto MicroVMs atendem uma requisição por vez.
+
+Criar um Lambda para cada endpoint da API.
+
+## :three: Observabilidade
+
+Podemos considerar que você tem observabilidade bem implementada quando temos: métricas, log e rastreamento.
+
+Esses mecanismos não tem como objetivo resolver problemas mais rápido e sim identificá-los com maior velocidade. Como resolver pode ser mais demorado ou não, dependendo de cada cenário.
+
+### :arrow_right: Métricas
+
+REST
+
+- Contagem de chamadas de API;
+- Latência;
+- 4XXs e 5XXs;
+- Latência de integração;
+- Contagem de ocorrências de cache;
+- Contagem de falhas de cache.
+
+HTTP
+
+- Contagem de chamadas de API;
+- Latência;
+- 4XXs e 5XXs;
+- Latência de integração;
+- Dados processados.
+
+WebSocket
+
+- Contagem de conexões;
+- Contagem de mensagens;
+- Erro de integração;
+- Erro de cliente;
+- Erro de execução;
+- Latência de integração.
+
+Além dessas métricas, também existirão as personalizadas, que são criadas a partir do negócio no qual a aplicação está envolvida.
+
+### :arrow_right: Logs
+
+Tenha logs padronizados preparados para informações do tipo ERROR, INFO e DEBUG. Logs padronizados facilitam a busca de informações.
+
+### :arrow_right: Rastreamento
+
+Quer diminuir o tempo de um War Room? Tenha uma aplicação rastreável!
+
+É possível visualizar todo o caminho percorrido por uma requisição e verificar métricas relacionadas a cada um dos pontos pelo qual ela passou.
