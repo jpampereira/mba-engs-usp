@@ -66,19 +66,29 @@ Quando falamos em migrar de datacenters próprios para provedores de nuvem, esta
 
 ### :arrow_right: Platform as a Service (PaaS)
 
-A provedora fornece um ambiente de desenvolvimento e implantação completo de aplicativos. Nesse cenário não é necessário que o cliente se preocupe com questões de atualização de sistema operação, provisionamento de máquinas virtuais, ambiente de execução etc., se preocupando apenas com as aplicações que serão implementadas e os seus acessos e dados.
+A provedora fornece um ambiente de desenvolvimento e implantação completo de aplicativos. Nesse cenário não é necessário que o cliente se preocupe com questões de atualização de sistema operação, provisionamento de máquinas virtuais, ambiente de execução, configurações etc., se preocupando apenas com as aplicações que serão implementadas e os seus acessos e dados.
 
-Serviços de provisionamento de bancos de dados são um exemplo de PaaS.
+Serviços de provisionamento de bancos de dados são um exemplo de PaaS. Basta selecionar uma das opções de bancos de dados que a plataforma oferece e definir algumas configurações, como versão do servidor, usuário e senha root etc. e de resto a provedora cuida para lhe entregar um ambiente pronto para uso.
 
-- Na AWS temos o DynamoDB e o Amazon RDS.
+- Na AWS temos o Amazon RDS;
+- Na IBM Cloud temos o Compose;
+- O Microsoft Azure tem o Azure SQL Database.
+
+Em todos esses casos os clientes não precisam se preocupar nem com questões de hardware (coisa que já com o IaaS não era necessário se preocupar) nem com questões de configuração de ambiente, sistema operacional, ambiente de execução, disponibilidade, atualização de versão etc.
+
+Outro exemplo é o Heroku, uma plataforma para o desenvolvimento de aplicativos em nuvem permitindo o uso de diferentes linguagens de programação.
 
 ### :arrow_right: Software as a Service (SaaS)
 
-A provedora fonrece aplicativos prontos para uso pela Internet, como por exemplo, o Google Docs, Google Spreedsheet, Google Drive, One Drive, Microsoft 365, Dropbox, Outlook, Gmail etc. Nesse caso o usuário deve se preocupar apenas com o acesso ao seu perfil na plataforma e aos dados que armazena dentro dela, de resto, tudo é de responsabilidade da provedora (atualização, correção de bugs, provisionamento de recursos etc.).
+A provedora fornece aplicativos prontos para uso pela Internet, como por exemplo, o Google Docs, Google Spreedsheet, Google Drive, One Drive, Microsoft 365, Dropbox, Outlook, Gmail etc. Nesse caso o usuário deve se preocupar apenas com o acesso ao seu perfil na plataforma e aos dados que armazena dentro dela, de resto, tudo é de responsabilidade da provedora (atualização, correção de bugs, provisionamento de recursos etc.). Outras aplicações como waze, whatsapp, netflix etc. também podem ser considerados SaaS.
 
-Quando trabalhamos como arquiteto de soluções, devemos sempre priorizar o uso de ferramentas SaaS quando estamos projetando uma solução baseada nos requisitos do cliente, pois são muito mais simples, práticas e baratas de se utilizar. Caso não seja possível utilizar o SaaS, vá para as soluções PaaS.
+Quando trabalhamos como arquiteto de soluções, devemos sempre priorizar o uso de ferramentas SaaS quando estamos projetando uma solução baseada nos requisitos do cliente, pois são muito mais simples, práticas e baratas de se utilizar. Caso não seja possível utilizar o SaaS, vá para as soluções PaaS. A escolha do modelo vai depender das suas necessidades.
 
 Empresas que não são de fato do mundo de tecnología (bancos, telecomunicações, varejo etc.) devem dar preferência a esse tipo de serviço, pois seu negócio principal é serviço e não cuidar de questões de infraestrutura.
+
+Os modelos de negócio mais comuns em SaaS são o modelo de assinatura (mais adotado), onde os usuário pagam uma taxa mensagem ou anual pelo acesso ao software. Outro modelo de negócio é o freemium (modernização do trial), onde o software é gratuíto, mas recursos adicionais são pagos. Há também o modelo *pay-per-use* (pague pelo quanto usar).
+
+Devemos ficar atentos aos termos de uso do serviço SaaS que desejamos contratar, principalmente em cenários corporativos onde lidamos muitas vezes com dados sensíveis. A empresa precisa garantir que seus dados estão seguros e costumam oferecer recursos de segurança, como criptografia, autenticação de usuários, acesso baseado em perfil etc.
 
 ## :five: Tipos de Implantação
 
@@ -129,3 +139,41 @@ As nuvens oferecem serviços basicamente crus, onde você consegue definir uma f
 - AWS: Elastic Container Service (ECS), Elastic Kubernetes Service (EKS);
 - GCP: Google Container Engine (GCE), Google Kubernetes Engine (GKE);
 - Azure: Azure Kubernetes Service (AKS).
+
+Podemos dizer que esses serviços de orquestração são um meio termo entre IaaS e PaaS.
+
+## :one::one: Estratégias de escolha entre IaaS, PaaS e SaaS
+
+1. Compreender as diferenças entre cada um dos modelos;
+
+2. Avaliar as necessidades de negócio e o custo benefício de cada modelo;
+
+3. Considerar as habilidades de TI da companhia (para empresas onde tecnologia não é o principal negócio, soluções SaaS podem ser mais adequadas pois exigem menos habilidades de TI);
+
+4. Analisar a escalabilidade e flexibilidade oferecidas por cada modelo;
+
+5. Identificar os recursos de segurança e conformidade oferecidos por cada modelo.
+
+## :one::two: Considerações de custo e desempenho
+
+A escolha do modelo de nuvem deve ser baseada em uma avaliação cuidadosa dos requisitos de custo e desempenho da organização.
+
+IaaS pode ser menos caro em comparação com outros modelos, mas pode exigir mais habilidades técnicas. PaaS pode oferecer economia de custos devido a automação da infraestrutura, mas pode ter menos flexibilidade do que IaaS. SaaS, por sua vez, pode oferecer economia de custos e flexibilidade, mas pode ser limitado em termos de personalização e integração.
+
+## :one::three: Desafios e lições
+
+A segurança e privacidade dos dados foram os principais desafios enfrentados pelas empresas que migraram pra nuvem.
+
+A migração de aplicativos existentes é outro desafio, pois muitos aplicativos não foram apresentados para serem executados na nuvem.
+
+As empresas também precisaram investir em treinamento e desenvolvimento para garantir que seus funcionários tivessem as habilidades necessárias para trabalhar em um ambiente de nuvem.
+
+## :one::four: Futuro
+
+A inteligência artificial e a automação devem desempenhar um papel cada vez mais importante na computação em nuvem no futuro.
+
+- O Azure acabou de lançar o seu copilot, um assistente virtual que auxilia no gerenciamento da nuvem.
+
+A nuvem híbrida, que combina nuvem pública e privada, deve se tornar cada vez mais popular à medida que as empresas buscam a flexibilidade da nuvem pública e a segurança da nuvem privada.
+
+A segurança da nuvem continuará a ser um foco importante para as empresas à medida que mais dados são armazenados na nuvem.
