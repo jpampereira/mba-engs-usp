@@ -7,7 +7,8 @@ O Azure possui uma conta gratuíta por tempo limitado para novos usuários. Caso
 O nível hierarquico mais alto de uma conta no Microsoft Azure é o diretório.
 
 - Antigamente essa funcionalidade se chamava Microsoft Active Directory e hoje é o Microsoft Entra ID;
-- Um diretório pode ser acessado por vários usuários.
+- Um diretório pode ser acessado por vários usuários;
+- Solução de mercado consolidada.
 
 Abaixo do diretório temos as assinaturas (*Subscriptions*), que permite nós criarmos ambientes separados por projetos.
 
@@ -37,7 +38,7 @@ Conjunto de boas práticas para a criação e gerenciamento de serviços em nuve
 
 ## :four: Storage Accounts
 
-O serviço de Storage Accounts permite a criação de instâncias para armazenamento de dados, podendo funcionar no modelo clássico, similar ao S3 da AWS ou o File Buckets do GCP, ou em outros modelos como Data Lakes, tabelas NoSQL, Sistema de Arquivos ou fila de arquivos.
+O serviço IaaS de Storage Accounts permite a criação de instâncias para armazenamento de dados, podendo funcionar no modelo clássico, similar ao S3 da AWS ou o File Buckets do GCP, ou em outros modelos como Data Lakes, tabelas NoSQL, Sistema de Arquivos ou fila de arquivos.
 
 Na criação de um storage, nas configurações básicas, devemos apontar a *subscription* e *resource group* no qual ele será alocado, além de definir um nome (CAF define regras de nomenclatura de serviços), qual região ele será alocado, o tipo de performance (padrão ou de alta performance, para cenários onde se necessita de baixa latência) e a forma de redundância desses arquivos.
 
@@ -49,4 +50,8 @@ Na criação de um storage, nas configurações básicas, devemos apontar a *sub
 
 ## :five: Networks
 
-É possível criarmos redes virtuais (*virtual networks*) para agruparmos as instâncias dos nossos serviços dentro de uma mesma rede, permitindo adicionar mais uma camada de segurança, limitando acesso e utilizando serviços de firewall, DDoS e de conexão segura.
+É possível criarmos redes virtuais (*virtual networks*) para agruparmos as instâncias dos nossos serviços dentro de uma mesma rede, permitindo adicionar mais uma camada de segurança, limitando acesso e utilizando serviços de firewall, DDoS e de conexão segura. Este é um serviço IaaS.
+
+## :six: App Services
+
+O App Services é um PaaS oferecido pelo Azure para a criação de aplicações webs, sejam elas páginas estáticas, com back-end e até banco de dados. Apenas com algumas configurações, o serviço cria todo o serviço para você e ainda permite definir a fonte do código desde containers registries até o seu próprio GitHub.
