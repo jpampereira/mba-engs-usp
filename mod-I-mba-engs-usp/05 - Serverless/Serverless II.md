@@ -4,7 +4,7 @@
 
 ### :arrow_right: Modelo Síncrono de Solicitação/Resposta (Request/Response)
 
-![Modelo de Comunicação Request/Response](Imagens/Modelos%20de%20Comunicação%20-%20Request%20e%20Response.png)
+![Modelo de Comunicação - Request/Response](Imagens/Modelos%20de%20Comunicação%20-%20Request%20e%20Response.png)
 
 Vantagens:
 
@@ -21,7 +21,7 @@ Cuidar das mensagens de erro, pois pode não ficar claro para o cliente o que de
 
 ### :arrow_right: Ponto a ponto assíncrono (Fila)
 
-![Modelo de Comunicação Fila](Imagens/Modelos%20de%20Comunicação%20-%20Fila.png)
+![Modelo de Comunicação - Fila](Imagens/Modelos%20de%20Comunicação%20-%20Fila.png)
 
 Vantagens:
 
@@ -53,3 +53,19 @@ Existem cenários onde as mensagens precisam ser entregues para mais de um desti
 Existe um serviço voltado para soluções IoT que é o AWS IoT Core que utiliza o protocolo MQTT para realizar o processo de comunicação utilizando o conceito de Publisher/Subscriber, sendo muito mais barato do que conexões HTTP ou via WebSocket.
 
 No SQS existem duas formas de consumir as mensagens da fila, utilizando o formato padrão e o FIFO. No formato padrão, o SQS tenta manter a ordem dos itens na fila, porém, se um falhar e ele retornar para a fila, pode ser que nesse meio tempo o item seguinte já foi consumido. No modo FIFO, a ordem é religiosamente respeita, porém, nesse caso os itens serão consumidos um a um, o que pode ser inviável dependendo do número de requisições que vc tenha.
+
+### :arrow_right: Ponto a ponto assíncrono (Roteador)
+
+![Modelo de Comunicação - Roteador](Imagens/Modelos%20de%20Comunicação%20-%20Roteador.png)
+
+Nesse modelo definimos o destino para o qual a mensagem será encaminhada baseado nas características da mesma. Porém, o grande problema desse modelo é que aumenta o acoplamento entre os serviços, uma vez que toda a lógica de roteamento fica armazenada no remetente, trazendo dificuldades para escalar as aplicações e aumenta a complexidade de acordo com o crescimento do sistema.
+
+### :arrow_right: Roteador de mensagem assícrono (Barramento)
+
+![Modelo de Comunicação - Barramento](Imagens/Modelos%20de%20Comunicação%20-%20Roteador.png)
+
+A alternativa nesse caso é utilizar um barramento, onde o remetente envia a mensagem para ele e este, em posse de toda a lógica de negócio de comunicação, encaminha as mensagens para o destino correto. Esse modelo diminui o acoplamento entre os serviços.
+
+O serviço AWS que trabalha com barramentos é o Amazon Event Bridge.
+
+**Diferença entre streaming e fila:** o streaming envia pequenos lotes de dados, agrupados em um determinado espaço de tempo, por vez enquanto uma fila envia mensagens de forma unitária.
