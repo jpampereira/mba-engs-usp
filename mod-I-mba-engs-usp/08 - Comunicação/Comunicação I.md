@@ -125,6 +125,12 @@ Devemos nos avaliar em ambos os papéis. Somos bons emissores e receptores de me
 
 Uma parte intrínseca do processo de comunicação é o viés, seja na escuta ou na fala e não adianta lutarmos contra pois ele é um processo natural e inconsciente do ser humano. O que devemos fazer é escutarmos todos os lados de uma história e procurar entender que mesmo se não concordarmos com as opiniões de alguém, não realizarmos pré julgamentos, escutarmos elas e tentar entender seu ponto de vista pois algo no meio de todas aquelas informações pode fazer sentido.
 
+Não devemos nos sentir mal por termos viés pois esse é um mecanismo natural do nosso cérebro, construído ao longo de milhares de anos, para facilitar a nossa vida e diminuir o esforço cognitivo necessário. Porém, é importante conhecermos nossos viéses para tomarmos cuidado com eles no nosso dia-a-dia.
+
+Jogo da História feito pela professora mostrou um pouco como nós temos viés. Neste caso ficou explícito um viés de gênero.
+
+Existe um projeto de Harvard chamado *Project Implicit* que permite fazermos um teste e ao final, baseado nas informações que fornecemos, são mostrados os principais viéses identificados em nossa personalidade.
+
 ## :nine: Comunicação Escrita
 
 - **Meios:** e-mails, cartas, jornais, informativos, Whatsapp etc.;
