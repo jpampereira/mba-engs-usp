@@ -22,9 +22,9 @@ O calor da emoção muitas vezes desanda uma boa comunicação.
 
 "A interface é muito clara", "Minha mensagem está muito fácil de entender". É fácil pra você, mas é fácil para um cidadão médio?
 
-Existem momentos para utilizar a linguagem coloquial e técnica.
+- Existem momentos para utilizar a linguagem coloquial e técnica.
 
-O que é óbvio pra você pode não ser óbvio pro outro.
+- O que é óbvio pra você pode não ser óbvio pro outro.
 
 Escuta ativa é muito importante (especialmente quando estamos falando de uma liderança).
 
@@ -35,13 +35,13 @@ Escuta ativa é muito importante (especialmente quando estamos falando de uma li
 
 Humildade é **MUITO** importante.
 
-- Você não entende de tudo;
+- Você não sabe de tudo;
 - As pessoas não sabem de tudo;
 - Tudo bem você não saber algo;
 - Evite ser o tudologo;
 - Você precisa viver pra entender uma realidade. Portanto, tente ouvir ambos os lados da história.
 
-As gerações possuem valores e visões de mundo diferente, portanto, não podemos julgar as vontades e ambições dos outros.
+As gerações possuem valores e visões de mundo diferentes, portanto, não podemos julgar as vontades e ambições dos outros.
 
 ## :two: Liderança
 
@@ -69,7 +69,7 @@ Devemos ter momentos de humanidade, isto é, não apenas demandar tarefas mas ta
 
 - Sejam coerentes com os seus valores;
 - Seja claro e justifique determinada ação. Exemplo: porque estou promovendo determinada pessoa e outra não. Outros cenários são: remuneração, demissão, feedback. Tenha indicadores para se basear na sua tomada de decisão;
-- Coerência nas suas decisões evitam desgaste.
+- Coerência nas suas decisões evita desgastes desnecessários.
 
 ## :four: Informar x Comunicar
 
@@ -81,9 +81,11 @@ A comunicação é mais do que simplesmente transmitir um significado: esse sign
 
 Quem cala consente? Não necessariamente!
 
-Tome cuidado com a frase "Reunião que poderia ser um e-mail". As vezes a comunicação falada é mais precisa e evita prejuízos, sejam eles de tempo, financeiros, de recursos etc.
+Tome cuidado com a frase "Reunião que poderia ser um e-mail". As vezes a comunicação falada é mais precisa e evita prejuízos, sejam eles de tempo, financeiros, de recursos, emocionais etc.
 
 - Principalmente em conversas que geram mudanças.
+
+![Hierarquia da riqueza de canais](Imagens/Hierarquia%20da%20riqueza%20de%20canais.png)
 
 ## :six: Como perceber que algumas informações não estão sendo passadas?
 
@@ -102,9 +104,9 @@ Qualquer um dos elementos do processo de comunicação estando em mal funcioname
 **Problemas no emissor:**
 
 - Sobrecarga de informações;
-- Falta de disposição para falar. Isso pode não ser algo necessariamente proposital, pode ser da personalidade da pessoa;
+- Falta de disposição para falar. Isso pode não ser algo necessariamente proposital ou pode ser da personalidade da pessoa;
 - Codificação incorreta, isto é, utilizar palavras que não fazem parte do vocabulário do receptor. Exemplos: uso de linguagem comumente utilizada pelos jovens com pessoas de mais idade ou utilizar termos técnicos com alguém que não é do ramo;
-- Incorreção da linguagem;
+- Incorreção da linguagem: falta de concordância verbal, aplicação incorreta do português etc.;
 - Complexidade do tema. É preciso escolher bem como falar do assunto e ser o mais didático possível;
 - Desequilibrio emocional.
 
@@ -119,7 +121,11 @@ Qualquer um dos elementos do processo de comunicação estando em mal funcioname
 
 Devemos nos avaliar em ambos os papéis. Somos bons emissores e receptores de mensagens?
 
-## :eight: Comunicação Escrita
+## :eight: Viés
+
+Uma parte intrínseca do processo de comunicação é o viés, seja na escuta ou na fala e não adianta lutarmos contra pois ele é um processo natural e inconsciente do ser humano. O que devemos fazer é escutarmos todos os lados de uma história e procurar entender que mesmo se não concordarmos com as opiniões de alguém, não realizarmos pré julgamentos, escutarmos elas e tentar entender seu ponto de vista pois algo no meio de todas aquelas informações pode fazer sentido.
+
+## :nine: Comunicação Escrita
 
 - **Meios:** e-mails, cartas, jornais, informativos, Whatsapp etc.;
 
@@ -129,7 +135,7 @@ Devemos nos avaliar em ambos os papéis. Somos bons emissores e receptores de me
 
 Dica: Tentar ser o mais objetivo possível.
 
-## :nine: Comunicação Não Verbal
+## :one::zero: Comunicação Não Verbal
 
 Engloba os movimentos corporais, a entonação ou ênfase dada às palavras e expressão facial.
 
@@ -137,7 +143,11 @@ Se você ler a ata de uma reunião, não sentirá o impacto do que foi dito da m
 
 - Podemos não perceber a urgência ou criticidade do assunto que foi tratado na reunião.
 
-## :one::zero: Rádio Peão (Rede de Rumores)
+As expressões faciais, ao lado de entonações de voz, podem mostrar arrogância, agressividade, medo, timidez, etc.
+
+Estudos mostram que em uma conversa presencial se dá mais valor a comunicação não verbal.
+
+## :one::one: Rádio Peão (Rede de Rumores)
 
 Rádio Peão é um processo natural e presente em qualquer grupo de pessoas de um ambiente de trabalho. Ela possuí um poder de pertencimento, que aproxima as pessoas e também satisfaz as suas ansiedades e medos.
 
