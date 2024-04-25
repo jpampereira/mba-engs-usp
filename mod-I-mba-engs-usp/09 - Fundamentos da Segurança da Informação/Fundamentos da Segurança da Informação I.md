@@ -213,16 +213,75 @@ Esse termo abrange todos os tipos de programas desenvolvidos com o objetivo de e
 
   - Para tentar se prevenir a isso, as instituições bancárias adotaram como padrão o uso de teclados virtuais. Então para driblar isso os hackers desenvolveram os Screenloggers, capazes de capturar informações da tela do computador como a posição do cursor e printscreen do monitor nos momentos em que o mouse é clicado.
 
-- **Bots e Botnets:** sua propagação é similar ao Worm e possui mecanismos de comunicação com o invasor, permitindo que o bot seja controlado remotamente.
+- **Bots e Botnets:** Sua propagação é similar ao Worm e possui mecanismos de comunicação com o invasor, permitindo que o bot seja controlado remotamente.
 
   - Muito utilizado para realizar ataques de negação de serviço em outros pontos da internet;
   - Botnets são redes formadas por centenas ou milhares de computadores infectados com bots. Isso permite para o hacker realizar ataques, como phising ou negação de serviço, com muito mais potência;
   - Identificar a presença de um bot em um computador não é uma tarefa simples (mesmo para os programas de antivírus).
 
-- **Rootkits:**
+- **Rootkits:** Conjunto de programas que fornece mecanismos para que um invasor possa esconder e assegurar sua presença na máquina.
 
-#### Negação de Serviço (DoS) e Ataques Coordenados (DDoS)
+  - O nome não indica que as ferramentas que compõe são usadas para obter acesso privilegiado (root ou Administrator) a um computador, mas sim para mantê-lo.
+
+- **Spam:** Termo usado para se referir a mensagens (não necessariamente e-mails) não solicitadas, mas geralmente enviadas para um grande número de pessoas.
+
+  - São utilizadas para propagar malwares ou páginas falsas (phising) que copiam dados dos usuários.
+
+#### Negação de Serviço (*Denial of Service* - DoS) e Ataques Coordenados (DDoS)
+
+O atacante utiliza um computador para tirar de operação um serviço ou computador(es) conectado(s) à internet. Isso pode ser feito através de:
 
 - Sobrecarga no poder computacional;
-- Sobrecarga na rede;
+- Sobrecarga de tráfego na rede;
 - Sobrecarga nos atendimentos de conexão simultânea.
+
+No DDoS é utilizado um conjunto de máquinas para realizar o ataque. Geralmente está associado a ataques a grandes servidores/serviços.
+
+Exemplos de como realizar a negação de um serviço:
+
+- **SYN Flooding:** O ataque é realizado utilizando o handshake de 3-vias para o estebelecimento de conexões TCP. Cliente envia o bit SYN para indicar o desejo de estabelecer conexão, o servidor responde com o SYN-ACK e o atacante não responde com ACK, mantendo a conexão aberta. Ele faz isso até ocupar todo o buffer de conexão no servidor, tornando impossível que clientes legítimos consigam se conectar.
+
+  ![SYN Flooding](Imagens/SYN%20Flooding.png)
+
+- **Ping of Death:** Pode ser utilizado em sistemas que não tratam adequadamento pacotes ICMP maiores do que o normal. A ideia desse ataque consiste em enviar sequência de pings com campo ICMP de tamanho máximo (maior do que o normal), causando estouro do buffer e podendo *crashar* o sistema.
+
+- **Smurf:** Como sabemos, o PING é utilizado para verificar se um endereço existe e se está vivo. O nome se deve ao fato dele ser similar ao jogo de Ping Pong, onde o emissor manda o PING e a ponta verificada responde com PONG, se estiver operacional. Nesse ataque, o atacante manda um série de PINGs em uma rede intermediária, porém, altera o IP de origem no pacote ICMP para o sistema alvo, fazendo com que ele receba todos esses pacotes e cause uma indisponibilidade.
+
+  ![Smurf](Imagens/Smurf.png)
+
+#### Formas de Proteção
+
+- Antivírus;
+- Anti spam;
+- Anti spyware;
+- Atualização do sistema;
+- Política de segurança.
+
+## :four: Princípios de Segurança para Empresas
+
+- **Economy of Mechanism:** A utilização de mecanismos simples de segurança ajudam os desenvolvedores e usuários a entendê-los mais fácil, tornando a aderência melhor. Por exemplo, o Windows caiu no gosto popular pois além de seguro, é simples de se configurar.
+
+- **Fail-Safe Defaults:** A configuração padrão de um sistema deve ter um esquema de proteção conservador. Por exemplo, quando um usuário novo for inserido em um sistema, suas configurações padrão devem conceder o mínimo de privilégios necessários para que ele consiga realizar suas tarefas.
+
+- **Complete Mediation:** Cada acesso a um determinado recurso deve ser checado para o cumprimento de um regime de proteção. Hoje está muito em uso a autenticação de dois fatores. Existem sistemas, como os bancários, que exigem que o usuário faça um novo login a cada intervalo de tempo (em geral 15 minutos é o intervalo definido).
+
+- **Open Design:** A política de segurança deve ser disponibilizada e de conhecimento de todos. Isso possibilita as pessoas de saber como os processos devem ser realizados e quais os seus direitos e deveres. O nível de informação nesse caso é superficial e não entra em questões de ferramenta.
+
+  - Um projeto aberto possibilita que o sistema seja examinado por várias partes, o que leva a descoberta e correção precoce das vulnerabilidade de seguranças causadas por erro de projeto. Esse princípio é similar ao adotado pelo código aberto.
+
+- **Separation of Privilege:** Separar o acesso a recursos por níveis de acesso de acordo com múltiplas condições pré-estabelecidas.
+
+- **Least Privilege:** Cada programa e usuário de um sistema de computador deve operar com os privilégios mínimos necessários para funcionar corretamente. Em caso de comprometimento de uma conta de aplicativo ou usuário o dano é mínimo.
+
+  - O conceito militar necessidade de saber é um exemplo deste princípio;
+
+- **Least Common Mechanism:** Em sistemas com múltiplos usuários, mecanismos que permitam que os recursos sejam compartilhados por mais de um usuário devem ser minimizados.
+
+- **Psychological Acceptability (Acessibilidade):** Esse princípio estabelece que interfaces de usuário devem ser bem projetadas e intuitivas, e todas as configurações relacionadas à segurança devem aderir ao que um usuário comum poderia esperar.
+
+- **Work Factor:** O custo para viabiliazar a segurança deve ser proporcional ao prejuízo que a falta dele pode causar, isto é, uma faculdade não irá investir para proteger o seu sistema de lançamento de notas de possíveis alunos que desejarem burlá-lo o mesmo que uma organização militar para proteger suas informações de caráter extremamente confidencial.
+
+- **Compromise Recording:** Esse princípio estabelece que, por vezes, é mais desejável gravar os detalhes de uma intrusão do que adotar medidas sofisticadas para evitá-la.
+
+  - Câmeras de vigilância conectadas a internet são um exemplo típico de um sistema de registro que pode ser desenvolvido para proteger um edifício em vez de reforças as portas e janelas;
+  - Os servidores em uma rede no escritório podem manter registros de todos os acessos a arquivos, todos os e-mails enviados e recebidos e todas as sessões dos navegadores.
