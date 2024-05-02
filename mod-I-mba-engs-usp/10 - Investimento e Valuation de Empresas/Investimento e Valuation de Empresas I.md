@@ -1,5 +1,7 @@
 # Investimento e Valuation de Empresas I
 
+## :one: Conceitos Iniciais
+
 *Valuation* é um conjunto de fundamentos de finanças aplicados para conseguir determinar o **desempenho/valor** de uma empresa.
 
 O valor de uma empresa não está no passado e sim na capacidade de continuar gerando fluxos de caixa
