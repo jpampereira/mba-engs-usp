@@ -184,3 +184,79 @@ Quanto mais próximo da computação pura mais barato é o custo computacional C
 Processos de consumo constante custam mais barato em serviços computacionais como o EC2. Por outro lado, processos de consumo esporádico e oscilante custam mais barato em serviços elásticos com Lambda, Fargate, Kubernetes e similares. O mesmo vale para bancos de dados.
 
 Exemplo: utilizar uma instância de banco de dados através do RDS custa mais caro do que utilizar através de uma máquina EC2, porém, você não precisa se preocupar com questões de backup, redundância de dados, recuperação de desastres etc.
+
+### :arrow_right: Otimização de Recursos Computacionais
+
+O método clássico para alocação de um serviço era colocarmos todos os componentes relacionados à aplicação em um mesmo servidor dedicado (servidor HTTP, back-end, cache, banco de dados etc) e no máximo em soluções de grande escala, separarmos a base de dados em um segundo servidor, também dedicado.
+
+![Método Clássico de alocação de serviços](Imagens/Método%20Clássico%20-%20Aplicação%20direto%20na%20máquina%20host.png)
+
+Com o surgimento da tecnologia de virtualização tornou-se possível separarmos logicamente os recursos computacionais de uma mesma máquina entre os componentes da aplicação. Essas instâncias lógicas são conhecidas como máquinas virtuais (*Virtual Machines* - VMs - ou máquinas *guest*). A cada uma delas é associada um sistema operacional próprio e uma determinada quantidade de recursos computacionais (processamento e memória). A quantidade determinada deve ser de acordo com o que o usuário considera suficiente para que a VM atinja a sua finalidade, isto é, faça o componente funcionar corretamente.
+
+- A virtualização não resolve alguns problemas, como o fato que o dimensionamento dessas máquinas virtuais não acaba com a ociosidade de recursos computacionais, uma vez que é necessário pré-determinar a quantidade de recursos que a máquina virtual terá e não necessariamente eles estarão 100% em uso a todo instante, havendo horários de pico e horários de ociosidade;
+
+- A máquina precisará alocar recursos em seu sistema operacional *host* (sistema operacional da máquina real) para que seja possível executar o HyperVisor, tecnologia que permite a virtualização.
+
+![Aplicação executando em máquinas virtuais](Imagens/Aplicação%20executando%20em%20máquinas%20virtuais.png)
+
+Seja o caso de uma aplicação sendo executada diretamente em um servidor, ou seja, com todos os componentes da aplicação funcionando diretamente no sistema operacional *host*. Desejamos transportar essa máquina para a Cloud devido a todo o *hype* que essa vertente está tendo nos últimos anos. Nesse momento podemos cometer nosso primeiro equívoco: achar que instanciando uma máquina virtual de mesma capacidade no provedor (utilizando, por exemplo, o serviço do EC2) e colocar a aplicação para executar nela, que tudo estará funcionando exatamente da mesma forma e que vamos estar obtendo as vantagens que um ambiente de nuvem oferece.
+
+- Uma máquina virtual se comparada a uma máquina real (ou máquina host), possui um delay para a execução das instruções. No caso de um ambiente virtualizado, a aplicação precisa conversar com o SO da máquina guest, que conversa com o hardware (no caso, como é virtualizado, a conversa é com o HyperVisor), só então conversar com o SO host que conversa com o hardware da máquina, onde de fato a instrução será executada. No caso de um ambiente real, essa comunicação é direta com o SO da máquina host, sendo mais rápido. Essa diferença é na casa dos micro ou milissegundos e pode ser imperceptível do ponto de vista do usuário. Mas não podemos dizer que é igual;
+- Não necessariamente se tornará mais barato;
+
+![Servidor On Premisses x Instância Cloud](Imagens/On%20Premisses%20x%20Cloud.png)
+
+O primeiro passo é ao invés de configurarmos todos os componentes da aplicação dentro de uma única máquina virtual, é utilizarmos os diferentes serviços que o provedor oferece, que já são especializados de acordo com as nossas necessidades, logo, são desenvolvidos da forma mais otimizada possível e respeitam todos os requisitos de segurança como backup, redundância etc. A utilização dos serviços retira a responsabilidade de desenvolvimento e disponibilidade dos componentes do lado do cliente, ficando a cargo da provedora que possui um SLA muito rígido em relação a isso.
+
+![Granularidade - Utilização de Serviços Cloud](Imagens/Granularidade%20-%20Utilização%20de%20Serviços%20Cloud.png)
+
+Entendido esses pontos, ainda sim você pode cometer outro grande equívoco que pode te trazer prejuízos financeiros desnecessários. Nesse caso estamos falando da distribuição de recursos nas instâncias.
+
+Quando configuramos instâncias dos serviços dentro do provedor, em alguns casos vamos nos deparar com a necessidade de determinar o tamanho das máquinas virtuais onde estes serão executados (no caso, definir a quantidade de recursos computacionais como processamento, memória, quantidade de disco para armazenamento etc). Podemos cometer o erro de instanciar máquinas grandes para que tenhamos uma "gordura" em momentos de maior tráfego, porém, se analisarmos o seguinte caso, podemos ver que essa pode não ser uma boa ideia.
+
+![Simulação de gastos máquina grande](Imagens/Simulação%20de%20gastos%20máquina%20grande.png)
+
+Na imagem acima vemos que temos instânciadas, duas (boa prática, por questões de redundância)  máquinas m5.2xlarge, que possuem 8 vCPUs e 32 GB de memória RAM cada. Vemos que até 11 usuários essas duas máquinas são suficientes para processar todas as requisições e acima disso novas instâncias são criadas conforme necessidade, respeitando o princípio da elasticidade/escalabilidade de ambientes de nuvem. Porém, se analisarmos, abaixo dos 11 usuários conectados, temos um grande gap entre a quantidade de recursos disponíveis e o que de fato é utilizado. Essa diferença permanece quando novas instâncias são criadas, uma vez que são alocados 8 vCPUs e 23 GB de RAM por vez, que não necessariamente serão utilizados em sua totalidade. O valor pago se estamos utilizando uma pequena porcentagem de recursos da instância ou sua totalidade é o mesmo. Podemos concluir que a quantidade de recursos desse componente está superestimado e que ajustes podem ser feitos para reduzir o custo de 737,28 dólares mensais.
+
+Algo que devemos entender é a importância de desenvolvermos aplicações bem otimizadas, que consumam recursos conforme a necessidade e em momentos de ociosidade (ou estado de IDLE) este seja o mínimo possível. Tendo isso em mente, devemos definir o tamanho máximo da máquina da instância de acordo com a quantidade mínima necessária para que a aplicação funcione em estado de IDLE, ou seja, para que a aplicação consiga ser executada. Além disso, a escalabilidade dos recursos deve ser feita de forma proporcional ao tráfego, sem deixar gaps de recursos ociosos. Na imagem abaixo vemos que, para a mesma aplicação do gráfico anterior, se trocarmos por máquinas m5.large, com 2 vCPUs e 8GB de RAM, conseguimos atender a aplicação em cenários de poucas requisições e os recursos são escalados de forma que não se formam gaps entre a quantidade disponível e a quantidade utilizada. Apesar de estarmos alocando mais máquinas quando a quantidade de requisições aumenta, essas máquinas são bem mais baratas por terem menor poder computacional, gerando um custo mensal de 501,12 dólares, uma redução de 32% no valor, se comparado ao cenário anterior e muito mais condizente com a quantidade de recursos de fato utilizados para se atender as requisições.
+
+![Simulação de gastos máquina pequena](Imagens/Simulação%20de%20gastos%20máquina%20pequena.png)
+
+Outra vantagem de utilizarmos instâncias menores é que em cenários onde uma das instâncias falha, as demais não são sobrecarregadas. Seja o cenário 1 onde temos a aplicação funcionando em cima de máquinas m5.2xlarge e o cenário 2 onde utilizamos máquinas m5.large. No cenário 1, caso seja atingida a quantidade de 6000 requisições, teremos instanciadas 4 máquinas, enquanto no cenário 2 teremos 16. Caso uma das máquinas do cenário 1 falhe, significa uma perda de 25% dos recursos computacionais até que essa máquina seja reposta, enquanto no segundo cenário representa uma perda de 6,25%. Se considerarmos que 25% de perda de capacidade é significativo, entendemos que as demais máquinas serão sobrecarregadas, podendo gerar um efeito em cascata que cause problemas nas demais. Por sua vez, a perda de 6,25% de recursos pode passar despercebida com as demais conseguindo dar conta. Com isso podemos concluir que utilizar máquinas menores, além de tornar o uso de recursos muito mais otimizado, faz com que mais máquinas sejam alocadas em cenários de altro tráfego e pequenos pontos de falha nas instâncias causem menor impacto na aplicação como um todo.
+
+## :eight: Arquitetura
+
+Quando pensamos na arquitetura devemos nos preocupar tanto com a arquitetura da aplicação quanto a de infraestrutura. Essas devem trabalhar juntas, caso contrário, se uma delas for mal elaborada a outra ficará comprometida.
+
+Quando estamos falando de arquitetura de infraestrutura de aplicações em nuvem, podemos utilizar um dos frameworks mais conhecidos pelo mercado, desenvolvido pela AWS e depois replicado por demais provedores: Well Architected Frameworks.
+
+Princípios:
+
+- Pare de adivinha suas necessidades de capacidade. Teste na prática quanto de infraestrutura será necessário para atender a sua solução;
+- Sistemas de teste em escala de produção. Testes de funcionalidade podem ser feitos em ambientes reduzidos, porém, é necessário realizar testes de estresse com carga similar ao de um ambiente de produção;
+- Automatize tendo em mente a experimentação arquitetônica;
+- Considere arquiteturas evolucionárias. Muitas soluções iniciam como monolítos, pois são muito mais simples e em muitos cenários iniciais é o suficiente, porém, pode ser necessário com a expansão  da aplicação a adoção de outras arquiteturas mais flexíveis como microsserviços. Portanto, desenvolva seu software de forma que seja possível lá na frente desmembrá-lo em módulos sem grandes esforços;
+- Impulsione arquiteturas usando dados. Utilize dados de logs para entender o comportamento do sistema e de seus usuários para definir soluções que atendam suas necessidades;
+- Melhore durante os dias de jogo. Não espere um grande problema acontecer, como uma indisponibilidade ou ataque de negação de serviço, por exemplo, para descobrir se sua equipe será capaz de contorná-los. Crie dias de jogos, onde são feitas simulações de problemas em ambientes produtivos para treinar a equipe e perceber virtudes e dificuldades dos membros, para corrigí-las.
+
+Pilares:
+
+- Excelência Operacional;
+- Segurança;
+- Confiabilidade;
+- Eficiência de Desempenho;
+- Otimização de Custos;
+- Sustentabilidade.
+
+Princípios da Arquitetura Eficiente:
+
+- Acoplamento fraco;
+- Gestão de dados independente;
+- Independência de camadas;
+- Versionamento;
+- Testes;
+- Automação de deploys / pipelines;
+- Monitoramento;
+- Plano de Contingência;
+- Autorreparação;
+- Análise e evolução constante.
