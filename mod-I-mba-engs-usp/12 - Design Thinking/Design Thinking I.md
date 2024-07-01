@@ -125,3 +125,53 @@ Muitas empresas acham o processo intimidador pelas seguintes motivos:
 - Identificando e solucionando os problemas relacionados aos stakeholders do ecossistema de negócios;
 - Reduzindo ou eliminando os pontos de fricção ou atrito dos stakeholders ao longo de suas jornadas diárias;
 - Resolução de problemas é um processo de aprendizagem, portanto, está relacionado com a cognição.
+
+## :one::one: Filosofando
+
+A filosofia se preocupa com a maneira como pensamos.
+
+Existem diversas linhas de raciocínio para a questão de como devemos resolver problemas.
+
+Racionalismo
+
+- Descartes;
+- O livro "O Método" descreve o que muito tempo depois ficou conhecido como ciclo PDCA;
+- "Se eu tiver dados, de forma lógica e dedutiva, eu resolvo problemas;
+- Parte de premissas e vai fechando até chegar em algo dedutivo;
+- Dedutivo.
+
+Empirismo
+
+- Francis Bacon, John Locke, Galileu, etc;
+- Indutivo;
+- Experimentação;
+- Muito utilizado pela ciência.
+
+Tem um melhor? Não! Depende do tipo de problema.
+
+## :one::two: Problemas Complexos x Bem Definidos
+
+Problemas complexos:
+
+- Difícil definição;
+- Solução múltipla;
+- Tentativa e erro;
+- Não terminam.
+
+Para problemas complexos utilizamos métodos baseados no empirismo, como o Design Thinking e podemos dividir a busca pela resolução em quatro etapas:
+
+1. **Conhecido x Concreto:** o fenômeno está acontecendo e vamos para campo realizar a coleta de dados relacionados a ele;
+2. **Conhecido x Abstrato:** Análise e síntese dos dados com a equipe. Em busca das perguntas bem feitas;
+3. **Desconhecido x Abstrato:** Brainstorm e geração de protótipos;
+4. **Desconhecido x Concreto:** Experimentação em campo.
+
+Bem Definidos:
+
+- Fácil definição;
+- Solução única;
+- Racionais e lineares;
+- Viram algoritmos.
+
+Para problemas bem definidos, basta que ele seja de conhecimento e tenha dados. Nesse caso utilizamos metodologias PDCA.
+
+A parte mais difícil nos dias de hoje é encontrar o problema que de fato precisa ser resolvido.
