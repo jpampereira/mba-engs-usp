@@ -58,13 +58,17 @@ Essa relação facilita o uso de operações de junção.
 
 São uma série de regras que garantem que um banco de dados foi bem projetado. Tem como objetivo garantir informação sem redundância e eficiência na obtenção dos dados.
 
-Existem quatro formas normais, porém, nem todos os bancos possuem recursos para implementar todas elas, principalmente a quarta forma.
+Existem várias formas normais, porém, nem todos os bancos possuem recursos para implementar todas elas e muitos autores entendem que conhecer as três primeiras já é o suficiente para a construção de bases de dados otimizadas.
 
-### :arrow_right: 1ª Forma Normal
+Normalizar um banco é o ato de aplicar as formas normais para que o banco tenha as melhores práticas de estrutura.
+
+[Link de referência](https://www.hashtagtreinamentos.com/o-que-sao-formas-normais-em-bancos-de-dados-sql?gad_source=1&gclid=CjwKCAjw7s20BhBFEiwABVIMrSWyZ8NQ8K1fY0h4dWhXua2bSDC8gHJqTmUnefc2ZrSzp2H-8W0KFhoCoaYQAvD_BwE)
+
+### :arrow_right: 1ª Forma Normal (1FN)
 
 "*Cada linha é uma informação. Não podem existir grupos repetidos ou atributos com mais de um valor.*"
 
-Ou seja, devemos utilizar chaves primárias para garantir a unicidade dos registros e caso um mesmo atributo possa assumir vários valores ao mesmo tempo, esses dados devem ser dispostos em uma nova tabela e deve-se utilizar os conceitos de chave primária e estrangeira para relacionar as duas tabelas.
+Ou seja, devemos utilizar chaves primárias para garantir a unicidade dos registros e caso um mesmo atributo possa assumir vários valores ao mesmo tempo (Atributos multivalorados), esses dados devem ser dispostos em uma nova tabela e deve-se utilizar os conceitos de chave primária e estrangeira para relacionar as duas tabelas.
 
 O professor utilizou o seguinte exemplo: seja uma tabela de alunos da USP/Esalq contendo todas as suas informações pessoais. Um mesmo aluno pode conter vários telefones (residêncial, celular, trabalho etc.).
 
@@ -75,7 +79,9 @@ O professor utilizou o seguinte exemplo: seja uma tabela de alunos da USP/Esalq 
 
 A 1ª Forma Normal indica que a segunda opção é o caminho mais adequado.
 
-### :arrow_right: 2ª Forma Normal
+A 1FN também fala da remoção de atributos compostos. Um bom exemplos nesse caso é o campo de endereço de um aluno, que geralmente é composto da rua, bairro, cidade, estado e CEP onde reside. É comum ver casos onde essas informações são inseridas em uma mesma coluna, porém, é necessário que elas sejam quebradas em diferentes colunas, facilitando sua manipulação e para remover redundâncias.
+
+### :arrow_right: 2ª Forma Normal (2FN)
 
 "*Todas as colunas que não participam da chave primária são dependentes de todas as colunas que compõe a chave primária.*"
 
@@ -90,3 +96,5 @@ O professor utilizou o seguinte exemplo: temos uma tabela ALUNOS_CURSOS que traz
   - Qual dos caminhos seguir vai depender da regra de negócio de cada organização.
 
 O importante aqui é entender que um bom modelo agrupa dados de um mesmo escopo em cada uma das tabelas e caso seja necessário relacionar esses escopos, utilizamos chaves primárias e estrangeiras.
+
+### :arrow_right: 3ª Forma Normal (3FN)

@@ -10,7 +10,8 @@ O mundo atual é muito mais complexo, portanto desenvolver novas perspectivas e 
 
 Um estudo da Delloite mostra a relação das inovações tecnológicas com as mudanças que ocorrem na sociedades e nas organizações privadas e públicas, sendo esse um ciclo sem fim.
 
-- As inovações obrigam que as organizações e pessoas adaptem seus modelos de negócio, gestão e cultura.
+- As inovações obrigam que as organizações e pessoas adaptem seus modelos de negócio, gestão e cultura;
+- Tecnologia como vetor da mudança.
 
 Há um passo muito importante, anterior as inovações tecnologicas, e que muitas vezes não é tratado da forma que devia: a ciência. As tecnologias são apenas a materialização dos conceitos descobertos e fundamentos pela ciência. Um exemplo é a energia elétrica: só após a definição dos conceitos que compõe as leis da física elétrica e o domínio dessa área pelos seres humanos que foi possível desenvolver todas as tecnologias que a envolvem.
 
@@ -26,9 +27,9 @@ Nem toda tecnologia, mesmo que nova, pode ser considerada inovação. Ela precis
 
 Nos exemplos acima temos casos onde a inovação vai além da visão tecnocêntrica. Inovação e tecnologia não estão necessariamente atrelados: o principal objetivo é gerar impacto.
 
-## :two: Design Thinking
+## :two: Focas nas Necessidades das Pessoas
 
-O Design Thinking é pensado baseado nas necessidades das pessoas.
+O Design Thinking é centrado nas necessidades das pessoas.
 
 - A Netflix surgiu da frustração de seu dono (e provavelmente de muitas outras pessoas) de que quando alugava um filme, precisava devolver no domingo, mas como acabava de vê-lo apenas domingo a noite, devolvia só na segunda e era multado. Ele decidiu então criar uma empresa para alocação de filmes via correios, sendo essa a primeira versão do Netflix. Mais a frente ele começou a perceber a tendência do mundo de migrar para o mundo digital e dos streamings e em mais uma inovação, criou a Netflix como conhecemos hoje;
 
@@ -38,7 +39,7 @@ O Design Thinking é pensado baseado nas necessidades das pessoas.
 Algumas outras empresas não entenderam as novas demandas:
 
 - A Nokia era a líder mundial em dispositivos celulares na primeira década de 2000 e quando surgiram os smartphones, como o iPhone, ela decidiu remar contra a maré e não percebeu que estava diante de uma necessidade que o mercado impunha;
-- A Blockbuster nos anos 1990 e primeira década de 2000 era a empresa líder do setor de alocação de filmes, porém, mesmo observando a transformação digital pelo qual o mundo passava, decidiu ignorá-la e não procurou se adaptar. Acabou sendo engolida para a Netflix e faliu.
+- A Blockbuster nos anos 1990 e primeira década de 2000 era a empresa líder do setor de alocação de filmes, porém, mesmo observando a transformação digital pelo qual o mundo passava, decidiu ignorá-la e não procurou se adaptar. Acabou sendo engolida pela Netflix e faliu.
 
 ## :three: Como Inovar?
 
@@ -54,7 +55,7 @@ Caso a solução pensada para o problema não entregue resultados em um primeiro
 
 ## :four: Definições Clássicas de Inovação
 
-**Adam Smith:** Seu foco na eficiência. Ninguém é bom em tudo, portanto devemos dividir as pessoas em áreas especializadas com o objetivo de maximizar a produtividade e o crescimento econômico.
+**Adam Smith:** Seu foco é na eficiência. Ninguém é bom em tudo, portanto devemos dividir as pessoas em áreas especializadas com o objetivo de maximizar a produtividade e o crescimento econômico.
 
 **Joseph Schumpeter:** Introdução do conceito de "destruição criativa", enfatizando que a inovação é crucial para o desenvolvimento econômico. Inovação pode envolver:
 
@@ -87,7 +88,7 @@ Para solucionar problemas podemos utilizar entre várias técnicas:
 
 O Stage Gates é um método tradicional e muito utilizado por empresas para o desenvolvimento de produtos. No início do projeto é definido um comitê responsável pela avaliação do projeto e antes de iniciar cada etapa esse comitê avalia o andamento do projeto antes de liberá-lo, funcionando como uma espécie de portão (gate) para cada etapa (stage).
 
-O problema do Stage Gates é ser um método extremamente linear e demorado, além de buscar apenas opiniões internas e não dos stakeholders (assim como o Design Thinking faz).
+O problema do Stage Gates é ser um método extremamente linear e demorado, além de buscar apenas opiniões internas e não dos stakeholders (coisa que o Design Thinking faz).
 
 A demanda do mercado pode mudar nesse meio tempo e o projeto ficar defasado.
 
@@ -161,7 +162,7 @@ Problemas complexos:
 Para problemas complexos utilizamos métodos baseados no empirismo, como o Design Thinking e podemos dividir a busca pela resolução em quatro etapas:
 
 1. **Conhecido x Concreto:** o fenômeno está acontecendo e vamos para campo realizar a coleta de dados relacionados a ele;
-2. **Conhecido x Abstrato:** Análise e síntese dos dados com a equipe. Em busca das perguntas bem feitas;
+2. **Conhecido x Abstrato:** Análise e síntese dos dados com a equipe. Daqui saem as perguntas bem feitas;
 3. **Desconhecido x Abstrato:** Brainstorm e geração de protótipos;
 4. **Desconhecido x Concreto:** Experimentação em campo.
 
@@ -172,6 +173,6 @@ Bem Definidos:
 - Racionais e lineares;
 - Viram algoritmos.
 
-Para problemas bem definidos, basta que ele seja de conhecimento e tenha dados. Nesse caso utilizamos metodologias PDCA.
+Para problemas bem definidos, basta que ele seja de conhecimento e tenha dados. Nesse caso utilizamos metodologias como o PDCA.
 
 A parte mais difícil nos dias de hoje é encontrar o problema que de fato precisa ser resolvido.
