@@ -1,23 +1,23 @@
 # Tendências em Inteligência Artificial e Big Data
 
-IA é apenas uma ferramenta para a maioria das empresas. Só é tratado como core business em empresas que constroem modelos, como: Google, IBM etc.
+IA é apenas uma ferramenta para a maioria das empresas. Só é tratado como *core business* em empresas que constroem modelos, como: Google, IBM etc.
 
 Devemos olhar a IA como uma ferramenta auxiliar e não como algo que irá nos substituir.
 
 - Exemplo: O ChatGPT é um bom auxiliar durante o desenvolvimento para relembrar comandos e tirar dúvidas.
 
-## :one: Big Data
+## Big Data
 
-Big Data não é uma ferramenta ou um aplicativo e sim um conceito. Segundo a definição da Gartner:
+Big Data não é uma ferramenta ou um aplicativo e sim um conceito que veio do mercado.
 
-"*Big data é um conjunto de informações em alto volume, alta velocidade e/ou alta variedade, que demanda formas inovadoras e custo-efetivas de processamento de informações, permitindo uma visão aprimorada, tomada de decisões e automação de processos.*"
+Segundo a definição da Gartner: "*Big data é um conjunto de informações em alto volume, alta velocidade e/ou alta variedade, que demanda formas inovadoras e custo-efetivas de processamento de informações, permitindo uma visão aprimorada, tomada de decisões e automação de processos.*"
 
 Os três V's clássicos do Big Data:
 
 - **Volume:**
 
   - Temos mais dados pois o armazenamento se tornou muito mais barato, além de termos muitas mais fontes de coleta;
-  - É o conceito que a maioria das pessoas associa o BIG do nome, porém, apenas o volume não significa nada.
+  - É o conceito que a maioria das pessoas associa o **BIG** do nome, porém, apenas o volume não significa nada.
 
 - **Variedade:**
 
@@ -39,9 +39,9 @@ Outros 2 V's importantíssimos:
 
 Portanto, Big Data não é sobre armazenar grandes quantidades de dados e sim sobre gerar algum valor sobre eles.
 
-- Se dado é o novo petróleo (combustível), então o analytics é o motor.
+> Se dado é o novo petróleo (combustível), então o analytics é o motor.
 
-## :two: Modelo Preditivo
+## Modelo Preditivo
 
 Um modelo preditivo é uma função matemática capaz de identificar padrões por meio de uma série de dados previamente coletados.
 
@@ -55,25 +55,33 @@ P(cachorro) = 0.2*(pergunta1) + 0.2*(pergunta2) + 0.2*(pergunta3) + 0.2*(pergunt
 
 Claro que uma IA não gera um modelo de predição da forma como foi apresentado. Essa é apenas uma explicação lúdica de como funciona um modelo. O importante aqui é entender que todo modelo de predição é uma equação matemática, onde os dados de entrada são as variáveis desse modelo e esses possuem pesos, definidos durante a fase de treinamento do mesmo.
 
-## :three: Simplificando a IA
+## Simplificando a IA
 
 Podemos dividir as IAs em três categorias:
 
-- **Super IA:** É aquela que vemos nos filmes de ficção. São máquinas autoconscientes. Ainda não existem mas há estudos para que sejam construídas de forma ética e segura;
-- **IA Geral:** Procura soluções para problemas para os quais ela não foi especificamente treinada. Ela não existe mas estamos mais perto do que as super. Podemos achar que o ChatGPT é um exemplo, já que ele responde perguntas de diferentes temas, porém, ele não é pois é baseado puramente em um modelo matemático;
-- **IA Restrita:** Maior parte dos modelos que conhecemos e estão no nosso dia a dia são construídos com objetivos específicos.
+- **Super IA (ASI, Artificial Super Intelligence):** É aquela que vemos nos filmes de ficção. São máquinas autoconscientes. Ainda não existem mas há estudos para que sejam construídas de forma ética e segura;
+
+- **IA Geral (GAI, General Artificial Intelligence):** Procura soluções para problemas para os quais ela não foi especificamente treinada. Ela não existe mas estamos mais perto do que as super. Podemos achar que o ChatGPT é um exemplo, já que ele responde perguntas de diferentes temas, porém, ele não é pois é baseado puramente em um modelo matemático;
+
+- **IA Restrita/Estreita (NAI, Narrow Artificial Intelligence):** Maior parte dos modelos que conhecemos e estão no nosso dia a dia são construídos com objetivos específicos.
   - Um modelo criado pra um determinado propósito não pode ser replicado em outro contexto;
   - Cada contexto necessita de uma nova modelagem;
   - Exemplo: algoritmo do melhor caminho do waze não pode ser utilizado pelo ifood para te recomendar um restaurante de acordo com os seus gostos.
 
-### :arrow_right: Machine Learning
+### Machine Learning
 
-Outro termo muito na moda no mundo de tecnologia é o Machine Learnig (Aprendizado de Máquina). Resumindo: seu objetivo é simular a forma de aprendizagem dos humanos, baseada em exemplos, para construir os modelos. Isso permite fazermos previsões de forma mais rápida, barata e assertiva, além de possibilitar novas aplicações.
+Outro termo (*buzzword*) muito na moda no mundo de tecnologia é o *Machine Learnig* (Aprendizado de Máquina).
+
+**Resumindo:** Seu objetivo é simular a forma de aprendizagem dos humanos, baseada em exemplos, para construir os modelos. Isso permite fazermos previsões de forma mais rápida, barata e assertiva, além de possibilitar novas aplicações.
+
+- O termo correto na verdade seria "predição", mas para simplificar vamos utilizar "previsão".
 
 Vamos pensar no exemplo da autonomia veicular: apesar de ainda não estarmos vendo carros autônomos nas ruas, essa conversa é antiga e remete ao contexto fabríl na automação das suas empilhadeiras. Nesse contexto já podemos observar a existência de empilhadeiras autônomas, então a pergunta que fica é: porque isso ainda não foi replicado para carros convencionais?
 
 - A resposta é simples: o ambiente de uma empilhadeira é restrito e controlado se comparado ao mundo real amplo e cheio de imperfeições;
+
 - No caso de uma empilhadeira, é simples definirmos os cenários em que ela pode se encontrar e definir as ações que ela deve tomar nesses casos. Exemplo: "se alguém entrar na frente então parar" ou "se a prateleira estiver vazia então vá para a próxima";
+
 - Porém, quando vamos para o mundo real não é possível utilizar esse modelo condicional pois as situações são infinitas.
 
 A autonomia veicular só pode ser resolvida com previsão.
@@ -81,11 +89,14 @@ A autonomia veicular só pode ser resolvida com previsão.
 Como ela funciona?
 
 - Um humano, que classificamos como bem intencionado, dirige um carro e um programa, no passageiro, vai captando informações através de câmeras, radares e sensores e vai aprendendo com os acontecimentos e dados coletados;
-- Exemplo: a pessoa identifica um pedestre e para o carro. Quando o sensor identificar o pedestre ele irá, através do seu algoritmo, tentar definir a ação que ele deve tomar. Caso a ação seja a mesma da pessoa, ele aprende que aquilo é correto. Caso sua ação seja diferente da pessoa, ele aprende que errou e retroalimenta o modelo com a informação de qual a ação correta a se tomar naquele cenário.
+
+- Exemplo: o condutor identifica um pedestre e para o carro. Quando o sensor identificar o pedestre ele irá, através do seu algoritmo, tentar definir a ação que ele deve tomar. Caso a ação seja a mesma do condutor, ele aprende que aquilo é correto. Caso sua ação seja diferente, ele aprende que errou e retroalimenta o modelo com a informação de qual a ação correta a se tomar naquele cenário. Acertando ou errando o modelo está aprendendo.
 
 De início o programa irá cometer vários erros, mas aprende com esses erros e atualiza o programa sempre que prevê de forma errada o que o humano bem intencionado faria. As previsões melhoram até o momento em que o programa fica melhor que o motorista bem intencionado. Neste ponto, o programa pode atuar sozinho.
 
-Por que os carros autônomos ainda não são uma realidade? Dois principais desafios: quantidade enorme de dados a processar e tempo de resposta deve ser baixíssimo.
+Por que os carros autônomos ainda não são uma realidade?
+
+- Dois principais desafios: quantidade enorme de dados a processar e tempo de resposta deve ser baixíssimo.
 
 ## :four: IA com Dados Estruturados
 
