@@ -98,7 +98,7 @@ Por que os carros autônomos ainda não são uma realidade?
 
 - Dois principais desafios: quantidade enorme de dados a processar e tempo de resposta deve ser baixíssimo.
 
-## :four: IA com Dados Estruturados
+## IA com Dados Estruturados
 
 Vamos ver um exemplo próximo do dia-a-dia utilizado pelas empresas: a divisão de recursos humanos de uma empresa deseja reduzir o seu turnover já que a perda de colaboradores pode ser muito custosa, seja no sentido financeiro ou até mesmo de ritmo (curva de aprendizagem). Para isso, decidiram contratar uma consultoria para criar um modelo de análise preditiva que determina a probabilidade de um colaborador pedir demissão.
 
@@ -110,34 +110,43 @@ Para conseguirmos criar um modelo o primeiro de tudo é termos o nosso dataset. 
 
   ![Dataset estruturado](Imagens/Dataset%20estruturado.png)
 
-  - Podemos interpretar a imagem acima da seguinte forma: os pontos são cada um dos funcionários. A cor azul identifica os funcionários que permanecem na empresa e o vermelho aqueles que já saíram. Cada um dos funcionários possui diferentes atributos (ou features) que o identificam.
+  - Podemos interpretar a imagem acima da seguinte forma: os pontos são cada um dos funcionários. A cor azul identifica os funcionários que permanecem na empresa e o vermelho aqueles que já saíram. Cada um dos funcionários possui atributos (ou *features*) que o identificam.
 
 Em posse do dataset, escolhemos uma entre várias ferramentas existentes para modelagem, como as linguagens Python ou R, o Watson da IBM etc. e "jogamos" esses dados dentro dessas ferramentas de modelagem. O resultado dessa ferramenta será o modelo que iremos utilizar para prever qual a chance de um colaborador pedir demissão ou não.
 
-Aqui temos que ter em mente que estamos utilizando um novo paradigma. Usualmente quando construímos algoritmos, nós desenvolvedores definimos é construímos as regras de negócio da aplicação e utilizamos os dados de entrada e saída em testes e produção. No caso da inteligência artificial fazemos o inverso, nós fornecemos para a ferramenta de modelagem os dados de entrada (inputs) e os de saída (target, label ou output) e ela será responsável por definir o modelo que iremos utilizar.
+Aqui temos que ter em mente que estamos utilizando um novo paradigma. Usualmente quando construímos algoritmos, nós desenvolvedores definimos é construímos as regras de negócio da aplicação e utilizamos os dados de entrada e saída em testes e produção. No caso da inteligência artificial fazemos o inverso, nós fornecemos para a ferramenta de modelagem os dados de entrada (*inputs*) e os de saída (*target*, *label* ou *output*) e ela será responsável por definir o modelo que iremos utilizar.
 
 - "*Usando IA, quem cria as condicionais é o computador!*";
 
 - Basicamente estamos informando para a ferramenta exemplos de cenários reais e qual o resultado esperado para eles e de forma iterativa ela vai aprendendo e melhorando de forma que modelo final seja capaz de receber novos cenários, fora daqueles treinados, e seja capaz de definir com precisão a probabilidade de determinada coisa acontecer. Esse é o conceito de Machine Learning;
+
 - Por isso a importância do dataset e do treinamento, pois só assim se pode chegar em um modelo de qualidade.
 
-Esse modelo que tanto falamos é uma equação matemática, onde cada porção dessa equação representa um input (no exemplo, cada uma das informações do usuário) e essas porções recebem pesos, calculados durante a fase de treinamento e baseado nos targets informados.
+Esse modelo que tanto falamos é uma equação matemática, onde cada porção dessa equação representa um *input* (no exemplo, cada uma das informações do usuário) e essas porções recebem pesos, calculados durante a fase de treinamento e baseado nos *targets* informados.
 
-  ![Modelo com dataset estruturado](Imagens/Modelo%20com%20dataset%20estruturado.png)
+![Modelo com dataset estruturado](Imagens/Modelo%20com%20dataset%20estruturado.png)
+
+- **P-Valor** é uma métrica gerada automaticamente pelas bibliotecas de modelagem e que indica quais são as *features* que tem maior impacto na geração do resultado, sendo aquelas com o valor próximo do zero as mais relevantes, enquanto as mais próximas do um são irrelevantes (no exemplo acima, idade se mostra um atributo mais relevante para o resultado do que escolaridade).
 
 Após muito treinamento o modelo gerado pode ser utilizado em produção. Porém, ele não retornará o que deve ser feito para que o funcionário não peça definição e sim apenas a probabilidade disso acontecer. O modelo pode até retornar quais foram as informações que mais influenciaram na sua tomada de decisão, porém, a partir da entrega do dado, cabe a equipe do RH, responsável pelo tema, de trabalhar caso a caso para que o turnover diminua.
 
 - O modelo não trará todas as respostas, ele apenas apontará os cenários de maior probabilidade (uma espécie de facilitador) para que a equipe se concentre nos casos mais críticos;
+
 - O que é mais importante para se atingir a diminuição do turnover: tratar o caso de um funcionário que tem 90% de probabilidade de sair ou de um que tem apenas 12%?
 
 Essa mesma ideia pode ser aplicada em outros contextos. Exemplos:
 
 - Uma faculdade está observando muitos casos de desistência e quer a partir de modelos probabilísticos encontrar o perfil dos alunos que tem maior tendência a isso para que consigam criar um plano de ação com o objetivo de diminuir a incidência;
-- Uma empresa de televisão a cabo quer utilizar um modelo probabilístico para prever quais os clientes que tem maior probabilidade de cancelar a assinatura e com isso trabalhar em ações em cima dos casos mais críticos, afim de diminuir o seu churn (métrica que mostra o número de clientes que cancelaram um determinado serviço em um período de tempo).
 
-## :five: IA com Dados Não Estruturados
+- Uma empresa de televisão a cabo quer utilizar um modelo probabilístico para prever quais os clientes que tem maior probabilidade de cancelar a assinatura e com isso trabalhar em ações em cima dos casos mais críticos, afim de diminuir o seu *churn* (métrica que mostra o número de clientes que cancelaram um determinado serviço em um período de tempo);
 
-Quando falamos de dados estruturados estamos falando de imagens, videos, audios, textos etc. Nesses casis é comum que não criemos e executemos modelos com esses dados em nossas máquinas pessoais, visto que eles necessitam de maior poder computacional para serem processados. Nesse caso utilizamos modelos prontos em nuvem  (SaaS) criados por outras pessoas/empresas, como a Google e Azure.
+- Na TIM desenvolvemos um modelo que indica qual a probabilidade de um site cair nos próximos sete dias, gerando uma indisponibilidade e possivelmente afetando o serviço de um cliente.
+
+## IA com Dados Não Estruturados
+
+Quando falamos de dados estruturados estamos falando de imagens, videos, audios, textos etc. Nesses casos é comum que não criemos e executemos modelos com esses dados em nossas máquinas pessoais, visto que eles necessitam de maior poder computacional para serem processados. Nesse caso utilizamos modelos prontos em nuvem (SaaS) criados por outras pessoas/empresas, como a Google e Azure.
+
+- **Visão Computacional** é a área da IA que trata de elementos visuais, como vídeos e imagens.
 
 ## :six: Qualidade e Explicação de Modelos Preditivos
 
