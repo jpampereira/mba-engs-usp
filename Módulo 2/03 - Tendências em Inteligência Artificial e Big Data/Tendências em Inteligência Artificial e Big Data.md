@@ -148,13 +148,13 @@ Quando falamos de dados estruturados estamos falando de imagens, videos, audios,
 
 - **Visão Computacional** é a área da IA que trata de elementos visuais, como vídeos e imagens.
 
-## :six: Qualidade e Explicação de Modelos Preditivos
-
-### :arrow_right: Qualidade
+## Qualidade e Explicação de Modelos Preditivos
 
 Não existe modelo bom quando os dados de treinamento são ruins, porém, mesmo com dados de qualidade, não necessariamente podemos criar um modelo. A característica desses dados também é fator determinante para definir sua viabilidade ou não.
 
-- Se o modelo não for capaz de diferenciar os dados que compõe o dataset através de seus atributos ele não será viável. Exemplo do Rei Charles e Ozzy Osbourne presente nos slides da aula, ambos apresentam os mesmos atributos, porém, são pessoas completamente diferentes.
+- Se o modelo não for capaz de diferenciar os grupos que compõe o dataset através dos atributos dos dados, ele não será viável.
+
+  - Exemplo do Rei Charles e Ozzy Osbourne presente nos slides da aula: ambos apresentam os mesmos atributos (masculino, nasceu em 1948, criado no Reino Unido, casado duas vezes, mora em um castelo, é rico e famoso), porém, são pessoas completamente diferentes.
 
 - Modelo sempre dá pra criar, agora, se dá pra usar vai depender da capacidade preditiva dele, isto é, quanto ele vai acertar.
 
@@ -175,7 +175,7 @@ A matriz possui duas linhas e duas colunas:
 - O modelo prevê que ele irá pagar mas na verdade não pagou (falso negativo);
 - O modelo prevê que ele irá pagar e de fato pagou (verdadeiro negativo);
 
-Interpretando a matriz: de 5098 casos analisados, o modelo preveu que 2809 deles os clientes não iriam pagar. Desse número ele acerto 1949 e errou outros 860. Os outros 2289 o modelo previu que os clientes pagariam e obteve acerto em 1816 casos, enquanto outros 473 houve equívoco.
+Interpretando a matriz: de 5098 casos analisados, o modelo preveu que 2809 deles os clientes não iriam pagar. Desse número ele acertou 1949 e errou outros 860. Os outros 2289 o modelo previu que os clientes pagariam e obteve acerto em 1816 casos, enquanto outros 473 houve equívoco.
 
 A partir dessa matriz é possível calcular várias métricas de qualidade como sensibilidade, especificidade, acuracidade, precisão etc.
 
@@ -194,13 +194,13 @@ O papel do cientista de dados acaba no cálculo dos coeficientes de qualidade. A
 - Tudo depende do contexto onde ela será inserida;
 - Por isso a avaliação do modelo deve ser feita pela equipe detentora do negócio.
 
-## :seven: Alguns pontos importantes sobre IA generativa
+## Alguns pontos importantes sobre IA generativa
 
 Você precisa olhar para o chatGPT como se ele fosse o seu assistente, isto é, você pede para ele fazer o trabalho pesado e revisa o resultado.
 
 - Você tem que olhar para ele como um estagiário. Você delega uma atividade para ele mas não a responsabilidade. Ele pode errar, então você sempre precisa revisar.
 
-IA generativa não é um método melhor do que outros.
+IA generativa não é um método melhor do que outros, como os tradicionais de Machine Learning.
 
 - Cada um tem seu propósito;
 - IA generativa é uma ótima solução para estruturação de dados mas não para modelos de predição;
@@ -208,7 +208,9 @@ IA generativa não é um método melhor do que outros.
 
 Devemos tomar muito cuidado com automações que utilizam LLM, pois elas alucinam (isto é, respondem baseadas em informações não verificadas), portanto, necessitam sempre de análise crítica dos humanos que a utilizam e a supervisionam.
 
-## :eight: Regulação, ética, justiça, transparência
+Temos tanto as LLMs fechadas, como o GPT e o Gemini, quanto as *Open Source*, como o Mistral, a Meta, Vicuna, Cabrita ou Stanford Alpaca.
+
+## Regulação, ética, justiça, transparência
 
 Sua obrigação como cientista de dados é criar um modelo que não tenha viés.
 
