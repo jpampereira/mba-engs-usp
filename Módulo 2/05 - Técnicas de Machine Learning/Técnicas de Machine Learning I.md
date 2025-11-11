@@ -10,7 +10,7 @@ Exemplo: criação de modelos preditivos ou análise de interdependência entre 
 
 ## :one: Banco de Dados
 
-A primeira coisa que precisamos definir antes mesmo da modelagem é no banco de dados que armazenará dos dados que serão consumidos pelo modelo.
+A primeira coisa que precisamos definir antes mesmo da modelagem é no banco de dados que armazenará os dados que serão consumidos pelo modelo.
 
 Esses dados são uma amostra, ou em outras palavras, um subconjunto da população do problema que estamos tentando resolver.
 
@@ -47,7 +47,7 @@ Utilizando a mesma tabela do exemplo anteriores vamos classificar as variáveis:
 
 ![Tipos de Variáveis](./Imagens/Tipos%20de%20Variáveis.png)
 
-- As variáveius "idade", "altura" e "renda", destacadas em vermelho, são classificadas como métricas, enquanto "cidade" e "profissão", destacadas em verde, são qualitativas.
+- As variáveis "idade", "altura" e "renda", destacadas em vermelho, são classificadas como métricas, enquanto "cidade" e "profissão", destacadas em verde, são qualitativas.
 
 **Atenção:** Apesar de variáveis quantitativas serem representadas por números, não significa que toda variável numérica é do tipo "métrica". Pode ser apenas uma representação numérica de uma categoria para facilitar a análise e manipulação, mas ela não deixa de ser qualitativa.
 
@@ -72,7 +72,7 @@ Variáveis quantitativas possuem um maior leque de representações, como medida
 
 Isso mostra o quanto é importante identificar o tipo de variável para definir o método estatístico a se utilizar.
 
-### :arrow_right: Outras Características Relevantes (mas não essenciais)
+### :arrow_right: Outras Características Relevantes
 
 Variáveis Qualitativas podem ser classificadas entre dicotômicas (duas categorias - binário) ou policotômicas (mais de duas categorias) ou nominal e ordinal, onde a segunda indica que as categorias possuem uma relação de grandeza (ou ordem), enquanto a primeira não.
 
