@@ -96,13 +96,13 @@ Como interpretar essa equação:
 - Nós propomos que as variáveis X explicam Y;
 - Queremos explicar o comportamento Y em função de X.
 
-**Importante:** Esse modelo deve ser aplicado apenas quando a variável dependente é do tipo quantitativa. As variáveis explicativas podem ser tanto métricas quanto categóricas.
+**Importante:** Esse modelo deve ser aplicado apenas quando a variável dependente é do tipo quantitativa. As variáveis explicativas podem ser tanto métricas quanto categóricas (nesse caso, precisarão de um tratamento prévio).
 
 A diferença entre uma regressão simples e uma múltipla é que a primeira contém apenas uma variável explicativa, enquanto a segunda possui duas ou mais.
 
 ### :arrow_right: Modelos Supervisionados
 
-Os modelos de supervisionados de ML são aqueles que o analista propõe o modelo que deve ser produzido, especificando as variáveis que serão levadas em consideração e que elas tem relação de causa-efeito com o que se deseja provar. Os não supervisionados desejamos utilizar a tecnologia para procurar possíveis relações, ainda desconhecidas, entre as variáveis.
+Os modelos supervisionados de Machine Learning são aqueles em que o analista propõe o modelo que deve ser produzido, especificando as variáveis que serão levadas em consideração e que elas tem relação de causa-efeito com o que se deseja provar. Os não supervisionados desejamos utilizar a tecnologia para procurar possíveis relações, ainda desconhecidas, entre as variáveis.
 
 ### :arrow_right: Modelo Geral de Regressão Linear
 
@@ -122,7 +122,7 @@ O resíduo do modelo pode ser calculado como a diferença entre o valor real e o
 
 ### :arrow_right: Exemplo
 
-No exemplo abaixo temos a representação gráfica de um modelo de regressão linear simples que procura explicar o preço do imóvel em função do seu tamanho (m2), sendo possível concluir que quanto maior o seu tamanho, maior o seu preço.
+No exemplo abaixo temos a representação gráfica de um modelo de regressão linear simples que procura explicar o preço do imóvel em função do seu tamanho (m2), sendo possível concluir que quanto maior o seu tamanho, maior o seu preço, caracterizando uma relação positiva entre as variáveis X e Y:
 
 ![Exemplo de Regressão Linear Simples - Parte 1](Imagens/Exemplo%20de%20Regressão%20Linear%20Simples%20-%20Parte%201.png)
 
@@ -130,7 +130,7 @@ Se escolhermos qualquer ponto no eixo x, isto é, o tamanho do imóvel que gosta
 
 ![Exemplo de Regressão Linear Simples - Parte 2](Imagens/Exemplo%20de%20Regressão%20Linear%20Simples%20-%20Parte%202.png)
 
-O resíduo (ou erro) de uma observação é a distância do ponto no gráfico (valor real ou observado) para a reta (valor previsto):
+O resíduo (ou erro) de uma observação é a distância (diferença) do ponto no gráfico (valor real ou observado) para a reta (valor previsto):
 
 ![Exemplo de Regressão Linear Simples - Parte 3](Imagens/Exemplo%20de%20Regressão%20Linear%20Simples%20-%20Parte%203.png)
 
