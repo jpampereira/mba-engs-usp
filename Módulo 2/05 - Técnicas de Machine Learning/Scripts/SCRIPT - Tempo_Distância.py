@@ -65,7 +65,7 @@ reg_simples = sm.OLS.from_formula(formula = 'tempo ~ distancia',
                                   data=alunos).fit()
 
 # Obtenção dos outputs
-reg_simples.summary()
+reg_simples.summary() # Modelo => tempo(i) = 5,87 + 1,41 * distancia(i)
 
 # ANOVA da regressão
 sm.stats.anova_lm(reg_simples)

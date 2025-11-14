@@ -96,7 +96,7 @@ Como interpretar essa equação:
 - Nós propomos que as variáveis X explicam Y;
 - Queremos explicar o comportamento Y em função de X.
 
-**Importante:** Esse modelo deve ser aplicado apenas quando a variável dependente é do tipo quantitativa. As variáveis explicativas podem ser tanto métricas quanto categóricas (nesse caso, precisarão de um tratamento prévio).
+**Importante:** Esse modelo deve ser aplicado apenas quando a variável dependente é do tipo quantitativa. As variáveis explicativas podem ser tanto métricas quanto categóricas (nesse caso, precisarão de um tratamento prévio chamado *dummização*).
 
 A diferença entre uma regressão simples e uma múltipla é que a primeira contém apenas uma variável explicativa, enquanto a segunda possui duas ou mais.
 
@@ -126,6 +126,10 @@ No exemplo abaixo temos a representação gráfica de um modelo de regressão li
 
 ![Exemplo de Regressão Linear Simples - Parte 1](Imagens/Exemplo%20de%20Regressão%20Linear%20Simples%20-%20Parte%201.png)
 
+- Em uma relação positiva entre X e Y, quanto maior o valor de X, maior o de Y. Na relação negativa, quanto maior o valor de X, menor o de Y. Quando as variáveis X e Y não possuem relação de causa e efeito a relação delas é nula. A relação nula é representada no gráfico por uma reta na horizontal, onde independentemente do valor de X, o valor de Y não varia;
+
+- Essa relação pode ser identificada de forma visual através da observação do gráfico gerado, porém, também pode ser calculada utilizando o coeficiente de correlação de Pearson. Esse coeficiente varia entre -1 e +1. Quanto mais próximo de -1, significa que as variáveis possuem uma relação negativa, enquanto próximo de +1 entende-se que elas tem uma relação positiva.
+
 Se escolhermos qualquer ponto no eixo x, isto é, o tamanho do imóvel que gostariamos de saber o seu possível preço, traçarmos um pontilhado até o ponto de cruzamento com a reta do gráfico e a partir desse ponto de cruzamento em direção ao eixo y, vamos encontrar o seu valor correspondente:
 
 ![Exemplo de Regressão Linear Simples - Parte 2](Imagens/Exemplo%20de%20Regressão%20Linear%20Simples%20-%20Parte%202.png)
@@ -137,8 +141,10 @@ O resíduo (ou erro) de uma observação é a distância (diferença) do ponto n
 Se fossemos representar por meio de uma fórmula esse modelo, teriamos:
 
 ```Regressão Linear Simples
-Preço do Imóvel i = a + b * Tamanho do Imóvel i
+Preço do Imóvel (i) = a + b * Tamanho do Imóvel (i)
 ```
+
+Sendo assim, toda vez que desejarmos prever o preço de um imóvel, basta substituirmos o valor do tamanho do imóvel na equação acima e calcular seu valor resultando.
 
 ### :arrow_right: Mínimos Quadrados Ordinários (MQO)
 
@@ -146,10 +152,6 @@ Como podemos observar no gráfico do exemplo anterior, o modelo (reta) não pass
 
 No caso da Regressão Linear são utilizadas duas condições para estabelecer o melhor modelo:
 
-**1 -** A somatória dos resíduos deve ser igual a zero.
+1. A somatória dos resíduos deve ser igual a zero. Porém, apenas essa condição não é suficiente, pois ainda existirão várias retas possíveis a serem traçadas.
 
-Porém, apenas essa condição não é suficiente, pois ainda existirão várias retas possíveis a serem traçadas.
-
-**2 -** A somatória dos resíduos ao quadrado é a mínima possível.
-
-Isto é, queremos a reta cujos resíduos são os menores possíveis, quando seus quadrados são somados.
+2. A somatória dos resíduos ao quadrado é a mínima possível. Isto é, queremos a reta cujos resíduos são os menores possíveis, quando seus quadrados são somados.
