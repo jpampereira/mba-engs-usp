@@ -84,7 +84,7 @@ Finalmente agora vamos gerar o modelo de Regressão Linear Simples. Para isso ut
 
 Uma interpretação para o Intercepto é que ele é o coeficiente linear, ou seja, o valor da variável dependente caso todas as variáveis explicativas sejam iguais à 0. Porém, podemos também interpretar ele apenas como o ponto de projeção da reta no eixo y, uma vez que seu valor pode não ter relação lógica caso todas as variáveis explicativas sejam zero.
 
-- No exemplo do script, se substituirmos `Distância i` por 0, vamos obter que o tempo para deslocamento até a escola a uma distância de 0 metros é 5,8784 minutos, o que não faz sentido.
+- No exemplo do script, se substituirmos `Distância(i)` por 0, vamos obter que o tempo para deslocamento até a escola a uma distância de 0 metros é 5,8784 minutos, o que não faz sentido.
 
 Podemos interpretar também os coeficientes das variáveis explicativas como a **magnitude** que essas tem sobre o fenômeno e que seus valores indicam se a sua influência é positiva, negativa ou neutra.
 
@@ -102,7 +102,7 @@ A ideia é atestar que pelo menos uma das variáveis explicativas é estatistica
 
 Normalmente adota-se um nível de significância de até 5% para o teste, isto é, se o P-valor da estatística F for menor do que 0.05, podemos concluir que ao menos uma das variáveis explicativas é estatisticamente diferente de zero e que podemos seguir com esse modelo. Caso contrário, as variáveis X não explicam Y e o modelo é ruim.
 
-No exemplo que estamos tratando a estatística F pode ser visualizada através do comando visualizado na seção anterior em `F-statistic` e `Prob (F-statistic)`. Como o valor de `Prob (F-statistic)` é menor do que 5% (0,05), então podemos concluir que o modelo é viável.
+No exemplo que estamos tratando a estatística F pode ser visualizada através do comando visualizado na seção anterior em `F-statistic` e `Prob (F-statistic)`. Como o valor de `Prob (F-statistic)` é menor do que 0.05, então podemos concluir que o modelo é viável.
 
 ![Estatística F](./Imagens/Regressão%20Linear%20Simples%20-%20Tempo%20x%20Distância%20-%20Estatística%20F.png)
 
@@ -157,7 +157,7 @@ Analisando as estatísticas F e T, vemos que o modelo e suas variáveis explicat
 Escrevendo o modelo em equação matemática:
 
 ```Regressão Linear Múltipla
-Tempo i = 8,1512 + 0,7972 * Distância i + 8,2963 * Semáforos i
+Tempo(i) = 8,1512 + 0,7972 * Distância(i) + 8,2963 * Semáforos(i)
 ```
 
 ## :four: Código - Regressão Múltipla com Variáveis Categóricas - Tempo x Distância
