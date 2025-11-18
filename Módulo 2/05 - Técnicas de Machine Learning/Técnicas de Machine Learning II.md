@@ -42,7 +42,7 @@ No bloco seguinte são executados alguns métodos do próprio objeto DataFrame q
 
 - No caso das estatísticas para variáveis do tipo métricas (`tempo`, `distancia` e `semaforos`) foi retornado o número de observações existentes na lista (`count`), a média (`mean`), o desvio padrão (`std`), os valores mínimos e máximos (`min` e `max`, respectivamente) e os quartis (`25%`, `50%` e `75%`).
 
-- No caso das estatísticas para variáveis categóricas (`periodo` e `perfil`) foi retornada a contagem de quantas observações se encaixam em cada uma das categorias.
+- No caso das estatísticas para variáveis categóricas (`periodo` e `perfil`) foi retornada a contagem de quantas observações se encaixam em cada uma das categorias (tabelas de frequência).
 
 **Importante:** O modelo foi treinado baseado em valores de distância que variam de 10 à 55. Quando for analisar cenários fora aqueles já conhecidos, tomar cuidado para não extrapolar o valor das variáveis, pois o modelo não está adequado para todo e qualquer cenário, apenas para aqueles que estejam próximos ou dentro a faixa que lhe foi apresentada.
 
@@ -77,16 +77,16 @@ Finalmente agora vamos gerar o modelo de Regressão Linear Simples. Para isso ut
 - Com o modelo gerado armazenado em `reg_simples`, utilizamos o método `summary` para visualizar alguns dados relacionados ao modelo gerado, entre eles, os valores do intercepto e do coeficiente da distância. Tendo esses valores podemos definir o modelo que explica o tempo em relação a distância percorriada:
 
   ```Regressão Linear Simples
-  Tempo i = 5.8784 + 1.4189 * Distância i
+  Tempo(i) = 5.8784 + 1.4189 * Distância(i)
   ```
 
-  - Se substituirmos a variável `Distância i` da equação acima, vamos obter o tempo estimado pelo modelo para se chegar na escola.
+  - Se substituirmos a variável `Distância(i)` da equação acima, vamos obter o tempo `Tempo(i)` estimado pelo modelo para se chegar na escola.
 
 Uma interpretação para o Intercepto é que ele é o coeficiente linear, ou seja, o valor da variável dependente caso todas as variáveis explicativas sejam iguais à 0. Porém, podemos também interpretar ele apenas como o ponto de projeção da reta no eixo y, uma vez que seu valor pode não ter relação lógica caso todas as variáveis explicativas sejam zero.
 
 - No exemplo do script, se substituirmos `Distância i` por 0, vamos obter que o tempo para deslocamento até a escola a uma distância de 0 metros é 5,8784 minutos, o que não faz sentido.
 
-Podemos interpretar também os coeficientes das variáveis explicativas como a magnitude que essas tem sobre o fenômeno e que seus valores indicam se a sua influência é positiva, negativa ou neutra.
+Podemos interpretar também os coeficientes das variáveis explicativas como a **magnitude** que essas tem sobre o fenômeno e que seus valores indicam se a sua influência é positiva, negativa ou neutra.
 
 - Para o caso de uma regressão simples, o coeficiente positivo produz um efeito positivo no modelo (quanto maior X maior Y, quanto menor X menor Y) e a reta será projetada de forma ascendente, por outro lado, caso o coeficiente seja negativo, o efeito em Y será negativo (quanto maior X menor Y e vice-versa) e a reta do modelo será projetada de forma descendente;
 
@@ -102,7 +102,7 @@ A ideia é atestar que pelo menos uma das variáveis explicativas é estatistica
 
 Normalmente adota-se um nível de significância de até 5% para o teste, isto é, se o P-valor da estatística F for menor do que 0.05, podemos concluir que ao menos uma das variáveis explicativas é estatisticamente diferente de zero e que podemos seguir com esse modelo. Caso contrário, as variáveis X não explicam Y e o modelo é ruim.
 
-No exemplo que estamos tratando a estatística F pode ser visualizada através do comando visualizado na seção anterior em `F-statistic` e `Prob (F-statistic)`. Como o valor de `Prob (F-statistic)` é menor do que 5% (isto é, 0,05), então podemos concluir que o modelo é viável.
+No exemplo que estamos tratando a estatística F pode ser visualizada através do comando visualizado na seção anterior em `F-statistic` e `Prob (F-statistic)`. Como o valor de `Prob (F-statistic)` é menor do que 5% (0,05), então podemos concluir que o modelo é viável.
 
 ![Estatística F](./Imagens/Regressão%20Linear%20Simples%20-%20Tempo%20x%20Distância%20-%20Estatística%20F.png)
 
@@ -112,13 +112,13 @@ Após analisar a significância geral do modelo, vamos analisar a significância
 
 Essa análise permite o aprimoramento do modelo para que permaneçam apenas as variáveis que de fato auxiliam na predição de Y.
 
-No exemplo que estamos analisando, podemos concluir que a variável `distancia` exerce uma influência estatisticamente significativa no `tempo` para chegar na escola, pois `P>|t|` é menor do que 5%.
+No exemplo que estamos analisando, podemos concluir que a variável `distancia` exerce uma **influência estatisticamente significativa** no `tempo` para chegar na escola, pois `P>|t|` é menor do que 5%.
 
 ![Estatística T](./Imagens/Regressão%20Linear%20Simples%20-%20Tempo%20x%20Distância%20-%20Estatística%20T.png)
 
 Mesmo que o Intercepto seja estatisticamente igual a 0 ele não pode ser removido do modelo, pois ele viabiliza que as regras de MQO sejam respeitadas.
 
-- O alfa tem relação com o tamanho da amostra, se a amostra for maior é capaz que ele seja estatisticamente significativo.
+- Ele tem relação com o tamanho da amostra, se a amostra for maior é capaz que ele seja estatisticamente significativo.
 
 ### :arrow_right: Coeficiente de Explicação (R²)
 
