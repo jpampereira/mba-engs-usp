@@ -132,7 +132,7 @@ Por fim, vamos utilizar o modelo gerado para prever o tempo que levará para per
 
 Nesse caso o modelo retornou que serão necessários 48,45 minutos para se chegar a escola em uma distância de 30 quilômetros.
 
-## :three: Código - Regressão Múltipla - Tempo x Distância
+## :three: Código - Regressão Múltipla - Tempo x Distância + Semáforos
 
 Vamos tentar melhorar ainda mais o nosso modelo e para isso vamos adicionar uma segunda variável explicativa: a quantidade de semáforos que o indivíduo passa até a escola.
 
@@ -140,19 +140,23 @@ Vamos tentar melhorar ainda mais o nosso modelo e para isso vamos adicionar uma 
 
 Verificando o coeficiente de correlação de Pearson vemos que assim como a variável de distância, a quantidade de semáforos também produz um efeito positivo no tempo gasto até se chegar a escola, isto é, quanto mais semáforos durante o trajeto, maior o tempo até o destino.
 
-![Coeficiente de Correlação de Pearson](./Imagens/Regressão%20Linear%20Múltipla%20-%20Tempo%20x%20Distância%20-%20Coeficiente%20de%20Correlação%20de%20Pearson.png)
+![Coeficiente de Correlação de Pearson](./Imagens/Regressão%20Linear%20Múltipla%20-%20Tempo%20x%20Distância%20+%20Semáforos%20-%20Coeficiente%20de%20Correlação%20de%20Pearson.png)
 
 Utilizando o método `pairplot` biblioteca do Seaborn, podemos também verificar essa correlação positiva entre as variáveis através de uma representação gráfica:
 
-![Gráfico de Pares](./Imagens/Regressão%20Linear%20Múltipla%20-%20Tempo%20x%20Distância%20-%20Gráfico%20em%20Pares.png)
+![Gráfico de Pares](./Imagens/Regressão%20Linear%20Múltipla%20-%20Tempo%20x%20Distância%20+%20Semáforos%20-%20Gráfico%20em%20Pares.png)
 
 ### :arrow_right: Criando Modelo de Regressão Linear Múltipla
 
 Com os mesmos métodos da biblioteca `statsmodel` utilizados para criar o modelo de Regressão Linear Simples, vamos criar o modelo de Regressão Linear Múltipla, sendo a única diferença na fórmula passada no primeiro parâmetro, sendo adicionada a variável `semaforos`.
 
-![Geração do Modelo de OLS](./Imagens/Regressão%20Linear%20Múltipla%20-%20Tempo%20x%20Distância%20-%20Geração%20do%20Modelo%20de%20OLS.png)
+![Geração do Modelo de OLS](./Imagens/Regressão%20Linear%20Múltipla%20-%20Tempo%20x%20Distância%20+%20Semáforos%20-%20Geração%20do%20Modelo%20de%20OLS.png)
 
 Analisando as estatísticas F e T, vemos que o modelo e suas variáveis explicativas estão dentro do nível de significância aceitável, inclusive o Intercepto, que anteriormente havia ficado acima do limiar de 5%.
+
+O valor de R², se comparado ao modelo de Regressão Linear Simples, aumentou, o que significa que a capacidade preditiva do modelo melhorou. Isso pode ser observado quando comparamos os resultados obtidos por cada um dos modelos para o mesmo conjunto de dados e vemos que os valores obtidos pelo modelo de regressão múltipla se aproximam mais dos valores reais de tempo:
+
+![Comparação entre Modelos](./Imagens/Regressão%20Linear%20Múltipla%20-%20Tempo%20x%20Distância%20+%20Semáforos%20-%20Comparação%20entre%20Modelos.png)
 
 Escrevendo o modelo em equação matemática:
 
@@ -160,11 +164,11 @@ Escrevendo o modelo em equação matemática:
 Tempo(i) = 8,1512 + 0,7972 * Distância(i) + 8,2963 * Semáforos(i)
 ```
 
-## :four: Código - Regressão Múltipla com Variáveis Categóricas - Tempo x Distância
+## :four: Código - Regressão Múltipla com Variáveis Categóricas - Tempo x Distância + Semáforos + Período + Perfil
 
-Para utilizar as variáveis categóricas `periodo` e `perfil`, será necessário realizar a dummização delas, isto é, transformá-las em variáveis binárias. Portanto, se a vaiável categórica `periodo` possui duas possibilidades de resultados `manhã` e `tarde`, então serão criadas duas novas variáveis `periodo_manhã` e `periodo_tarde` e caso a observação aponte que o trajeto até a escola foi feito pela manhã, a primeira terá o valor 1 e a segunda 0, caso o trajeto tenha sido realizado a tarde, a primeira receberá o valor 0 e a segunda 1. O mesmo ocorre com a variável `perfil`.
+Para utilizar as variáveis categóricas `periodo` e `perfil`, será necessário realizar a dummização delas, isto é, transformá-las em variáveis binárias. Portanto, se a variável categórica `periodo` possui duas possibilidades de resultados `manhã` e `tarde`, então serão criadas duas novas variáveis `periodo_manhã` e `periodo_tarde` e caso a observação aponte que o trajeto até a escola foi feito pela manhã, a primeira terá o valor 1 e a segunda 0, caso o trajeto tenha sido realizado a tarde, a primeira receberá o valor 0 e a segunda 1. O mesmo ocorre com a variável `perfil`.
 
-Outro aspecto da dummização é que existe uma regra que indica que das novas categorias criadas, apenas n-1 delas será adicionada ao modelo, isto é, será necessário descartar uma delas. No caso de `perfil`, portanto, será necessário descartar `perfil_calmo`, `perfil_moderado` ou `perfil_agressivo`. Aquela descartada será colocada no Intercepto para servir de referência para as demais.
+Outro aspecto da dummização é que existe uma regra que indica que das novas categorias criadas, apenas n-1 delas serão adicionadas ao modelo, isto é, será necessário descartar uma delas. No caso de `perfil`, portanto, será necessário descartar `perfil_calmo`, `perfil_moderado` ou `perfil_agressivo`, enquanto no caso de `periodo` será necessário descartar `periodo_manha` ou `periodo_tarde`. Aquela descartada será colocada no Intercepto para servir de referência para as demais.
 
 Variáveis antes da Dummização:
 
@@ -190,7 +194,7 @@ Analisando os resultado:
 
 - As variáveis `periodo_manhã` e `perfil_moderado` tem seu p-valor acima do limiar de 5%, logo, são estatisticamente iguais a zero e portanto, não possuem relevância sobre o tempo para se chegar na escola.
 
-Para eliminar as variáveis explicativos que não são relevantes para determinar o valor de Y, vamos utilizar o método `stepwise`. Após remover essas variáveis obtemos os seguintes resultados:
+Para eliminar as variáveis explicativas que não são relevantes para determinar o valor de Y, vamos utilizar o método `stepwise`. Após remover essas variáveis obtemos os seguintes resultados:
 
 ![Modelo Gerado após remoção nas variáveis não relevantes](./Imagens/Regressão%20Múltipla%20com%20Variáveis%20Categóricas%20-%20Tempo%20x%20Distância%20-%20Modelo%20Gerado%20após%20remoção%20nas%20variáveis%20não%20relevantes.png)
 
@@ -203,7 +207,7 @@ Para eliminar as variáveis explicativos que não são relevantes para determina
 - O modelo final é:
 
   ```Modelo de Regressão Linear Múltipla com Variáveis Categóricas
-  Tempo i = 8,29 + 0,71 * Distância i + 7,84 * Semáforos i + 8,97 * Perfil Agressivo i
+  Tempo(i) = 8,29 + 0,71 * Distância(i) + 7,84 * Semáforos(i) + 8,97 * Perfil Agressivo(i)
   ```
 
 ## :five: Comparação dos Modelos
