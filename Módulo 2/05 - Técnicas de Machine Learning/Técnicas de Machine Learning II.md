@@ -26,6 +26,8 @@ Na primeira parte do código temos a instalação e importação das bibliotecas
 
 - Para executarmos uma única linha isoladamente devemos pressionar `F9`. É possível selecionar um conjunto de linhas e pressionar a mesma tecla para que apenas elas sejam executadas.
 
+- As bibliotecas `pandas` e `numpy` são utilizadas para **manipulação de dados**, o `statsmodel` para gerar o modelo de **regressão linear**, o `matplotlib` e `seaborn` são os pacotes gráficos e o `pingouin` e o `statstests` para fazer algumas análises em cima dos modelos.
+
 ### :arrow_right: Visualização da Base de Dados
 
 Assim que utilizamos a biblioteca do Pandas para importar os dados de um excel, é possível visualizar uma prévia desses dados de forma estruturada no segundo quadrante da interface da IDE clicando em cima da estrutura com nome `alunos` do tipo `DataFrame`:
@@ -123,6 +125,8 @@ Mesmo que o Intercepto seja estatisticamente igual a 0 ele não pode ser removid
 ### :arrow_right: Coeficiente de Explicação (R²)
 
 Esse coeficiente que varia entre 0 e 1 apresenta o poder explicativo do modelo, isto é, quanto mais próximo de 1 indica maior capacidade preditiva. Porém, ele não deve ser utilizado para validar ou não o modelo, pois, em muitos campos do conhecimento, é comum não obter valores muito elevados. Use ele apenas para conhecer o seu modelo.
+
+Quanto menor os resíduos das variáveis explicativas, maior o valor de R², pois o valor calculado pelo modelo será mais próximo do cenário real.
 
 ### :arrow_right: Predições para Novas Observações
 

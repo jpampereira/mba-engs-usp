@@ -96,7 +96,9 @@ Como interpretar essa equação:
 - Nós propomos que as variáveis X explicam Y;
 - Queremos explicar o comportamento Y em função de X.
 
-**Importante:** Esse modelo deve ser aplicado apenas quando a variável dependente é do tipo quantitativa. As variáveis explicativas podem ser tanto métricas quanto categóricas (nesse caso, precisarão de um tratamento prévio chamado *dummização*).
+**Importante:** Modelos de regressão linear (simples ou múltipla) devem ser aplicados apenas quando a variável dependente é do tipo quantitativa. As variáveis explicativas podem ser tanto métricas quanto categóricas (nesse caso, precisarão de um tratamento prévio chamado *dummização*).
+
+- Existem modelos que permitem que a variável dependente seja do tipo categórica. Esses modelos costumam ser chamados de modelos de classificação.
 
 A diferença entre uma regressão simples e uma múltipla é que a primeira contém apenas uma variável explicativa, enquanto a segunda possui duas ou mais.
 
